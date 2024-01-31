@@ -1,5 +1,49 @@
 # Investitionsrechner
 
-Zu erstellen ist ein Programm zur Darstellung von verschiedenen
-Investitionsrechenverfahren mit graphischer Unterstützung und Ausgabe in
-PDF-Format.
+Ziel ist es, eine Webapp zu entwickeln, mit der eine Privatperson sein Investitionsportfolio an einem zentralen Ort überwachen kann. Die App soll die Möglichkeit bieten, Aktien, Immobilien, Fahrzeuge, Kryptowährungen und andere Investitionen einzutragen und deren Performance zu überwachen.
+
+## Umfang
+
+### Core
+
+1. Aktien im Portfolio eintragen / löschen
+2. Aktien API anbinden um echt Zeit Preise anzuzeigen
+3. Andere Investitionen eintragen / löschen / bearbeiten (Immobilien, Fahrzeuge, Kryptowährungen, etc.)
+4. Statistiken über die Performance der Investitionen anzeigen (Gewinn oder Verlust, Kursdiagramm)
+5. Dashboard mit Gesamtperformance des Portfolios anzeigen (Gewinn oder Verlust, Kursdiagramm)
+
+### Additional
+
+1. Preis Benachrichtigung (bei Aktienpreis x E-Mail versenden)
+
+## Use Cases
+
+### Use Case Diagramm
+
+_Noch nicht vorhanden._
+
+### Core
+
+_UC01_: Als Benutzer möchte die Startseite sehen, um mich über die App zu informieren. \
+_UC02_: Als Benutzer möchte ich die Datenschutzerklärung sehen, um mich über die Verarbeitung meiner Daten zu informieren. \
+_UC03_: Als Benutzer möchte ich eine Seite sehen, welche die Betreiber der App vorstellt, um mich über die App zu informieren. \
+_UC04_: Als Benutzer möchte ich Kontakt zu den Betreibern der App aufnehmen können, um Fragen zu stellen. \
+_UC05_: Als Benutzer möchte ich mich über Google anmelden können, um die App zu nutzen. \
+_UC06_: Als Benutzer möchte ich mein Portfolio einsehen können, um meine Investitionen zu überwachen. \
+_UC07_: Als Benutzer möchte ich mein Portfolio filtern können, um nur bestimmte Investitionen anzuzeigen. \
+_UC08_: Als Benutzer möchte ein neues Investment hinzufügen können, um dieses zu überwachen. \
+_UC09_: Als Benutzer möchte ich auf ein Investment klicken können, um die Performance des Investments zu sehen. \
+_UC10_: Als Benutzer möchte ich ein Investment bearbeiten können, um die Daten zu aktualisieren. \
+_UC11_: Als Benutzer möchte ich ein Investment als verkauft markieren können, um den Verkauf zu dokumentieren. \
+_UC12_: Als Benutzer möchte ich ein Investment löschen können, um es aus meinem Portfolio zu entfernen. \
+_UC13_: Als Benutzer möchte ich mich ausloggen können, um die App zu verlassen.
+
+### Additional
+
+_Noch keine Use Cases vorhanden._
+
+## Tech Stack
+
+**Frontend**: [Typescript](https://www.typescriptlang.org/), [React](https://react.dev), [Chakra UI](https://chakra-ui.com/), [Firebase SDK](https://firebase.google.com/docs/web/setup) \
+**Datenbank**: [Firestore](https://firebase.google.com/docs/firestore) \
+**Hosting**: [Firebase Hosting](https://firebase.google.com/docs/hosting)
