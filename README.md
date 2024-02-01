@@ -20,7 +20,7 @@ Ziel ist es, eine Webapp zu entwickeln, mit der eine Privatperson sein Investiti
 
 ### Use Case Diagramm
 
-_Noch nicht vorhanden._
+![Use Case Diagram](docs/use-case-diagram.png)
 
 ### Core
 
