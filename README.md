@@ -45,28 +45,28 @@ _Noch keine Use Cases vorhanden._
 ## Sketches
 
 ### Dashboard
-![Dashboard](docs\dashboard-sketch.png)
+![Dashboard](docs/dashboard-sketch.png)
 <br />
 Beim Dashboard haben wir lange diskutiert wie wir es gestalten und welche Informationen wir darstellen wollen. 
 
 ### Landing Page
-![Landing Page](docs\landingpage-sketch.png)
+![Landing Page](docs/landingpage-sketch.png)
 <br />
 Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
 
 
 ### Login
-![Login](docs\login-sketch.png)
+![Login](docs/login-sketch.png)
 <br />
 Auch die Login Page soll einfach und übersichtlich sein.
 
 ### New Investment
-![New Investment](docs\new-investment-sketch.png)
+![New Investment](docs/new-investment-sketch.png)
 <br />
 Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzuügen.
 
 ### Single Investment
-![Single Investment](docs\single-investment-sketch.png)
+![Single Investment](docs/single-investment-sketch.png)
 <br />
 Hier sollen alle Informationen zu einem Investment dargestellt werden.
 
