@@ -42,6 +42,36 @@ _UC13_: Als Benutzer möchte ich mich ausloggen können, um die App zu verlassen
 
 _Noch keine Use Cases vorhanden._
 
+## Sketches
+
+### Dashboard
+![Dashboard](docs/dashboard-sketch.png)
+<br />
+Beim Dashboard haben wir lange diskutiert wie wir es gestalten und welche Informationen wir darstellen wollen. 
+Hier sieht man alle Investments und deren gesamt Performance. Um die Performance eines einzelnen Investments zu sehen, kann man auf das Investment klicken und gelangt zur `Single Investment` Seite.
+
+### Landing Page
+![Landing Page](docs/landingpage-sketch.png)
+<br />
+Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
+
+
+### Login
+![Login](docs/login-sketch.png)
+<br />
+Auch die Login Page soll einfach und übersichtlich sein.
+
+### New Investment
+![New Investment](docs/new-investment-sketch.png)
+<br />
+Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzufügen. Wenn man diesen Prozess durchgeht gelangt man zur `Single Investment` Seite.
+
+### Single Investment
+![Single Investment](docs/single-investment-sketch.png)
+<br />
+Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist es möglich das Investment zu bearbeiten oder als verkauft zu markieren.
+
+
 ## Tech Stack
 
 **Frontend**: [Typescript](https://www.typescriptlang.org/), [React](https://react.dev), [Chakra UI](https://chakra-ui.com/), [Firebase SDK](https://firebase.google.com/docs/web/setup) \
