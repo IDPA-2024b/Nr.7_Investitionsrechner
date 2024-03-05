@@ -45,32 +45,53 @@ _Noch keine Use Cases vorhanden._
 ## Sketches
 
 ### Dashboard
-![Dashboard](docs/dashboard-sketch.png)
+
+![Dashboard](docs/sketches/dashboard-sketch.png)
 <br />
-Beim Dashboard haben wir lange diskutiert wie wir es gestalten und welche Informationen wir darstellen wollen. 
+Beim Dashboard haben wir lange diskutiert wie wir es gestalten und welche Informationen wir darstellen wollen.
 Hier sieht man alle Investments und deren gesamt Performance. Um die Performance eines einzelnen Investments zu sehen, kann man auf das Investment klicken und gelangt zur `Single Investment` Seite.
 
 ### Landing Page
-![Landing Page](docs/landingpage-sketch.png)
+
+![Landing Page](docs/sketches/landingpage-sketch.png)
 <br />
 Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
 
-
 ### Login
-![Login](docs/login-sketch.png)
+
+![Login](docs/sketches/login-sketch.png)
 <br />
 Auch die Login Page soll einfach und übersichtlich sein.
 
 ### New Investment
-![New Investment](docs/new-investment-sketch.png)
+
+![New Investment](docs/sketches/new-investment-sketch.png)
 <br />
 Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzufügen. Wenn man diesen Prozess durchgeht gelangt man zur `Single Investment` Seite.
 
 ### Single Investment
-![Single Investment](docs/single-investment-sketch.png)
+
+![Single Investment](docs/sketches/single-investment-sketch.png)
 <br />
 Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist es möglich das Investment zu bearbeiten oder als verkauft zu markieren.
 
+## Prototype
+
+Den Prototyp haben wir mit [Figma](https://www.figma.com/) erstellt.
+
+### Dashboard
+
+![Dashboard](docs/prototypes/dashboard-prototype.png)
+
+### Single Investment
+
+![Single Investment](docs/prototypes/single-investment-prototype.png)
+
+### New Investment
+
+![New Investment](docs/prototypes/new-investment-1-prototype.png)
+
+![New Investment](docs/prototypes/new-investment-2-prototype.png)
 
 ## Tech Stack
 
