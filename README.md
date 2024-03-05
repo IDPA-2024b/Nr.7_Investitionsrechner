@@ -88,13 +88,19 @@ Den Prototyp haben wir mit [Figma](https://www.figma.com/) erstellt.
 ### Dashboard
 
 ![Dashboard](docs/prototypes/dashboard-prototype.png)
+<br />
+Hier haben wir uns bereits mit den Farben auseinander gesetzt und ausprobiert, schlussendlich kamen wir zu diesen grünlichem Farbthmeme. Beim Dashboard war es uns ausserdem wichtig relevante Infos so anschaulich wie möglich darzustellen.
 
 ### New Investment
 
 ![New Investment](docs/prototypes/new-investment-1-prototype.png)
 
 ![New Investment](docs/prototypes/new-investment-2-prototype.png)
+<br />
+Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen. 
 
 ### Single Investment
 
 ![Single Investment](docs/prototypes/single-investment-prototype.png)
+<br />
+Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
