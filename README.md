@@ -42,38 +42,65 @@ _UC13_: Als Benutzer möchte ich mich ausloggen können, um die App zu verlassen
 
 _Noch keine Use Cases vorhanden._
 
-## Sketches
-
-### Dashboard
-![Dashboard](docs/dashboard-sketch.png)
-<br />
-Beim Dashboard haben wir lange diskutiert wie wir es gestalten und welche Informationen wir darstellen wollen. 
-Hier sieht man alle Investments und deren gesamt Performance. Um die Performance eines einzelnen Investments zu sehen, kann man auf das Investment klicken und gelangt zur `Single Investment` Seite.
-
-### Landing Page
-![Landing Page](docs/landingpage-sketch.png)
-<br />
-Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
-
-
-### Login
-![Login](docs/login-sketch.png)
-<br />
-Auch die Login Page soll einfach und übersichtlich sein.
-
-### New Investment
-![New Investment](docs/new-investment-sketch.png)
-<br />
-Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzufügen. Wenn man diesen Prozess durchgeht gelangt man zur `Single Investment` Seite.
-
-### Single Investment
-![Single Investment](docs/single-investment-sketch.png)
-<br />
-Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist es möglich das Investment zu bearbeiten oder als verkauft zu markieren.
-
-
 ## Tech Stack
 
 **Frontend**: [Typescript](https://www.typescriptlang.org/), [React](https://react.dev), [Chakra UI](https://chakra-ui.com/), [Firebase SDK](https://firebase.google.com/docs/web/setup) \
 **Datenbank**: [Firestore](https://firebase.google.com/docs/firestore) \
 **Hosting**: [Firebase Hosting](https://firebase.google.com/docs/hosting)
+
+## Sketches
+
+### Landing Page
+
+![Landing Page](docs/sketches/landingpage-sketch.png)
+<br />
+Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
+
+### Login
+
+![Login](docs/sketches/login-sketch.png)
+<br />
+Auch die Login Page soll einfach und übersichtlich sein.
+
+### Dashboard
+
+![Dashboard](docs/sketches/dashboard-sketch.png)
+<br />
+Über das Dashboard haben wir lange diskutiert, wie wir es gestalten und welche Informationen wir darstellen sollten.
+Hier sieht man alle Investments und deren gesamt Performance. Um die Performance eines einzelnen Investments zu sehen, kann man auf das Investment klicken und gelangt zur Seite [Single Investment](#single-investment).
+
+### New Investment
+
+![New Investment](docs/sketches/new-investment-sketch.png)
+<br />
+Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzufügen. Wenn man diesen Prozess durchgeht gelangt man zur `Single Investment` Seite.
+
+### Single Investment
+
+![Single Investment](docs/sketches/single-investment-sketch.png)
+<br />
+Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist es möglich das Investment zu bearbeiten oder als verkauft zu markieren.
+
+## Prototype
+
+Den Prototyp haben wir mit [Figma](https://www.figma.com/) erstellt.
+
+### Dashboard
+
+![Dashboard](docs/prototypes/dashboard-prototype.png)
+<br />
+Hier haben wir uns bereits mit den Farben auseinander gesetzt und ausprobiert, schlussendlich kamen wir zu diesen grünlichem Farbthmeme. Beim Dashboard war es uns ausserdem wichtig relevante Infos so anschaulich wie möglich darzustellen.
+
+### New Investment
+
+![New Investment](docs/prototypes/new-investment-1-prototype.png)
+
+![New Investment](docs/prototypes/new-investment-2-prototype.png)
+<br />
+Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen. 
+
+### Single Investment
+
+![Single Investment](docs/prototypes/single-investment-prototype.png)
+<br />
+Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
