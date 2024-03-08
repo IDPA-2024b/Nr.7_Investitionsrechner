@@ -104,3 +104,44 @@ Beim New Investment geht man ein Forms durch, bei dem man seine Investition eint
 ![Single Investment](docs/prototypes/single-investment-prototype.png)
 <br />
 Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
+
+
+## Datenstruktur
+
+
+### Aufbau eines Users 
+
+```ts 
+interface User {
+  uid: string;
+  email: string;
+  displayName?: string;
+  photoURL?: string;
+}
+```
+
+
+### Aufbau einer einzelnen Investition
+
+```ts
+interface Investment {
+    id: string;
+    name: string;
+    symbol: string;
+    type: string;
+    purchase: {
+        pricePerUnit: number;
+        date: string;
+        units: number;
+    };
+    sale?: {
+        pricePerUnit: number;
+        date: string;
+        units: number;
+    };
+    historicalData: {
+        date: string;
+        pricePerUnit: number;
+    }[];
+}
+``` 
