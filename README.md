@@ -53,32 +53,32 @@ _Noch keine Use Cases vorhanden._
 ### Landing Page
 
 ![Landing Page](docs/sketches/landingpage-sketch.png)
-<br />
+
 Bei der Landing Page haben wir uns für eine einfache und übersichtliche Darstellung entschieden.
 
 ### Login
 
 ![Login](docs/sketches/login-sketch.png)
-<br />
+
 Auch die Login Page soll einfach und übersichtlich sein.
 
 ### Dashboard
 
 ![Dashboard](docs/sketches/dashboard-sketch.png)
-<br />
+
 Über das Dashboard haben wir lange diskutiert, wie wir es gestalten und welche Informationen wir darstellen sollten.
 Hier sieht man alle Investments und deren gesamt Performance. Um die Performance eines einzelnen Investments zu sehen, kann man auf das Investment klicken und gelangt zur Seite [Single Investment](#single-investment).
 
 ### New Investment
 
 ![New Investment](docs/sketches/new-investment-sketch.png)
-<br />
+
 Hier soll es möglich sein, sein neues Investment so gut wie möglich zu beschreiben und hinzuzufügen. Wenn man diesen Prozess durchgeht gelangt man zur `Single Investment` Seite.
 
 ### Single Investment
 
 ![Single Investment](docs/sketches/single-investment-sketch.png)
-<br />
+
 Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist es möglich das Investment zu bearbeiten oder als verkauft zu markieren.
 
 ## Prototype
@@ -88,7 +88,7 @@ Den Prototyp haben wir mit [Figma](https://www.figma.com/) erstellt.
 ### Dashboard
 
 ![Dashboard](docs/prototypes/dashboard-prototype.png)
-<br />
+
 Hier haben wir uns bereits mit den Farben auseinander gesetzt und ausprobiert, schlussendlich kamen wir zu diesen grünlichem Farbthmeme. Beim Dashboard war es uns ausserdem wichtig relevante Infos so anschaulich wie möglich darzustellen.
 
 ### New Investment
@@ -96,52 +96,49 @@ Hier haben wir uns bereits mit den Farben auseinander gesetzt und ausprobiert, s
 ![New Investment](docs/prototypes/new-investment-1-prototype.png)
 
 ![New Investment](docs/prototypes/new-investment-2-prototype.png)
-<br />
-Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen. 
+
+Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen.
 
 ### Single Investment
 
 ![Single Investment](docs/prototypes/single-investment-prototype.png)
-<br />
-Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
 
+Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.
 
 ## Datenstruktur
 
+### Aufbau eines Users
 
-### Aufbau eines Users 
-
-```ts 
+```ts
 interface User {
   uid: string;
   email: string;
   displayName?: string;
-  photoURL?: string;
+  photoURL?: string;
 }
 ```
-
 
 ### Aufbau einer einzelnen Investition
 
 ```ts
 interface Investment {
-    id: string;
-    name: string;
-    symbol: string;
-    type: string;
-    purchase: {
-        pricePerUnit: number;
-        date: string;
-        units: number;
-    };
-    sale?: {
-        pricePerUnit: number;
-        date: string;
-        units: number;
-    };
-    historicalData: {
-        date: string;
-        pricePerUnit: number;
-    }[];
+  id: string;
+  name: string;
+  symbol: string;
+  type: string;
+  purchase: {
+    pricePerUnit: number;
+    date: string;
+    units: number;
+  };
+  sale?: {
+    pricePerUnit: number;
+    date: string;
+    units: number;
+  };
+  historicalData: {
+    date: string;
+    pricePerUnit: number;
+  }[];
 }
-``` 
+```
