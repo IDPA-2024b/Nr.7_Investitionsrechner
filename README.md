@@ -108,6 +108,8 @@ Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sin
 
 ## Datenstruktur
 
+Dieser Schritt ist essenziell, damit unsere Datenstruktur einheitlich und konsistent bleibt. 
+Hiermit können wir sicherstellen, dass alle den User oder auch das Investment gleich "Interpretieren".
 
 ### Aufbau eines Users 
 
