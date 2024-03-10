@@ -104,3 +104,38 @@ Beim New Investment geht man ein Forms durch, bei dem man seine Investition eint
 ![Single Investment](docs/prototypes/single-investment-prototype.png)
 <br />
 Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
+
+
+# Landing Page
+
+
+Für die Landing/ Welcome Page haben wir eine Auswahl an verschiedenen Komponenten erstellt, welche belibig verwedet werden können, um eine Interesante Landing Seite zu erstellen.
+
+
+### Landing Page
+
+![Landing Page](docs/prototypes/landing-page.png)
+
+
+### Über unser Design
+
+![Sleek Design](docs/prototypes/3D-dashboard-design.png)
+
+### Bewertung
+
+![Testimonial](docs/prototypes/testimonial.png)
+
+
+### Job Angebot
+
+![Job Offer](docs/prototypes/job-offer.png)
+
+
+### Account erstellen
+
+![Create Account](docs/prototypes/create-account-now.png)
+
+
+### FAQ
+
+![FAQ](docs/prototypes/simple-faq.png)
