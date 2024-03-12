@@ -85,6 +85,34 @@ Hier sollen alle Informationen zu einem Investment dargestellt werden. Dabei ist
 
 Den Prototyp haben wir mit [Figma](https://www.figma.com/) erstellt.
 
+### Landing Page
+
+Für die Landing/ Welcome Page haben wir eine Auswahl an verschiedenen Komponenten erstellt, welche belibig verwedet werden können, um eine Interesante Landing Seite zu erstellen.
+
+#### Landing Page
+
+![Landing Page](docs/prototypes/landing-page.png)
+
+#### Über unser Design
+
+![Sleek Design](docs/prototypes/3D-dashboard-design.png)
+
+#### Bewertung
+
+![Testimonial](docs/prototypes/testimonial.png)
+
+#### Job Angebot
+
+![Job Offer](docs/prototypes/job-offer.png)
+
+#### Account erstellen
+
+![Create Account](docs/prototypes/create-account-now.png)
+
+#### FAQ
+
+![FAQ](docs/prototypes/simple-faq.png)
+
 ### Dashboard
 
 ![Dashboard](docs/prototypes/dashboard-prototype.png)
@@ -142,38 +170,3 @@ interface Investment {
   }[];
 }
 ```
-
-
-# Landing Page
-
-
-Für die Landing/ Welcome Page haben wir eine Auswahl an verschiedenen Komponenten erstellt, welche belibig verwedet werden können, um eine Interesante Landing Seite zu erstellen.
-
-
-### Landing Page
-
-![Landing Page](docs/prototypes/landing-page.png)
-
-
-### Über unser Design
-
-![Sleek Design](docs/prototypes/3D-dashboard-design.png)
-
-### Bewertung
-
-![Testimonial](docs/prototypes/testimonial.png)
-
-
-### Job Angebot
-
-![Job Offer](docs/prototypes/job-offer.png)
-
-
-### Account erstellen
-
-![Create Account](docs/prototypes/create-account-now.png)
-
-
-### FAQ
-
-![FAQ](docs/prototypes/simple-faq.png)
