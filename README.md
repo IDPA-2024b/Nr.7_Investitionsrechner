@@ -135,6 +135,9 @@ Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sin
 
 ## Datenstruktur
 
+Dieser Schritt ist essenziell, damit unsere Datenstruktur einheitlich und konsistent bleibt.
+Hiermit können wir sicherstellen, dass alle den User oder auch das Investment gleich "Interpretieren".
+
 ### Aufbau eines Users
 
 ```ts
@@ -154,19 +157,19 @@ interface Investment {
   name: string;
   symbol: string;
   type: string;
-  purchase: {
-    pricePerUnit: number;
-    date: string;
-    units: number;
-  };
-  sale?: {
-    pricePerUnit: number;
-    date: string;
-    units: number;
-  };
-  historicalData: {
-    date: string;
-    pricePerUnit: number;
-  }[];
+  purchase: Transaction;
+  sale?: Transaction;
+  historicalData: PriceRecord[];
+}
+
+interface Transaction {
+  pricePerUnit: number;
+  date: string;
+  units: number;
+}
+
+interface PriceRecord {
+  date: string;
+  pricePerUnit: number;
 }
 ```
