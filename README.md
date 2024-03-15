@@ -97,53 +97,51 @@ Hier haben wir uns bereits mit den Farben auseinander gesetzt und ausprobiert, s
 
 ![New Investment](docs/prototypes/new-investment-2-prototype.png)
 <br />
-Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen. 
+Beim New Investment geht man ein Forms durch, bei dem man seine Investition eintragen kann. Auch hier war es uns wichtig es so anschaulich wie möglich zu machen.
 
 ### Single Investment
 
 ![Single Investment](docs/prototypes/single-investment-prototype.png)
 <br />
-Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.  
-
+Auch wenn sich das Single Investment nicht sehr unterscheidet vom Dashboard, sind einige Details anderst gestaltet. Man sieht Infos wie Marketvalue oder auch die Haltedauer der Investition.
 
 ## Datenstruktur
 
-Dieser Schritt ist essenziell, damit unsere Datenstruktur einheitlich und konsistent bleibt. 
+Dieser Schritt ist essenziell, damit unsere Datenstruktur einheitlich und konsistent bleibt.
 Hiermit können wir sicherstellen, dass alle den User oder auch das Investment gleich "Interpretieren".
 
-### Aufbau eines Users 
+### Aufbau eines Users
 
-```ts 
+```ts
 interface User {
   uid: string;
   email: string;
   displayName?: string;
-  photoURL?: string;
+  photoURL?: string;
 }
 ```
-
 
 ### Aufbau einer einzelnen Investition
 
 ```ts
 interface Investment {
-    id: string;
-    name: string;
-    symbol: string;
-    type: string;
-    purchase: {
-        pricePerUnit: number;
-        date: string;
-        units: number;
-    };
-    sale?: {
-        pricePerUnit: number;
-        date: string;
-        units: number;
-    };
-    historicalData: {
-        date: string;
-        pricePerUnit: number;
-    }[];
+  id: string;
+  name: string;
+  symbol: string;
+  type: string;
+  purchase: Transaction;
+  sale?: Transaction;
+  historicalData: PriceRecord[];
 }
-``` 
+
+interface Transaction {
+  pricePerUnit: number;
+  date: string;
+  units: number;
+}
+
+interface PriceRecord {
+  date: string;
+  pricePerUnit: number;
+}
+```
