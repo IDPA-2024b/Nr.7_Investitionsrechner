@@ -1,6 +1,6 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import { DashboardLayout } from "./layouts/DashboardLayout";
-import { DefaultLayout } from "./layouts/DefaultLayout";
+import { DefaultLayout } from "./layouts/Default";
 import { StartPage } from "./pages/Start";
 import { LoginPage } from "./pages/Login";
 import { AboutPage } from "./pages/About";
