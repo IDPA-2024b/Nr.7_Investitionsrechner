@@ -10,14 +10,14 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react";
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import {
   useNavigate,
   useLocation,
-  To,
-  NavigateOptions,
+  type To,
+  type NavigateOptions,
 } from "react-router-dom";
-import { type ILink } from "../types/link";
+import type { ILink } from "../types/link";
 import { FaGithub } from "react-icons/fa";
 
 interface FooterProps {
