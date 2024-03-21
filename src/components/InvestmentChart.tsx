@@ -12,7 +12,7 @@ ChartJS.register(
   Legend
 );
 
-export function InvestmentChart({InvestmentData}) {
+export function InvestmentChart({ InvestmentData }) {
   const [selectedRange, setSelectedRange] = useState('last7days');
   const [aggregatedData, setAggregatedData] = useState([]);
 
@@ -20,8 +20,8 @@ export function InvestmentChart({InvestmentData}) {
     setAggregatedData(aggregateData(selectedRange));
   }, [selectedRange]);
 
-  const aggregateData = (range) => {
-    let startDate;
+  const aggregateData = (range: string) => {
+    let startDate: number | Date;
     switch (range) {
       case 'last7days':
         startDate = new Date();
@@ -39,7 +39,7 @@ export function InvestmentChart({InvestmentData}) {
         startDate.setDate(1);
         break;
       case 'all':
-        startDate = new Date(0); // Start date of UNIX epoch
+        startDate = new Date(0);
         break;
       default:
         break;
@@ -66,14 +66,23 @@ export function InvestmentChart({InvestmentData}) {
         aggregatedData[dayMonthYear].count++;
       }
     });
-    
-    return Object.values(aggregatedData).map((item) => ({
+
+    let aggregatedDataArray = Object.values(aggregatedData).map((item) => ({
       date: item.date,
       value: item.value / item.count, // Calculate average value for the day
     }));
+    const numberOfDates = aggregatedDataArray.length;
+    console.log(numberOfDates);
+    const x = Math.ceil(numberOfDates / 300);
+    console.log("x: " + x);
+    aggregatedDataArray = aggregatedDataArray.filter((item, index) => index % x === 0);
+    console.log("cut down length: " + aggregatedDataArray.length)
+
+
+    return aggregatedDataArray;
   };
 
-  const handleRangeChange = (event) => {
+  const handleRangeChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setSelectedRange(event.target.value);
   };
 
@@ -81,17 +90,25 @@ export function InvestmentChart({InvestmentData}) {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top' as const,
+        position: 'top',
       },
       title: {
         display: true,
-        text: 'Chart.js Line Chart',
+        text: 'Investment Value',
       },
     },
     scales: {
       y: {
         beginAtZero: true,
       },
+    },
+    interaction: {
+      mode: 'index',
+      intersect: false,
+    },
+    hover: {
+      mode: 'nearest',
+      intersect: true,
     },
   };
 
@@ -100,7 +117,6 @@ export function InvestmentChart({InvestmentData}) {
     labels: labels,
     datasets: [
       {
-          
         fill: true,
         label: 'Dataset 2',
         data: aggregatedData.map((d) => d.value),
@@ -110,6 +126,7 @@ export function InvestmentChart({InvestmentData}) {
       },
     ],
   };
+
 
   return (
     <div>
