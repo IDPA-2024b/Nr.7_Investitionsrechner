@@ -1,5 +1,5 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
-import { DashboardLayout } from "./layouts/DashboardLayout";
+import { DashboardLayout } from "./layouts/Dashboard";
 import { DefaultLayout } from "./layouts/Default";
 import { StartPage } from "./pages/Start";
 import { LoginPage } from "./pages/Login";
