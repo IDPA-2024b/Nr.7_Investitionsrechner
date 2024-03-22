@@ -8,7 +8,6 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import {
-  type NavigateOptions,
   type To,
   useLocation,
   useNavigate,
@@ -28,20 +27,18 @@ export function Header({ links }: HeaderProps) {
   const navigate = useNavigate();
   const { isOpen, onClose, onOpen } = useDisclosure();
 
-  function handleNavigate(path: To, options?: NavigateOptions) {
+  function handleNavigate(path: To) {
     onClose();
-    navigate(path, options);
+    navigate(path);
   }
 
   function displayUserActions() {
-    if (user)
-      return (
-        <AcountMenu
-          name={user.displayName ?? user.email}
-          src={user.photoURL}
-          logout={logout}
-        />
-      );
+    if (user) {
+      const name = user.isAnonymous
+        ? "Annonymous"
+        : user.displayName ?? user.email;
+      return <AcountMenu name={name} src={user.photoURL} logout={logout} />;
+    }
 
     return (
       <Button
@@ -49,7 +46,7 @@ export function Header({ links }: HeaderProps) {
         colorScheme="teal"
         _hover={{ transform: "scale(1.05)" }}
         onClick={() =>
-          handleNavigate("/login", { state: { from: location.pathname } })
+          handleNavigate("/login")
         }
       >
         Login
@@ -58,7 +55,15 @@ export function Header({ links }: HeaderProps) {
   }
 
   return (
-    <chakra.header py="3" px="5" borderBottomWidth={1}>
+    <chakra.header
+      position={"sticky"}
+      inset={0}
+      zIndex={1}
+      py="3"
+      px="5"
+      borderBottomWidth={1}
+      bg={"white"}
+    >
       <Flex width={"100%"} justify={"space-between"} align={"center"}>
         <IconButton
           display={{ base: "initial", md: "none" }}
@@ -67,6 +72,10 @@ export function Header({ links }: HeaderProps) {
           variant={"ghost"}
           _active={{
             outline: "none",
+            bg: "transparent",
+          }}
+          _focus={{
+            bg: "transparent",
           }}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={6} />}
         />
