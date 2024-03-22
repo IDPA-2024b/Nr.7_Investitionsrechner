@@ -1,0 +1,22 @@
+[
+    {
+        "type": "stock",
+        "percentage": 30
+    },
+    {
+        "type": "crypto",
+        "percentage": 20
+    },
+    {
+        "type": "property",
+        "percentage": 25
+    },
+    {
+        "type": "cars",
+        "percentage": 15
+    },
+    {
+        "type": "other",
+        "percentage": 10
+    }
+]
