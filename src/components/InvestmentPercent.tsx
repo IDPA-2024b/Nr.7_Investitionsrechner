@@ -27,11 +27,32 @@ export function InvestmentPercent({ InvestmentPercentageData }) {
         }]
     };
 
-    const total = data.datasets[0].data.reduce((acc, cur) => acc + cur, 0);
+
+    const plugins = [{
+        beforeDraw: function (chart) {
+            var width = chart.width,
+                height = chart.height,
+                ctx = chart.ctx;
+            ctx.restore();
+            var fontSize = (height / 300).toFixed(2);
+            ctx.font = fontSize + "em sans-serif";
+            ctx.textBaseline = "top";
+            var text = "Total: " + InvestmentPercentageData.reduce((acc, item) => acc + item.percentage, 0) + ".-",
+                textX = Math.round((width - ctx.measureText(text).width) / 2),
+                textY = height / 2;
+            ctx.fillText(text, textX, textY);
+            ctx.save();
+        }
+    }]
+
+
 
     return (
-        <div>
-            <Doughnut data={data}  />
-        </div>
+
+        <Doughnut
+            type="doughnut"
+            data={data}
+            plugins={plugins}
+        />
     );
 }
