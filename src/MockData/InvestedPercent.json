@@ -1,0 +1,22 @@
+[
+    {
+        "type": "stock",
+        "amount": 3000000
+    },
+    {
+        "type": "crypto",
+        "amount": 2000000
+    },
+    {
+        "type": "property",
+        "amount": 2500000
+    },
+    {
+        "type": "cars",
+        "amount": 1500000
+    },
+    {
+        "type": "other",
+        "amount": 1000000
+    }
+]
