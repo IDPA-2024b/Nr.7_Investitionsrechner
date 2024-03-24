@@ -58,11 +58,16 @@ export function Header({ links }: HeaderProps) {
     <chakra.header
       position={"sticky"}
       inset={0}
-      zIndex={1}
+      zIndex={1232}
       py="3"
       px="5"
-      borderBottomWidth={1}
-      bg={"white"}
+      sx={{
+        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, ), rgba(0, 255, 255, 0.5))`,
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        
+      
+      }}
     >
       <Flex width={"100%"} justify={"space-between"} align={"center"}>
         <IconButton
