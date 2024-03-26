@@ -9,7 +9,16 @@ import {
 } from "@chakra-ui/react";
 import { FaQuoteRight } from "react-icons/fa";
 import "./style.css";
-export function Testimonial() {
+
+interface TestimonialProps {
+	quote: string;
+	avatarURL: string;
+	name: string;
+	role: string;
+	company: string;
+}
+
+export function Testimonial({ TestimonialProps }: { TestimonialProps: TestimonialProps }) {
 	return (
 		<Container maxW="2xl" p={5} position="relative">
 			<VStack spacing={3} position="relative" zIndex={1}>
@@ -25,17 +34,13 @@ export function Testimonial() {
 					}}
 				/>
 				<Text p={5} color={useColorModeValue("gray.600", "gray.300")}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-					cupiditate repellat unde voluptas, adipisci ex deleniti quisquam iusto
-					voluptate nostrum. Dolore, impedit! Officia voluptates a obcaecati qui
-					fuga consectetur similique in enim. Nisi laborum nulla recusandae odit
-					possimus earum odio,
-				</Text>
+					{TestimonialProps.quote}
+				</Text>	
 				<VStack alignItems="center">
 					<Avatar
 						name="avatar"
 						_hover={{ animation: "spin 10s linear infinite" }}
-						src="https://media.licdn.com/dms/image/D4D03AQGt8kXSUqmhBg/profile-displayphoto-shrink_800_800/0/1693219459486?e=2147483647&v=beta&t=kxpWDcTBCz-I9cqbe6yX9QMCQtZNAVqJu8lf3zFh__8"
+						src={TestimonialProps.avatarURL}
 						size="lg"
 					/>
 					<Box textAlign="center">
@@ -44,10 +49,10 @@ export function Testimonial() {
 							fontSize="lg"
 							_hover={{ animation: "none" }}
 						>
-							Aakash Sethi
+							{TestimonialProps.name}
 						</Text>
 						<Text fontSize="md" color="gray.500">
-							Songwriter at Funny.com
+							{TestimonialProps.role} at {TestimonialProps.company}
 						</Text>
 					</Box>
 				</VStack>
@@ -56,7 +61,7 @@ export function Testimonial() {
 		</Container>
 	);
 }
-
+// fancy dotted box for the testimonial background
 function DottedBox() {
 	return (
 		<Box

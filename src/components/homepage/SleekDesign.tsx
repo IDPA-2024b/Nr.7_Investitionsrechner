@@ -1,9 +1,16 @@
 import { Flex, Box, Text } from '@chakra-ui/react';
 import Spline from '@splinetool/react-spline';
 
-export function SleekDesign() {
+interface SleekDesignProps {
+    title: string;
+    description: string;
+    splineURL: string;
+}
+
+export function SleekDesign({ SleekDesignProps }: { SleekDesignProps: SleekDesignProps }) {
+
     return (
-        <Flex justifyContent="space-between" alignItems="center" margin="auto" 
+        <Flex justifyContent="space-between" alignItems="center" margin="auto"
             css={{
                 '@media screen and (max-width: 1000px)': {
                     flexDirection: 'column',
@@ -11,9 +18,9 @@ export function SleekDesign() {
             }}
         >
             <Box width="50%">
-                <Text fontSize="2xl" fontWeight="bold" marginBottom="1rem">About Sleek Design</Text>
+                <Text fontSize="2xl" fontWeight="bold" marginBottom="1rem">{SleekDesignProps.title}</Text>
                 <Text fontSize="lg">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    {SleekDesignProps.description}
                 </Text>
             </Box>
             <Box
@@ -29,7 +36,7 @@ export function SleekDesign() {
                     },
                 }}
             >
-                <Spline scene="https://prod.spline.design/4ufZdjS0fOS9-ObS/scene.splinecode" />
+                <Spline scene={SleekDesignProps.splineURL} />
             </Box>
         </Flex>
     );
