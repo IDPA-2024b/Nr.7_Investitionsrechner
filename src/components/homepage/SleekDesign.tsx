@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Box, Text } from '@chakra-ui/react';
 import Spline from '@splinetool/react-spline';
 

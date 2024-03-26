@@ -1,7 +1,7 @@
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import { DashboardLayout } from "./layouts/Dashboard";
 import { DefaultLayout } from "./layouts/Default";
-import { StartPage } from "./pages/Start";
+import { HomePage } from "./pages/Home";
 import { LoginPage } from "./pages/Login";
 import { AboutPage } from "./pages/About";
 import { PrivacyPage } from "./pages/Privacy";
@@ -17,7 +17,7 @@ const router = createHashRouter([
     children: [
       {
         index: true, // same path as parent: "/"
-        element: <StartPage />,
+        element: <HomePage />,
       },
       {
         path: "/login",
