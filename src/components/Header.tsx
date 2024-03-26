@@ -61,11 +61,11 @@ export function Header({ links }: HeaderProps) {
       zIndex={1232}
       py="3"
       px="5"
+      backgroundColor={"rgba(255, 255, 255, 0.8)"}
       sx={{
-        backgroundImage: `linear-gradient(to top, rgba(255, 255, 255, ), rgba(0, 255, 255, 0.5))`,
+        
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
-        
       
       }}
     >

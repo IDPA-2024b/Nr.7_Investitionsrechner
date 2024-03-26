@@ -33,9 +33,11 @@ export function JobOffer() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
                     </Text>
                     <Button
-                        colorScheme="blue"
+                        colorScheme="teal"
                         size="lg"
                         marginTop="1rem"
+                        _hover={{ opacity: 0.9, transform: 'scale(1.05)', transition: 'transform 0.3s ease-in-out, color 0.3s ease' }}
+
                     >
                         Apply Now
                     </Button>

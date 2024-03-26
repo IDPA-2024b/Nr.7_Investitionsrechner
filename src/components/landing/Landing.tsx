@@ -11,9 +11,9 @@ import {
 
     Button
 } from '@chakra-ui/react';
-
+import { useNavigate } from 'react-router-dom';
 export function Landing() {
-
+    const navigate = useNavigate();
     return (
         <>
             <Stack direction="column" spacing={6} justifyContent="center" maxW="480px" mx="auto" pt={"100px"}>
@@ -46,8 +46,8 @@ export function Landing() {
                         zIndex={1}
                         lineHeight={1}
                         _hover={{ opacity: 0.9, transform: 'scale(1.05)', transition: 'transform 0.3s ease-in-out, color 0.3s ease' }}
-                        transition="transform 0.3s ease-in-out"
                         colorScheme='teal'
+                        onClick={() => navigate('/login')}
                     >
                         Sign up for free
                     </Button>
@@ -64,6 +64,8 @@ export function Landing() {
                         boxShadow="md"
                         as={Link}
                         zIndex={1}
+                        _hover={{ textDecoration: 'none', transform: 'scale(1.05)', transition: 'transform 0.3s ease-in-out, color 0.3s ease'}}
+                        onClick={() => navigate('/pricing')}
                     >
                         See Pricing
                     </Box>

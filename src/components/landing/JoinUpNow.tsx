@@ -3,8 +3,9 @@ import { Box, Button, Text, Image } from '@chakra-ui/react';
 import blob from '../assets/SVGs/Blob.svg';
 import waves from '../assets/SVGs/layered-waves-haikei.svg'
 import "./style.css";
+import { useNavigate } from 'react-router-dom';
 export function JoinUpNow() {
-
+    const navigate = useNavigate();
     return (
         <>
             <Box
@@ -46,7 +47,7 @@ export function JoinUpNow() {
                     position="relative"
                     animation="spin 2s linear infinite"
                     as="span"
-
+                    
 
                 >
                     <Text fontSize="2xl" fontWeight="bold" marginBottom="1rem">Scrolled this Far And still not have a account?</Text>
@@ -57,6 +58,8 @@ export function JoinUpNow() {
                         colorScheme="teal"
                         size="lg"
                         marginTop="1rem"
+                        _hover={{ opacity: 0.9, transform: 'scale(1.05)', transition: 'transform 0.3s ease-in-out, color 0.3s ease' }}
+                        onClick={() => navigate('/login')}
                     >
                         Join Now
                     </Button>
