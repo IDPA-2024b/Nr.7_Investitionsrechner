@@ -83,7 +83,7 @@ export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxD
         fill: true,
         tension: 0.4,
         label: 'Value',
-        data: aggregatedData.map((d) => d.pricePerUnit),
+        data: aggregatedData.map((d) => parseFloat(d.pricePerUnit.toFixed(2))),
         borderColor: 'rgb(123, 162, 235)', // TODO: replace with theme specific color
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
         pointRadius: 1,
