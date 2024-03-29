@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend, ChartOptions } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { PriceRecord } from '../../types/investment';
+import { Box } from '@chakra-ui/react';
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -24,12 +25,13 @@ export enum DateRange {
 
 const options: ChartOptions<"line"> = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'top',
+      display: false,
     },
     title: {
-      display: true,
+      display: false,
       text: 'Investment Value',
     },
   },
@@ -52,24 +54,37 @@ interface LineChartProps {
   data: PriceRecord[];
   dateRange?: DateRange;
   maxDataPoints?: number;
+  receiveData?: (data1: number, data2: number) => void;
 }
 
-export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxDataPoints = 300 }: LineChartProps) {
+export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxDataPoints = 300, receiveData }: LineChartProps) {
   const [aggregatedData, setAggregatedData] = useState<PriceRecord[]>([]);
 
   useEffect(() => {
     setAggregatedData(aggregateData(rawData, dateRange, maxDataPoints));
+
   }, [dateRange, rawData, maxDataPoints]);
 
+
+  // TODO: sometimes the receiveData function is not called
+  useEffect(() => {
+    if (receiveData) {
+      receiveData(
+        parseFloat(aggregatedData[0]?.pricePerUnit.toFixed(2)) || 0,
+        parseFloat(aggregatedData[aggregatedData.length - 1]?.pricePerUnit.toFixed(2)) || 0
+      );
+    }
+  }, [aggregatedData]);
   const labels: string[] = useMemo(() => aggregatedData.map((d) => d.date), [aggregatedData]);
   const data = useMemo(() => ({
     labels: labels,
     datasets: [
       {
         fill: true,
-        label: 'Dataset 2',
+        tension: 0.4,
+        label: 'Value',
         data: aggregatedData.map((d) => d.pricePerUnit),
-        borderColor: 'rgb(53, 162, 235)', // TODO: replace with theme specific color
+        borderColor: 'rgb(123, 162, 235)', // TODO: replace with theme specific color
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
         pointRadius: 1,
       },
@@ -79,7 +94,12 @@ export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxD
 
   return (
     <div>
-      <Line options={options} data={data} />
+      <Box
+        h={'50vh'}
+      >
+
+        <Line options={options} data={data} />
+      </Box>
     </div>
   );
 }
@@ -118,6 +138,14 @@ function aggregateData(data: PriceRecord[], range: DateRange, maxDataPoints: num
 
   const filteredData = data.filter((item) => new Date(item.date) >= startDate);
   const aggregatedData = averageValueByDay(filteredData, maxDataPoints);
+
+  // Add current date if it's not already in the array
+  const currentDate = new Date().toISOString().split('T')[0];
+  if (!aggregatedData.some((item) => item.date === currentDate)) {
+    const currentValue = getCurrentValue(data);
+    aggregatedData.push({ date: currentDate, pricePerUnit: currentValue });
+  }
+
   return aggregatedData;
 }
 
@@ -126,7 +154,7 @@ function averageValueByDay(data: PriceRecord[], maxDataPoints: number): PriceRec
     const date = new Date(item.date);
     const dayMonthYear = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
     if (!acc[dayMonthYear]) {
-      acc[dayMonthYear] = [item]
+      acc[dayMonthYear] = [item];
     } else {
       acc[dayMonthYear].push(item);
     }
@@ -137,7 +165,6 @@ function averageValueByDay(data: PriceRecord[], maxDataPoints: number): PriceRec
   const averagedValueByDay = Object.entries(priceRecordsPerDate).map(([date, priceRecords]) => {
     const totalValue = priceRecords.reduce((acc, item) => acc + item.pricePerUnit, 0);
     const averageValue = totalValue / priceRecords.length;
-
     return {
       date,
       pricePerUnit: averageValue,
@@ -147,4 +174,10 @@ function averageValueByDay(data: PriceRecord[], maxDataPoints: number): PriceRec
   // ensure that the number of data points is less than or equal to maxDataPoints
   const nthDataPoint = Math.ceil(averagedValueByDay.length / maxDataPoints);
   return averagedValueByDay.filter((_, index) => index % nthDataPoint === 0);
+}
+
+function getCurrentValue(data: PriceRecord[]): number {
+  const currentDate = new Date().toISOString().split('T')[0];
+  const currentRecord = data.find((item) => item.date === currentDate);
+  return currentRecord ? currentRecord.pricePerUnit : 0;
 }
