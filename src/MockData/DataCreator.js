@@ -20,6 +20,12 @@ const generateDataForLastYear = () => {
     data.push({ date: formattedDate, value: randomNumber });
   }
 
+
+  // Add today's date
+  const today = new Date();
+  const formattedToday = today.toISOString().split('T')[0];
+  data.push({ date: formattedToday, value: previousNumber });
+
   return data;
 };
 
