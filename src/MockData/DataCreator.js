@@ -25,7 +25,6 @@ const generateDataForLastYear = () => {
 
 const lastYearData = generateDataForLastYear();
 
-
 fs.writeFile("overalData.json", JSON.stringify(lastYearData, null, 2), (err) => {
   if (err) {
     console.error('Error writing JSON file:', err);
