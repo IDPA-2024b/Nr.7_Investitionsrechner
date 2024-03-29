@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, IconButton, Tooltip, HStack } from "@chakra-ui/react";
+import { Text, IconButton, Tooltip, HStack, Icon } from "@chakra-ui/react";
 import { InfoOutlineIcon } from '@chakra-ui/icons';
 
 interface TextWithTooltipProps {
@@ -11,18 +11,20 @@ export function TextWithTooltip({ name, text }: TextWithTooltipProps) {
         <>
             <HStack>
 
-                <Text
-                    fontSize={"xl"}
-                    fontWeight={"bold"}
-                >
+                <Text>
                     {name}
                 </Text>
                 <Tooltip
                     hasArrow
                     label={text}
                     fontSize='sm'
+                    
                 >
-                    <InfoOutlineIcon />
+                    <Icon
+                        as={InfoOutlineIcon}
+                        w={4}
+                        h={4}
+                    />
                 </Tooltip>
             </HStack>
         </>
