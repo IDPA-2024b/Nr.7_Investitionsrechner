@@ -1,5 +1,5 @@
-
-import { DoughnutChart } from '../charts/Doughnut';
+import LastInvestmentData from "../../MockData/overalData.json"
+import TypeDiversity from "../../MockData/TypeDiversity.json"
 import {
     Box,
     Select,
@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { MainLineChart } from './MainLineChart';
+import { MainInfoSection } from './MainInfoSection';
 export function MainScreen() {
     const [dateRange, setDateRange] = useState('last7days');
 
@@ -31,14 +32,9 @@ export function MainScreen() {
                 >
                     Dashboard
                 </Text>
-                <MainLineChart />
+                <MainLineChart LastInvestmentData={LastInvestmentData} />
+                <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={TypeDiversity}/>
             </Box>
         </>
     )
 }
-/*
-<DoughnutChart investments={InvestmentPercentageData} />
-
-
-
-*/

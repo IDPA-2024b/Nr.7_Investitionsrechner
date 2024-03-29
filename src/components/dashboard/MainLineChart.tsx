@@ -1,11 +1,16 @@
 import { DateRange, LineChart } from "../charts/Line"
-import LastInvestmentData from "../../MockData/overalData.json"
 import { Box, Flex, Select, Text } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import {TriangleUpIcon, TriangleDownIcon, ChevronUpIcon, ChevronDownIcon} from '@chakra-ui/icons'
 import { TextWithTooltip } from "../TextWithTooltip"
 import { theme } from './../../configs/chakra';
-export function MainLineChart() {
+interface MainLineChartProps {
+    LastInvestmentData: {
+        date: string;
+        value: number;
+    }[]
+}
+export function MainLineChart({LastInvestmentData }: MainLineChartProps) {
     const [dateRange, setDateRange] = useState('last7days');
     const [firstValue, setFirstValue] = useState(0)
     const [lastValue, setLastValue] = useState(0)
