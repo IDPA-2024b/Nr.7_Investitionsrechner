@@ -1,5 +1,4 @@
-import React from 'react'
-import { Text, IconButton, Tooltip, HStack, Icon } from "@chakra-ui/react";
+import { Text, Tooltip, HStack, Icon } from "@chakra-ui/react";
 import { InfoOutlineIcon } from '@chakra-ui/icons';
 
 interface TextWithTooltipProps {

@@ -1,16 +1,12 @@
 import LastInvestmentData from "../../MockData/overalData.json"
 import TypeDiversity from "../../MockData/TypeDiversity.json"
 import {
-    Box,
     Flex,
-    Select,
     Text
 } from "@chakra-ui/react";
-import { useState } from "react";
 import { MainLineChart } from './MainLineChart';
 import { MainInfoSection } from './MainInfoSection';
 export function MainScreen() {
-    const [dateRange, setDateRange] = useState('last7days');
 
     return (
         <>
