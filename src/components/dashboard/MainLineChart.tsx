@@ -1,7 +1,7 @@
 import { DateRange, LineChart } from "../charts/Line"
 import { Box, Flex, Select, Text } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
-import {TriangleUpIcon, TriangleDownIcon, ChevronUpIcon, ChevronDownIcon} from '@chakra-ui/icons'
+import {TriangleUpIcon, TriangleDownIcon} from '@chakra-ui/icons'
 import { TextWithTooltip } from "../TextWithTooltip"
 import { theme } from './../../configs/chakra';
 interface MainLineChartProps {

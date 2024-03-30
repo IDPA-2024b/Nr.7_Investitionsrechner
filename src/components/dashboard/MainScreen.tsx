@@ -2,6 +2,7 @@ import LastInvestmentData from "../../MockData/overalData.json"
 import TypeDiversity from "../../MockData/TypeDiversity.json"
 import {
     Box,
+    Flex,
     Select,
     Text
 } from "@chakra-ui/react";
@@ -13,7 +14,7 @@ export function MainScreen() {
 
     return (
         <>
-            <Box
+            <Flex
                 width={'90%'}
                 minH={'90vh'}
                 backgroundColor={'#edf2f7'}
@@ -22,6 +23,8 @@ export function MainScreen() {
                 borderRadius="30px 0 0 0"
                 outline={' 1px solid #e2e8f0'}
                 px={10}
+                gap={4}
+                flexDir={"column"}
 
             >
                 <Text
@@ -34,7 +37,7 @@ export function MainScreen() {
                 </Text>
                 <MainLineChart LastInvestmentData={LastInvestmentData} />
                 <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={TypeDiversity}/>
-            </Box>
+            </Flex>
         </>
     )
 }
