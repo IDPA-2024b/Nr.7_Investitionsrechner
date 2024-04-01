@@ -46,7 +46,12 @@ export function DashboardPage() {
         currentDate.setDate(firstDate.getDate() + day);
 
         const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
-        const value = dataSet.historicalData.find(dataPoint => dataPoint.date === formattedDate)?.value;
+        
+        const value = dataSet.historicalData.find(dataPoint => {
+          const dataPointDate = new Date(dataPoint.date);
+          const formattedDataPointDate = `${dataPointDate.getFullYear()}-${(dataPointDate.getMonth() + 1).toString().padStart(2, '0')}-${dataPointDate.getDate().toString().padStart(2, '0')}`;
+          return formattedDataPointDate === formattedDate;
+        })?.value;
 
         const processedDataPoint = {
           date: formattedDate,
@@ -64,7 +69,6 @@ export function DashboardPage() {
       if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date !== formattedYesterday){
         processedDataSet.historicalData.push({date: formattedYesterday, value: processedDataSet.historicalData[processedDataSet.historicalData.length - 1].value});        
       }
-      console.log(processedDataSet.historicalData);
       processedDataSets.push(processedDataSet);
     });
 
@@ -107,6 +111,7 @@ export function DashboardPage() {
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
+  console.log(investments)
   return (
     <div>
 

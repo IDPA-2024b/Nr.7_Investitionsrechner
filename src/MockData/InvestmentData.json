@@ -31,7 +31,7 @@
         "symbol": "TSLA",
         "type": "Stock",
         "purchase": {
-            "date": "2023-02-28T22:00:00.000Z",
+            "date": "2022-03-21T22:00:00.000Z",
             "amount": 5,
             "price": 147.41
         },
@@ -63,19 +63,12 @@
             {
                 "date": "2023-04-29T22:00:00.000Z",
                 "value": 80000
+            },         
+               {
+                "date": "2024-03-27T22:00:00.000Z",
+                "value": 90000
             }
+
         ]
-    },
-        {
-        "id": "1",
-        "name": "Apple Investment",
-        "symbol": "AAPL",
-        "type": "Stock",
-        "purchase": {
-            "date": "2023-03-29T22:00:00.000Z",
-            "amount": 10,
-            "price": 171.5
-        },
-        "historicalData": "AAPL"
     }
 ]
