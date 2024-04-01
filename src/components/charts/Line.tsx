@@ -37,7 +37,7 @@ const options: ChartOptions<"line"> = {
   },
   scales: {
     y: {
-      beginAtZero: true,
+      beginAtZero: false,
     },
   },
   interaction: {
@@ -71,7 +71,7 @@ export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxD
     if (receiveData) {
       receiveData(
         parseFloat(aggregatedData[0]?.pricePerUnit.toFixed(2)) || 0,
-        parseFloat(aggregatedData[aggregatedData.length - 1]?.pricePerUnit.toFixed(2)) || 0
+        parseFloat(aggregatedData[aggregatedData.length - 2]?.pricePerUnit.toFixed(2)) || 0
       );
     }
   }, [aggregatedData]);
@@ -139,12 +139,7 @@ function aggregateData(data: PriceRecord[], range: DateRange, maxDataPoints: num
   const filteredData = data.filter((item) => new Date(item.date) >= startDate);
   const aggregatedData = averageValueByDay(filteredData, maxDataPoints);
 
-  // Add current date if it's not already in the array
-  const currentDate = new Date().toISOString().split('T')[0];
-  if (!aggregatedData.some((item) => item.date === currentDate)) {
-    const currentValue = getCurrentValue(data);
-    aggregatedData.push({ date: currentDate, pricePerUnit: currentValue });
-  }
+
 
   return aggregatedData;
 }
@@ -179,5 +174,5 @@ function averageValueByDay(data: PriceRecord[], maxDataPoints: number): PriceRec
 function getCurrentValue(data: PriceRecord[]): number {
   const currentDate = new Date().toISOString().split('T')[0];
   const currentRecord = data.find((item) => item.date === currentDate);
-  return currentRecord ? currentRecord.pricePerUnit : 0;
+  return currentRecord ? currentRecord.pricePerUnit : 33;
 }

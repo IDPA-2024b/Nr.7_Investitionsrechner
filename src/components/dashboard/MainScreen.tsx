@@ -1,15 +1,43 @@
 import LastInvestmentData from "../../MockData/overalData.json"
-import TypeDiversity from "../../MockData/TypeDiversity.json"
 import {
     Flex,
     Text
 } from "@chakra-ui/react";
 import { MainLineChart } from './MainLineChart';
 import { MainInfoSection } from './MainInfoSection';
-export function MainScreen() {
+export function MainScreen({ investmentDiversity, investments }) {
 
+    function sumTotalForMonth(dataSets) {
+        const totalForMonth = {};
+
+        // Calculate total price for each date
+        dataSets.forEach((dataSet) => {
+            dataSet.historicalData.forEach((dataPoint) => {
+                const date = dataPoint.date;
+                const value = dataPoint.value;
+
+                if (!totalForMonth[date]) {
+                    totalForMonth[date] = 0;
+                }
+
+                totalForMonth[date] += value;
+            });
+        });
+
+        // Transform totalForMonth object into an array of objects with the desired format
+        const result = Object.entries(totalForMonth).map(([date, value]) => ({
+            date,
+            value: parseFloat(value.toFixed(2)) // Round to two decimal places
+        }));
+
+        return result;
+    }
+
+
+    const processedDataSets = sumTotalForMonth(investments);
     return (
         <>
+        
             <Flex
                 width={'90%'}
                 minH={'90vh'}
@@ -31,9 +59,15 @@ export function MainScreen() {
                 >
                     Dashboard
                 </Text>
-                <MainLineChart LastInvestmentData={LastInvestmentData} />
-                <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={TypeDiversity}/>
+                <MainLineChart LastInvestmentData={processedDataSets} />
+                <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={investmentDiversity} />
             </Flex>
+            {processedDataSets.map((dataSet) => (
+                <div key={dataSet.date}>
+                    <p>Date: {dataSet.date}</p>
+                    <p>Value: {dataSet.value}</p>
+                </div>
+            ))}
         </>
     )
 }

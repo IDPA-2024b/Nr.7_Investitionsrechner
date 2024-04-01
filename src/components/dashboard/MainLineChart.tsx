@@ -62,14 +62,14 @@ export function MainLineChart({LastInvestmentData }: MainLineChartProps) {
                         fontWeight={"bold"}
                         fontSize={"2rem"}
                         >
-                            ${lastValue}
+                            ${lastValue.toLocaleString()}
                         </Text>
                         <Text
                         fontSize={"md"}
                         mt={-4}
                         color={percentageGain < 0 ? 'red.400' : 'green'}
                         >
-                             {amountGain > 0 ? '+' : ''} ${amountGain} ({percentageGain}%) {percentageGain < 0 ? <TriangleDownIcon color={'red.400'} /> : <TriangleUpIcon color={'green'} />}
+                             {amountGain > 0 ? '+' : ''} ${amountGain.toLocaleString()} ({percentageGain.toLocaleString()}%) {percentageGain < 0 ? <TriangleDownIcon color={'red.400'} /> : <TriangleUpIcon color={'green'} />}
 
                         </Text>
                     </Flex>

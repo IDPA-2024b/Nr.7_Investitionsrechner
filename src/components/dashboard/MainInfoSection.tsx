@@ -2,6 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import { MainPieChart } from './MainPieChart';
 import { TextWithTooltip } from '../TextWithTooltip';
 
+
 interface MainInfoSectionProps {
     LastInvestmentData: {
         date: string;
@@ -40,6 +41,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
         }
     ]
 
+
     return (
         <>
             <Flex
@@ -76,7 +78,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
                             fontSize={'2rem'}
                             fontWeight={'bold'}
                         >
-                            ${amountGain}
+                            ${amountGain.toLocaleString()}
                         </Text>
                     </Box>
 
@@ -102,7 +104,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
                             fontSize={'2rem'}
                             fontWeight={'bold'}
                         >
-                            ${lastValue}
+                            ${lastValue.toLocaleString()}
                         </Text>
                     </Box>
                 </Flex>

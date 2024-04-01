@@ -1,0 +1,15 @@
+[
+
+    {
+        "id": "3",
+        "name": "Tesla Fan Boyyyyyyyyy",
+        "symbol": "TSLA",
+        "type": "Stock",
+        "purchase": {
+            "date": "2023-02-29T22:00:00.000Z",
+            "amount": 5,
+            "price": 147.41
+        },
+        "historicalData": "TSLA"
+    }
+]
