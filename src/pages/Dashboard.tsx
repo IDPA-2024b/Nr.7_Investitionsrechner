@@ -24,6 +24,8 @@ export function DashboardPage() {
 
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
+    const formattedToday = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
+
     const processedDataSets = [];
 
     dataSets.forEach((dataSet, index) => {
@@ -34,7 +36,10 @@ export function DashboardPage() {
       };
       dataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date));
       const firstDate = new Date(dataSet.purchase.date);
-      const daysTillNow = Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)); // Calculate the number of days between the first date and today
+      let daysTillNow = Math.abs(Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)));
+      if (index > 1) {
+        daysTillNow = daysTillNow + 1;
+    }
       let lastKnownPrices = dataSet.purchase.price * dataSet.purchase.amount;
       for (let day = 0; day < daysTillNow; day++) {
         const currentDate = new Date(firstDate);
@@ -56,6 +61,11 @@ export function DashboardPage() {
         }
       }
       processedDataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date
+      console.log(index + " " +  processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date)
+      if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date === formattedToday){
+        // latest date
+
+      }
       processedDataSets.push(processedDataSet);
     });
 
@@ -86,8 +96,6 @@ export function DashboardPage() {
 
       // Filter out historical data entries before the purchase date
       historicalData = historicalData.filter(data => new Date(data.date) > purchaseDate);
-
-      // Add the purchase date as the first entry in the historical data array
       historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.amount * investment.purchase.price });
 
       return { ...investment, historicalData };
@@ -100,7 +108,6 @@ export function DashboardPage() {
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
-  console.log(eachDayInvestment);
   return (
     <div>
 
