@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { chakra } from "@chakra-ui/react";
-import { Header } from "../components/Header";
+import { DefaultHeader } from "../components/headers/Default";
 import { Footer } from "../components/Footer";
 import type { ILink } from "../types/link";
 
@@ -23,7 +23,7 @@ export function DefaultLayout() {
   return (
     <chakra.div width={"100%"}>
       <chakra.div minHeight={"100vh"} width={"100%"}>
-        <Header links={links} />
+        <DefaultHeader links={links} />
         <chakra.main>
           <Outlet />
         </chakra.main>

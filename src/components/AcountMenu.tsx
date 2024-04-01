@@ -10,15 +10,21 @@ import {
   Avatar,
   Text,
 } from "@chakra-ui/react";
-import type { PropsWithChildren } from "react";
+import { useEffect, type PropsWithChildren, useState } from "react";
+import { useAuth } from "../hooks/contexts";
 
-interface AcountMenuProps {
-  name?: string | null;
-  src?: string | null;
-  logout: () => void;
-}
+export function AcountMenu() {
+  const { logout, user } = useAuth();
+  const [name, setName] = useState<string | null>(null);
+  const [src, setSrc] = useState<string | null>(null);
 
-export function AcountMenu({ name, src, logout }: AcountMenuProps) {
+  useEffect(() => {
+    if (user) {
+      setName(user.isAnonymous ? "Annonymous" : user.displayName ?? user.email);
+      setSrc(user.photoURL);
+    }
+  }, [user]);
+
   return (
     <Menu>
       {({ onClose }) => (
