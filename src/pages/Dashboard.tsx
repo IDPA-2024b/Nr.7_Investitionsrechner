@@ -24,7 +24,9 @@ export function DashboardPage() {
 
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
-    const formattedToday = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const formattedYesterday = `${today.getFullYear()}-${(yesterday.getMonth() + 1).toString().padStart(2, '0')}-${yesterday.getDate().toString().padStart(2, '0')}`;
 
     const processedDataSets = [];
 
@@ -36,10 +38,8 @@ export function DashboardPage() {
       };
       dataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date));
       const firstDate = new Date(dataSet.purchase.date);
-      let daysTillNow = Math.abs(Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)));
-      if (index > 1) {
-        daysTillNow = daysTillNow + 1;
-    }
+      const daysTillNow = Math.abs(Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)));
+
       let lastKnownPrices = dataSet.purchase.price * dataSet.purchase.amount;
       for (let day = 0; day < daysTillNow; day++) {
         const currentDate = new Date(firstDate);
@@ -61,11 +61,10 @@ export function DashboardPage() {
         }
       }
       processedDataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date
-      console.log(index + " " +  processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date)
-      if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date === formattedToday){
-        // latest date
-
+      if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date !== formattedYesterday){
+        processedDataSet.historicalData.push({date: formattedYesterday, value: processedDataSet.historicalData[processedDataSet.historicalData.length - 1].value});        
       }
+      console.log(processedDataSet.historicalData);
       processedDataSets.push(processedDataSet);
     });
 

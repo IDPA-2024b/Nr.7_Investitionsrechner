@@ -1,4 +1,6 @@
 [
+    
+
     {
         "id": "1",
         "name": "Apple Investment",
@@ -63,5 +65,17 @@
                 "value": 80000
             }
         ]
+    },
+        {
+        "id": "1",
+        "name": "Apple Investment",
+        "symbol": "AAPL",
+        "type": "Stock",
+        "purchase": {
+            "date": "2023-03-29T22:00:00.000Z",
+            "amount": 10,
+            "price": 171.5
+        },
+        "historicalData": "AAPL"
     }
 ]
