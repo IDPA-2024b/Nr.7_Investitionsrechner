@@ -71,7 +71,7 @@ export function LineChart({ data: rawData, dateRange = DateRange.Last7Days, maxD
     if (receiveData) {
       receiveData(
         parseFloat(aggregatedData[0]?.pricePerUnit.toFixed(2)) || 0,
-        parseFloat(aggregatedData[aggregatedData.length - 2]?.pricePerUnit.toFixed(2)) || 0
+        parseFloat(aggregatedData[aggregatedData.length - 1]?.pricePerUnit.toFixed(2)) || 0
       );
     }
   }, [aggregatedData]);

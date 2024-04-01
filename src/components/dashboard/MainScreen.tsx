@@ -24,7 +24,6 @@ export function MainScreen({ investmentDiversity, investments }) {
             });
         });
 
-        // Transform totalForMonth object into an array of objects with the desired format
         const result = Object.entries(totalForMonth).map(([date, value]) => ({
             date,
             value: parseFloat(value.toFixed(2)) // Round to two decimal places
