@@ -2,6 +2,7 @@
 import { type FirebaseOptions, initializeApp } from "firebase/app";
 import { GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection } from "firebase/firestore";
+import { getDatabase } from "firebase/database";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -18,6 +19,9 @@ const firebaseConfig: FirebaseOptions = {
 const app = initializeApp(firebaseConfig);
 // Initialize Auth
 export const googleProvider = new GoogleAuthProvider();
+// Initialize Realtime Database
+export const database = getDatabase(app); 
+
 // Initialize Firestore
 const db = getFirestore(app);
 // users/<userId>/investments/<investmentId>
