@@ -58,7 +58,7 @@ export function MainScreen({ investmentDiversity, investments }) {
                 >
                     Dashboard
                 </Text>
-                <MainLineChart LastInvestmentData={processedDataSets} />
+                <MainLineChart LastInvestmentData={processedDataSets} investments={investments} />
                 <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={investmentDiversity} />
             </Flex>
             {processedDataSets.map((dataSet) => (

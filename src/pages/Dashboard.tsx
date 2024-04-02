@@ -99,8 +99,8 @@ export function DashboardPage() {
 
       // Filter out historical data entries before the purchase date
       historicalData = historicalData.filter(data => new Date(data.date) > purchaseDate);
-      historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.amount * investment.purchase.price });
-
+      historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.amount * investment.purchase.price });  
+      
       return { ...investment, historicalData };
     });
 
@@ -111,7 +111,7 @@ export function DashboardPage() {
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
-  console.log(investments)
+
   return (
     <div>
 
