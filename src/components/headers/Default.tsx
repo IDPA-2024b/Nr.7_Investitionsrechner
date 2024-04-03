@@ -2,27 +2,23 @@ import {
   Button,
   Flex,
   HStack,
-  Heading,
   IconButton,
   chakra,
   useDisclosure,
 } from "@chakra-ui/react";
-import {
-  type To,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
+import { type To, useLocation, useNavigate } from "react-router-dom";
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import type { ILink } from "../types/link";
-import { useAuth } from "../hooks/contexts";
-import { AcountMenu } from "./AcountMenu";
+import type { ILink } from "../../types/link";
+import { useAuth } from "../../hooks/contexts";
+import { AcountMenu } from "../AcountMenu";
+import { Logo } from "../Logo";
 
 interface HeaderProps {
   links: ILink[];
 }
 
-export function Header({ links }: HeaderProps) {
-  const { user, logout } = useAuth();
+export function DefaultHeader({ links }: HeaderProps) {
+  const { user } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -33,21 +29,14 @@ export function Header({ links }: HeaderProps) {
   }
 
   function displayUserActions() {
-    if (user) {
-      const name = user.isAnonymous
-        ? "Annonymous"
-        : user.displayName ?? user.email;
-      return <AcountMenu name={name} src={user.photoURL} logout={logout} />;
-    }
+    if (user) return <AcountMenu />;
 
     return (
       <Button
         size={{ base: "sm", md: "md" }}
         colorScheme="teal"
         _hover={{ transform: "scale(1.05)" }}
-        onClick={() =>
-          handleNavigate("/login")
-        }
+        onClick={() => handleNavigate("/login")}
       >
         Login
       </Button>
@@ -79,13 +68,7 @@ export function Header({ links }: HeaderProps) {
           }}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={6} />}
         />
-        <Heading
-          size="lg"
-          _hover={{ cursor: "pointer", transform: "scale(1.05)" }}
-          onClick={() => handleNavigate("/")}
-        >
-          InView
-        </Heading>
+        <Logo onClick={() => handleNavigate("/")} />
         <HStack gap={12} display={{ base: "none", md: "flex" }}>
           {links.map((link) => (
             <Button
