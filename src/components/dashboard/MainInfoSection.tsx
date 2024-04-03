@@ -1,23 +1,47 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import { MainPieChart } from './MainPieChart';
 import { TextWithTooltip } from '../TextWithTooltip';
+import { Investment } from '../../types/investment';
 
 
 interface MainInfoSectionProps {
-    LastInvestmentData: {
-        date: string;
-        value: number;
-    }[],
-    TypeDiversity: {
-        type: string;
-        amount: number;
-    }[]
+    investments: Investment[]
 }
 
-export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoSectionProps) {
-    const firstValue = LastInvestmentData[0].value.toFixed(2);
-    const lastValue = LastInvestmentData[LastInvestmentData.length - 1].value.toFixed(2);
-    const amountGain = parseFloat((Number(lastValue) - Number(firstValue)).toFixed(2));
+export function MainInfoSection({ investments }: MainInfoSectionProps) {
+    const lastValue = 3
+    const investmentDiversity = [];
+
+    for (const investment of investments) {
+      const type = investment.type;
+      const amount = investment.purchase.amount;
+      const cost = investment.purchase.price;
+      const total = amount * cost;
+  
+      const index = investmentDiversity.findIndex(item => item.type === type);
+      if (index !== -1) {
+        investmentDiversity[index].amount += total;
+      } else {
+        investmentDiversity.push({ type: type, amount: total });
+      }
+    }
+
+    const investmentsWithSoldData = investments.filter(investment => investment.sale !== undefined);
+
+    const onlySoldSpent = investmentsWithSoldData.reduce((total, investment) => {
+        const purchasePrice = investment.purchase.price;
+        const purchaseAmount = investment.purchase.amount;
+        return total + (purchasePrice * purchaseAmount);
+    }, 0);
+
+
+    const totalGain = investmentsWithSoldData.reduce((total, investment) => {
+        const salePrice = investment.sale.price;
+        const saleAmount = investment.sale.amount;
+        return total + (salePrice * saleAmount);
+    }, 0);
+
+    const profit = totalGain - onlySoldSpent;
     const top5Investments = [
         {
             name: 'Apple',
@@ -78,7 +102,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
                             fontSize={'2rem'}
                             fontWeight={'bold'}
                         >
-                            ${amountGain.toLocaleString()}
+                            ${totalGain.toLocaleString()}
                         </Text>
                     </Box>
 
@@ -104,7 +128,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
                             fontSize={'2rem'}
                             fontWeight={'bold'}
                         >
-                            ${lastValue.toLocaleString()}
+                            ${profit.toLocaleString()}
                         </Text>
                     </Box>
                 </Flex>
@@ -156,7 +180,7 @@ export function MainInfoSection({ LastInvestmentData, TypeDiversity }: MainInfoS
                 >
 
 
-                    <MainPieChart TypeDiversity={TypeDiversity} />
+                    <MainPieChart TypeDiversity={investmentDiversity} />
                 </Box>
             </Flex >
         </>

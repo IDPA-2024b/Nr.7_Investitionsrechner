@@ -59,7 +59,7 @@ export function MainScreen({ investmentDiversity, investments }) {
                     Dashboard
                 </Text>
                 <MainLineChart LastInvestmentData={processedDataSets} investments={investments} />
-                <MainInfoSection LastInvestmentData={LastInvestmentData} TypeDiversity={investmentDiversity} />
+                <MainInfoSection  investments={investments} />
             </Flex>
             {processedDataSets.map((dataSet) => (
                 <div key={dataSet.date}>

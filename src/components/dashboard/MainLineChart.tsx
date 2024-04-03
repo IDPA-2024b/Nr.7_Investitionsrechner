@@ -46,7 +46,6 @@ export function MainLineChart({ LastInvestmentData, investments }: MainLineChart
                 break;
         }
         let totalPaied = 0
-        console.log("date", date)
         const filteredInvestments = investments.filter((investment) => {
             const investmentDate = new Date(investment.purchase.date);
             if (investmentDate >= date) {
@@ -56,7 +55,6 @@ export function MainLineChart({ LastInvestmentData, investments }: MainLineChart
         return totalPaied;
     }
     const tmp = calculateAmountSpentInTimeRange(investments, dateRange as DateRange)
-    console.log("tmp", tmp)
     function calculatePercentageChange(firstValue: number, lastValue: number) {
         if (firstValue === 0) {
             return 0;
