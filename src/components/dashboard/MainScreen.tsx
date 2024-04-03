@@ -5,7 +5,7 @@ import {
 } from "@chakra-ui/react";
 import { MainLineChart } from './MainLineChart';
 import { MainInfoSection } from './MainInfoSection';
-export function MainScreen({ investmentDiversity, investments }) {
+export function MainScreen({ investments }) {
 
     function sumTotalForMonth(dataSets) {
         const totalForMonth = {};
