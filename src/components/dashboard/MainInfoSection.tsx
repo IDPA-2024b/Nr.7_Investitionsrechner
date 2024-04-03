@@ -14,10 +14,10 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
 
     for (const investment of investments) {
       const type = investment.type;
-      const amount = investment.purchase.amount;
+      const amount = investment.purchase.units;
       const cost = investment.purchase.price;
       const total = amount * cost;
-  
+    
       const index = investmentDiversity.findIndex(item => item.type === type);
       if (index !== -1) {
         investmentDiversity[index].amount += total;
@@ -27,21 +27,23 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
     }
 
     const investmentsWithSoldData = investments.filter(investment => investment.sale !== undefined);
-
+    console.log(investmentsWithSoldData);
     const onlySoldSpent = investmentsWithSoldData.reduce((total, investment) => {
         const purchasePrice = investment.purchase.price;
-        const purchaseAmount = investment.purchase.amount;
+        const purchaseAmount = investment.purchase.units;
         return total + (purchasePrice * purchaseAmount);
     }, 0);
 
-
     const totalGain = investmentsWithSoldData.reduce((total, investment) => {
         const salePrice = investment.sale.price;
-        const saleAmount = investment.sale.amount;
+        console.log(salePrice);
+        const saleAmount = investment.sale.units;
+        console.log(saleAmount);
         return total + (salePrice * saleAmount);
     }, 0);
 
     const profit = totalGain - onlySoldSpent;
+
     const top5Investments = [
         {
             name: 'Apple',
@@ -138,7 +140,7 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
                     borderRadius="30px"
                     outline={' 1px solid #e2e8f0'}
                     px={10}
-                    w="calc(33.33% - 1.33rem)" // Set the width of the box to 33.33% minus the gap
+                    w="calc(33.33% - 1.33rem)"
                     minW={'340px'}
 
                 >

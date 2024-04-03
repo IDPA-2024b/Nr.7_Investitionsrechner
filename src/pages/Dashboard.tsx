@@ -6,21 +6,8 @@ import StockData from "../MockData/StockData.json";
 export function DashboardPage() {
   const [investments, setInvestments] = useState([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
-  const investmentDiversity = [];
 
-  for (const investment of InvestmentData) {
-    const type = investment.type;
-    const amount = investment.purchase.amount;
-    const cost = investment.purchase.price;
-    const total = amount * cost;
 
-    const index = investmentDiversity.findIndex(item => item.type === type);
-    if (index !== -1) {
-      investmentDiversity[index].amount += total;
-    } else {
-      investmentDiversity.push({ type: type, amount: total });
-    }
-  }
 
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
@@ -40,7 +27,7 @@ export function DashboardPage() {
       const firstDate = new Date(dataSet.purchase.date);
       const daysTillNow = Math.abs(Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)));
 
-      let lastKnownPrices = dataSet.purchase.price * dataSet.purchase.amount;
+      let lastKnownPrices = dataSet.purchase.price * dataSet.purchase.units;
       for (let day = 0; day < daysTillNow; day++) {
         const currentDate = new Date(firstDate);
         currentDate.setDate(firstDate.getDate() + day);
@@ -88,18 +75,18 @@ export function DashboardPage() {
 
       if (typeof investment.historicalData === 'string') {
         historicalData = StockData[investment.historicalData].map(data => {
-          const value = (data.value * investment.purchase.amount).toFixed(2);
+          const value = (data.value * investment.purchase.units).toFixed(2);
           return { date: data.date, value: parseFloat(value) };
         });
       } else {
         historicalData = investment.historicalData.map(data => {
-          return { date: data.date, value: data.value * investment.purchase.amount };
+          return { date: data.date, value: data.value * investment.purchase.units };
         });
       }
 
       // Filter out historical data entries before the purchase date
       historicalData = historicalData.filter(data => new Date(data.date) > purchaseDate);
-      historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.amount * investment.purchase.price });  
+      historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.units * investment.purchase.price });  
       
       return { ...investment, historicalData };
     });
@@ -115,7 +102,7 @@ export function DashboardPage() {
   return (
     <div>
 
-      <MainScreen investmentDiversity={investmentDiversity} investments={eachDayInvestment} />
+      <MainScreen investments={eachDayInvestment} />
 
     </div>
   );
