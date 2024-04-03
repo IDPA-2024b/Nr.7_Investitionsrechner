@@ -7,7 +7,31 @@ export function DashboardPage() {
   const [investments, setInvestments] = useState([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
 
+  useEffect(() => {
+    const updatedInvestments = InvestmentData.map(investment => {
+      const purchaseDate = new Date(investment.purchase.date);
+      let historicalData = [];
 
+      if (typeof investment.historicalData === 'string') {
+        historicalData = StockData[investment.historicalData].map(data => {
+          const pricePerUnit = (data.pricePerUnit * investment.purchase.units).toFixed(2);
+          return { date: data.date, pricePerUnit: parseFloat(pricePerUnit) };
+        });
+      } else {
+        historicalData = investment.historicalData.map(data => {
+          return { date: data.date, pricePerUnit: data.pricePerUnit * investment.purchase.units };
+        });
+      }
+
+      // Filter out historical data entries before the purchase date
+      historicalData = historicalData.filter(data => new Date(data.date) > purchaseDate);
+      historicalData.unshift({ date: investment.purchase.date, pricePerUnit: investment.purchase.units * investment.purchase.pricePerUnit });  
+      
+      return { ...investment, historicalData };
+    });
+
+    setInvestments(updatedInvestments);
+  }, []);
 
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
@@ -27,34 +51,34 @@ export function DashboardPage() {
       const firstDate = new Date(dataSet.purchase.date);
       const daysTillNow = Math.abs(Math.floor((today - firstDate) / (24 * 60 * 60 * 1000)));
 
-      let lastKnownPrices = dataSet.purchase.price * dataSet.purchase.units;
+      let lastKnownPrices = dataSet.purchase.pricePerUnit * dataSet.purchase.units;
       for (let day = 0; day < daysTillNow; day++) {
         const currentDate = new Date(firstDate);
         currentDate.setDate(firstDate.getDate() + day);
 
         const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')}`;
         
-        const value = dataSet.historicalData.find(dataPoint => {
+        const pricePerUnit = dataSet.historicalData.find(dataPoint => {
           const dataPointDate = new Date(dataPoint.date);
           const formattedDataPointDate = `${dataPointDate.getFullYear()}-${(dataPointDate.getMonth() + 1).toString().padStart(2, '0')}-${dataPointDate.getDate().toString().padStart(2, '0')}`;
           return formattedDataPointDate === formattedDate;
-        })?.value;
+        })?.pricePerUnit;
 
         const processedDataPoint = {
           date: formattedDate,
-          value: value !== undefined ? value : lastKnownPrices
+          pricePerUnit: pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices
         };
 
         processedDataSet.historicalData.push(processedDataPoint);
 
         // Update the last known price for the current date
-        if (value !== undefined) {
-          lastKnownPrices = value;
+        if (pricePerUnit !== undefined) {
+          lastKnownPrices = pricePerUnit;
         }
       }
       processedDataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date
       if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date !== formattedYesterday){
-        processedDataSet.historicalData.push({date: formattedYesterday, value: processedDataSet.historicalData[processedDataSet.historicalData.length - 1].value});        
+        processedDataSet.historicalData.push({date: formattedYesterday, pricePerUnit: processedDataSet.historicalData[processedDataSet.historicalData.length - 1].pricePerUnit});        
       }
       processedDataSets.push(processedDataSet);
     });
@@ -68,31 +92,7 @@ export function DashboardPage() {
 
 
 
-  useEffect(() => {
-    const updatedInvestments = InvestmentData.map(investment => {
-      const purchaseDate = new Date(investment.purchase.date);
-      let historicalData = [];
 
-      if (typeof investment.historicalData === 'string') {
-        historicalData = StockData[investment.historicalData].map(data => {
-          const value = (data.value * investment.purchase.units).toFixed(2);
-          return { date: data.date, value: parseFloat(value) };
-        });
-      } else {
-        historicalData = investment.historicalData.map(data => {
-          return { date: data.date, value: data.value * investment.purchase.units };
-        });
-      }
-
-      // Filter out historical data entries before the purchase date
-      historicalData = historicalData.filter(data => new Date(data.date) > purchaseDate);
-      historicalData.unshift({ date: investment.purchase.date, value: investment.purchase.units * investment.purchase.price });  
-      
-      return { ...investment, historicalData };
-    });
-
-    setInvestments(updatedInvestments);
-  }, []);
 
 
   useEffect(() => {

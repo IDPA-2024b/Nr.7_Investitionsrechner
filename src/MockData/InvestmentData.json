@@ -9,12 +9,12 @@
         "purchase": {
             "date": "2023-03-29T22:00:00.000Z",
             "units": 10,
-            "price": 171.5
+            "pricePerUnit": 171.5
         },
         "sale": {
             "date": "2023-04-29T22:00:00.000Z",
             "units": 10,
-            "price": 201.5
+            "pricePerUnit": 201.5
         },
         "historicalData": "AAPL"
     },
@@ -26,7 +26,7 @@
         "purchase": {
             "date": "2023-04-29T22:00:00.000Z",
             "units": 20,
-            "price": 21.44
+            "pricePerUnit": 21.44
         },
         "historicalData": "ZWS"
     },
@@ -38,7 +38,7 @@
         "purchase": {
             "date": "2022-03-21T22:00:00.000Z",
             "units": 5,
-            "price": 147.41
+            "pricePerUnit": 147.41
         },
         "historicalData": "TSLA"
     },
@@ -50,28 +50,28 @@
         "purchase": {
             "date": "2023-01-29T22:00:00.000Z",
             "units": 0.05,
-            "price": 50000
+            "pricePerUnit": 50000
         },
         "historicalData": [
             {
                 "date": "2023-01-29T22:00:00.000Z",
-                "value": 50000
+                "pricePerUnit": 50000
             },
             {
                 "date": "2023-02-29T22:00:00.000Z",
-                "value": 60000
+                "pricePerUnit": 60000
             },
             {
                 "date": "2023-03-29T22:00:00.000Z",
-                "value": 70000
+                "pricePerUnit": 70000
             },
             {
                 "date": "2023-04-29T22:00:00.000Z",
-                "value": 80000
+                "pricePerUnit": 80000
             },         
                {
                 "date": "2024-03-27T22:00:00.000Z",
-                "value": 90000
+                "pricePerUnit": 90000
             }
 
         ]
