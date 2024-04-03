@@ -14,7 +14,7 @@ export function MainScreen({ investments }) {
         dataSets.forEach((dataSet) => {
             dataSet.historicalData.forEach((dataPoint) => {
                 const date = dataPoint.date;
-                const value = dataPoint.value;
+                const value = dataPoint.pricePerUnit;
 
                 if (!totalForMonth[date]) {
                     totalForMonth[date] = 0;
@@ -30,10 +30,11 @@ export function MainScreen({ investments }) {
         }));
 
         return result;
-    }
+    }   
 
 
     const processedDataSets = sumTotalForMonth(investments);
+    console.log(processedDataSets)
     return (
         <>
         

@@ -15,7 +15,7 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
     for (const investment of investments) {
       const type = investment.type;
       const amount = investment.purchase.units;
-      const cost = investment.purchase.price;
+      const cost = investment.purchase.pricePerUnit;
       const total = amount * cost;
     
       const index = investmentDiversity.findIndex(item => item.type === type);
@@ -27,18 +27,15 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
     }
 
     const investmentsWithSoldData = investments.filter(investment => investment.sale !== undefined);
-    console.log(investmentsWithSoldData);
     const onlySoldSpent = investmentsWithSoldData.reduce((total, investment) => {
-        const purchasePrice = investment.purchase.price;
+        const purchasePrice = investment.purchase.pricePerUnit;
         const purchaseAmount = investment.purchase.units;
         return total + (purchasePrice * purchaseAmount);
     }, 0);
 
     const totalGain = investmentsWithSoldData.reduce((total, investment) => {
-        const salePrice = investment.sale.price;
-        console.log(salePrice);
+        const salePrice = investment.sale.pricePerUnit;
         const saleAmount = investment.sale.units;
-        console.log(saleAmount);
         return total + (salePrice * saleAmount);
     }, 0);
 
