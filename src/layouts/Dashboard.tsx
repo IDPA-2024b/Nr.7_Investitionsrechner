@@ -3,6 +3,7 @@ import {
   chakra,
   useBreakpointValue,
   useDisclosure,
+  useOutsideClick,
 } from "@chakra-ui/react";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { DashboardHeader } from "../components/headers/Dashboard";
@@ -17,9 +18,14 @@ export function DashboardLayout() {
     }
   );
   const headerRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState<number>(0);
-  const { onToggle, isOpen, onOpen, onClose } = useDisclosure({
+  const { isOpen, onOpen, onClose } = useDisclosure({
     defaultIsOpen: defaultSidebarState,
+  });
+  useOutsideClick({
+    ref: sidebarRef,
+    handler: handleOutsideClick,
   });
 
   useEffect(() => {
@@ -33,11 +39,21 @@ export function DashboardLayout() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  function handleOutsideClick(e: Event) {
+    if (isOpen && !defaultSidebarState) {
+      onClose();
+      e.preventDefault();
+    }
+  }
+
   return (
     <chakra.div height={"100vh"}>
       {/* Header */}
       <chakra.div ref={headerRef}>
-        <DashboardHeader onMenuClick={onToggle} isOpen={isOpen} />
+        <DashboardHeader
+          onMenuClick={isOpen ? onClose : onOpen}
+          isOpen={isOpen}
+        />
       </chakra.div>
       <chakra.div
         display={"flex"}
@@ -46,15 +62,18 @@ export function DashboardLayout() {
       >
         {/* Sidebar */}
         <Flex
-          justify={"center"}
-          width={{ base: "100%", md: "auto" }}
+          ref={sidebarRef}
+          width={"fit-content"}
+          zIndex={{ base: 1, md: 0 }}
+          height={"100%"}
+          bg={"white"}
+          position={{ base: "fixed", md: "relative" }}
           display={{ base: isOpen ? "flex" : "none", md: "flex" }}
         >
           <Sidebar isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
         </Flex>
         {/* Main Content */}
         <chakra.main
-          display={{ base: isOpen ? "none" : "block", md: "block" }}
           flexGrow={1}
           height={"100%"}
           overflow={"auto"}
