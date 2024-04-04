@@ -18,14 +18,14 @@ import { useToast } from "@chakra-ui/react";
 
 interface AuthContextData {
   loginWithGoogle: () => Promise<User | undefined>;
-  loginAnnonymously: () => Promise<User | undefined>;
+  loginAnonymously: () => Promise<User | undefined>;
   logout: () => Promise<void>;
   user: User | null;
 }
 
 export const AuthContext = createContext<AuthContextData>({
   loginWithGoogle: async () => undefined,
-  loginAnnonymously: async () => undefined,
+  loginAnonymously: async () => undefined,
   logout: async () => {},
   user: null,
 });
@@ -96,7 +96,7 @@ export function AuthProvider({ children }: PropsWithChildren<object>) {
     <AuthContext.Provider
       value={{
         loginWithGoogle,
-        loginAnnonymously,
+        loginAnonymously: loginAnnonymously,
         user,
         logout,
       }}

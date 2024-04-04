@@ -1,6 +1,6 @@
 import { Button, Container, Heading, VStack, useToast } from "@chakra-ui/react";
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../hooks/contexts";
 import { useNavigate } from "react-router-dom";
 import type { User } from "firebase/auth";
@@ -13,25 +13,25 @@ type AuthProcessingStates =
 export function LoginPage() {
   const toast = useToast();
   const navigate = useNavigate();
-  const { loginWithGoogle, loginAnnonymously } = useAuth();
+  const { loginWithGoogle, loginAnonymously, user } = useAuth();
   const [processing, setProcessing] = useState<AuthProcessingStates>(null);
 
   async function handleGoogleLogin() {
     setProcessing("processing-google-auth");
     const user = await loginWithGoogle();
     setProcessing(null);
-    if (user) handleSuccessfullLogin(user);
+    if (user) handleSuccessfulLogin(user);
   }
 
-  async function handleAnnonymousLogin() {
+  async function handleAnonymousLogin() {
     setProcessing("processing-anonymous-auth");
-    const user = await loginAnnonymously();
+    const user = await loginAnonymously();
     setProcessing(null);
-    if (user) handleSuccessfullLogin(user);
+    if (user) handleSuccessfulLogin(user);
   }
 
-  function handleSuccessfullLogin(user: User) {
-    const name = user.isAnonymous ? "Annonymous" : user.displayName ?? "User";
+  function handleSuccessfulLogin(user: User) {
+    const name = user.isAnonymous ? "Anonymous" : user.displayName ?? "User";
     toast({
       title: "Logged in",
       description: `Welcome, ${name}!`,
@@ -39,6 +39,12 @@ export function LoginPage() {
     });
     navigate("/dashboard");
   }
+
+  useEffect(() => {
+    if (user) {
+      handleSuccessfulLogin(user);
+    }
+  }, [user]);
 
   return (
     <Container>
@@ -61,9 +67,9 @@ export function LoginPage() {
             colorScheme="teal"
             isDisabled={!!processing}
             isLoading={processing === "processing-anonymous-auth"}
-            onClick={handleAnnonymousLogin}
+            onClick={handleAnonymousLogin}
           >
-            Annonymus
+            Anonyms
           </Button>
         </VStack>
       </VStack>
