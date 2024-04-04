@@ -34,7 +34,6 @@ export function MainScreen({ investments }) {
 
 
     const processedDataSets = sumTotalForMonth(investments);
-    console.log(processedDataSets)
     return (
         <>
         
@@ -62,12 +61,7 @@ export function MainScreen({ investments }) {
                 <MainLineChart LastInvestmentData={processedDataSets} investments={investments} />
                 <MainInfoSection  investments={investments} />
             </Flex>
-            {processedDataSets.map((dataSet) => (
-                <div key={dataSet.date}>
-                    <p>Date: {dataSet.date}</p>
-                    <p>Value: {dataSet.value}</p>
-                </div>
-            ))}
+
         </>
     )
 }

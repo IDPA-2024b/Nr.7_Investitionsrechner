@@ -39,8 +39,15 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
         return total + (salePrice * saleAmount);
     }, 0);
 
-    const profit = totalGain - onlySoldSpent;
-
+    const top5investmentWithHighestPurchasePrice = investments
+      .sort((a, b) => (b.purchase.pricePerUnit * b.purchase.units) - (a.purchase.pricePerUnit * a.purchase.units))
+      .slice(0, 5);
+    const top5InvestmentsWithHighestPurchasePrice = top5investmentWithHighestPurchasePrice.map(investment => ({
+        name: investment.name,
+        amount: investment.purchase.pricePerUnit * investment.purchase.units,
+        id: investment.id
+    }));
+      const profit = totalGain - onlySoldSpent;
     const top5Investments = [
         {
             name: 'Apple',
@@ -153,7 +160,7 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
                         mt={4}
                         fontSize={'lg'}
                     >
-                        {top5Investments.map((investment, index) => (
+                        {top5InvestmentsWithHighestPurchasePrice.map((investment, index) => (
                             <Flex
                                 key={index}
                                 justifyContent={'space-between'}

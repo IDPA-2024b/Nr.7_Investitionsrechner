@@ -76,7 +76,7 @@ export function DashboardPage() {
           lastKnownPrices = pricePerUnit;
         }
       }
-      processedDataSet.historicalData.sort((a, b) => new Date(a.date) - new Date(b.date)); // Sort by date
+      processedDataSet.historicalData.sort((a: { date: string | number | Date; }, b: { date: string | number | Date; }) => new Date(a.date) - new Date(b.date)); // Sort by date
       if(processedDataSet.historicalData[processedDataSet.historicalData.length - 1].date !== formattedYesterday){
         processedDataSet.historicalData.push({date: formattedYesterday, pricePerUnit: processedDataSet.historicalData[processedDataSet.historicalData.length - 1].pricePerUnit});        
       }
