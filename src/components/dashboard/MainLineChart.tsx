@@ -49,7 +49,7 @@ export function MainLineChart({ LastInvestmentData, investments }: MainLineChart
         const filteredInvestments = investments.filter((investment) => {
             const investmentDate = new Date(investment.purchase.date);
             if (investmentDate >= date) {
-                totalPaied += investment.purchase.price * investment.purchase.units;
+                totalPaied += investment.purchase.pricePerUnit * investment.purchase.units;
             }
         });
         return totalPaied;
