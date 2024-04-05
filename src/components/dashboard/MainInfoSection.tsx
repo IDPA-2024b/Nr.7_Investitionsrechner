@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { MainPieChart } from "./MainPieChart";
 import { TitleWithTooltip } from "../TitleWithTooltip";
-import { Investment } from "../../types/investment";
+import type { Investment } from "../../types/investment";
 
 interface MainInfoSectionProps {
   investments: Investment[];
