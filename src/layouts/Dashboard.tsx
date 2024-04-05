@@ -81,6 +81,8 @@ export function DashboardLayout() {
           borderLeftWidth={1}
           borderTopLeftRadius={{ base: 0, md: "2xl" }}
           bg={"gray.100"}
+          px={{ base: 4, md: 8 }}
+          py={{ base: 4, md: 5 }}
         >
           <Outlet />
         </chakra.main>

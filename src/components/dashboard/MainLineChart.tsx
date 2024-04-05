@@ -1,10 +1,11 @@
-import { DateRange, LineChart } from "../charts/Line";
+import { LineChart } from "../charts/Line";
 import { Box, Flex, Select, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { TriangleUpIcon, TriangleDownIcon } from "@chakra-ui/icons";
 import { TitleWithTooltip } from "../TitleWithTooltip";
 import { theme } from "./../../configs/chakra";
 import type { Investment } from "./../../types/investment";
+import { DateRange } from "../../types/chart";
 interface MainLineChartProps {
   LastInvestmentData: {
     date: string;

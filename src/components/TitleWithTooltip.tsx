@@ -12,7 +12,11 @@ export function TitleWithTooltip({ title, tooltip }: TitleWithTooltipProps) {
   return (
     <>
       <Flex align={"center"} gap={2}>
-        <Heading fontWeight="bold" fontSize={"x-large"}>
+        <Heading
+          fontWeight="bold"
+          whiteSpace={"nowrap"}
+          fontSize={{ base: "large", md: "x-large" }}
+        >
           {title}
         </Heading>
         <Tooltip hasArrow label={tooltip} fontSize="sm">
