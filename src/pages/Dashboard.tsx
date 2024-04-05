@@ -148,6 +148,26 @@ export function DashboardPage() {
     return processedDataSets;
   }
 
+
+
+  const investmentsWithSoldData = investments.filter(
+    (investment) => investment.sale !== undefined
+  );
+  const onlySoldSpent = investmentsWithSoldData.reduce((total, investment) => {
+    const purchasePrice = investment.purchase.pricePerUnit;
+    const purchaseAmount = investment.purchase.units;
+    return total + purchasePrice * purchaseAmount;
+  }, 0);
+
+  const revenue = investmentsWithSoldData.reduce((total, investment) => {
+    const salePrice = investment.sale.pricePerUnit;
+    const saleAmount = investment.sale.units;
+    return total + salePrice * saleAmount;
+  }, 0);
+
+
+
+  const profit = revenue - onlySoldSpent;
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
@@ -169,8 +189,9 @@ export function DashboardPage() {
             width={"100%"}
             direction={{ base: "column", md: "row", lg: "column" }}
           >
-            <ProfitSection value={123.4} percentage={-0.5} />
-            <RevenueSection value={123.4} />
+            {/* /TODO: i dont fucking know what you mean with the percentage leo / idk how to calculate */}
+            <ProfitSection value={profit} percentage={-0.5} />
+            <RevenueSection value={revenue} />
           </Flex>
           {/* Top Investments and Diversity */}
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
