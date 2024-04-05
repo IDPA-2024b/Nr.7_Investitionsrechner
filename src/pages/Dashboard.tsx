@@ -49,7 +49,9 @@ export function DashboardPage() {
 
     setInvestments(updatedInvestments);
   }, []);
-
+  console.log("investments", investments);
+  console.log("eachDayInvestment", eachDayInvestment);
+  // adding each day betwenn an start date and today for each investment with date and price
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
     const yesterday = new Date(today);
@@ -155,7 +157,7 @@ export function DashboardPage() {
       {/* TODO: find best max width*/}
       <VStack align={"start"} gap={8}>
         <Heading size={"lg"}>Dashboard</Heading>
-        <MarketValueSection defaultDateRange={DateRange.All} />
+        <MarketValueSection defaultDateRange={DateRange.All} investments={eachDayInvestment}  />
         <Flex
           gap={"inherit"}
           width={"100%"}

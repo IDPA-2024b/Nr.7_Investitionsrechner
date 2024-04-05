@@ -6,6 +6,7 @@ import { LineChart } from "../charts/Line";
 import { Flex, Select, chakra, useBreakpointValue } from "@chakra-ui/react";
 import { DateRange } from "../../types/chart";
 import { useEffect, useRef, useState } from "react";
+import { Investment } from "../../types/investment";
 
 interface MarketValueSectionProps {
   defaultDateRange: DateRange;
@@ -13,8 +14,13 @@ interface MarketValueSectionProps {
 
 export function MarketValueSection({
   defaultDateRange,
+  investments,
 }: MarketValueSectionProps) {
   const [dateRange, setDateRange] = useState(defaultDateRange);
+  const [firstValue, setFirstValue] = useState(0);
+  const [lastValue, setLastValue] = useState(0);
+  const [percentageGain, setPercentageGain] = useState(0);
+  const [amountGain, setAmountGain] = useState(0);
   const chartRef = useRef<HTMLDivElement>(null);
   const [chartHeight, setChartHeight] = useState(0);
   // TODO: find best ratio for the chart
@@ -40,6 +46,94 @@ export function MarketValueSection({
     return () => window.removeEventListener("resize", event);
   }, [ratio]);
 
+
+  function calculateAmountSpentInTimeRange(
+    investments: Investment[],
+    dateRange: DateRange
+  ) {
+    const now = new Date();
+    const date = new Date();
+    switch (dateRange) {
+      case DateRange.Last7Days:
+        date.setDate(now.getDate() - 7);
+        break;
+      case DateRange.LastMonth:
+        date.setMonth(now.getMonth() - 1);
+        break;
+      case DateRange.LastYear:
+        date.setFullYear(date.getFullYear() - 1);
+        date.setMonth(0);
+        date.setDate(1);
+        break;
+      case DateRange.All:
+        date.setFullYear(1970);
+        break;
+    }
+    let totalPaied = 0;
+    const filteredInvestments = investments.filter((investment) => {
+      const investmentDate = new Date(investment.purchase.date);
+      if (investmentDate >= date) {
+        totalPaied +=
+          investment.purchase.pricePerUnit * investment.purchase.units;
+      }
+    });
+    return totalPaied;
+  }
+
+  const tmp = calculateAmountSpentInTimeRange(
+    investments,
+    dateRange as DateRange
+  );
+  // console.log(tmp);
+  function receiveData(data1: number, data2: number) {
+    setFirstValue(
+      calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||
+      data1
+    );
+    setLastValue(data2);
+  }
+
+  function sumTotalForMonth(dataSets) {
+    const totalForMonth = {};
+
+    // Calculate total price for each date
+    dataSets.forEach((dataSet) => {
+      dataSet.historicalData.forEach((dataPoint) => {
+        const date = dataPoint.date;
+        const value = dataPoint.pricePerUnit;
+
+        if (!totalForMonth[date]) {
+          totalForMonth[date] = 0;
+        }
+
+        totalForMonth[date] += value;
+      });
+    });
+
+    const result = Object.entries(totalForMonth).map(([date, value]) => ({
+      date,
+      value: parseFloat(value.toFixed(2)) // Round to two decimal places
+    }));
+
+    return result;
+  }
+
+  function calculatePercentageChange(firstValue: number, lastValue: number) {
+    if (firstValue === 0) {
+      return 0;
+    }
+    return parseFloat(
+      (((lastValue - firstValue) / firstValue) * 100).toFixed(2)
+    );
+  }
+  useEffect(() => {
+    setPercentageGain(calculatePercentageChange(firstValue, lastValue));
+    setAmountGain(parseFloat((lastValue - firstValue).toFixed(2)));
+  }, [firstValue, lastValue]);
+
+  const processedDataSets = sumTotalForMonth(investments);
+  // sort processedDataSets by date
+  processedDataSets.sort((a, b) => new Date(a.date) - new Date(b.date));
   return (
     <Section>
       <Flex
@@ -52,8 +146,8 @@ export function MarketValueSection({
             title="Current Market Value"
             tooltip="The total value of all your investments as of today"
           />
-          <ImportantNumber number={123.4} />
-          <MarketValueChange value={123.4} percentage={0.5} />
+          <ImportantNumber number={lastValue} />
+          <MarketValueChange value={amountGain} percentage={percentageGain} />
         </Flex>
         <DateRangeSelector
           defaultValue={defaultDateRange}
@@ -64,21 +158,12 @@ export function MarketValueSection({
         <LineChart
           width={"100%"}
           height={`${chartHeight}px`}
-          data={[
-            {
-              date: "2021-01-01",
-              pricePerUnit: 100,
-            },
-            {
-              date: "2021-02-01",
-              pricePerUnit: 200,
-            },
-            {
-              date: "2021-03-01",
-              pricePerUnit: 150,
-            },
-          ]}
+          data={processedDataSets.map((v) => ({
+            date: v.date,
+            pricePerUnit: v.value,
+          }))}
           dateRange={dateRange}
+          receiveData={receiveData}
         />
       </chakra.div>
     </Section>

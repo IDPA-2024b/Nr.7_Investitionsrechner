@@ -64,10 +64,7 @@ export function MainLineChart({
     });
     return totalPaied;
   }
-  const tmp = calculateAmountSpentInTimeRange(
-    investments,
-    dateRange as DateRange
-  );
+
   function calculatePercentageChange(firstValue: number, lastValue: number) {
     if (firstValue === 0) {
       return 0;

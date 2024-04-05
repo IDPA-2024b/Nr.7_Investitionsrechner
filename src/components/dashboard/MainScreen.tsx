@@ -1,4 +1,3 @@
-import LastInvestmentData from "../../MockData/overalData.json"
 import {
     Flex,
     Text

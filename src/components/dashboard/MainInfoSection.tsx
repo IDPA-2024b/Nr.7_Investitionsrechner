@@ -54,28 +54,6 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
       id: investment.id,
     }));
   const profit = totalGain - onlySoldSpent;
-  const top5Investments = [
-    {
-      name: "Apple",
-      amount: 50000000,
-    },
-    {
-      name: "Tesla",
-      amount: 40000000,
-    },
-    {
-      name: "Amazon",
-      amount: 30000000,
-    },
-    {
-      name: "Google",
-      amount: 20000000,
-    },
-    {
-      name: "Facebook",
-      amount: 10000000,
-    },
-  ];
 
   return (
     <>
