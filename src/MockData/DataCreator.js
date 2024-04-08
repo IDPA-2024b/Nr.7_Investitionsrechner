@@ -10,21 +10,26 @@ const generateDataForLastYear = () => {
     const formattedDate = date.toISOString().split('T')[0];
     let randomNumber;
     if (previousNumber !== null) {
-      const min = Math.max(previousNumber * 0.9, 100);
-      const max = Math.min(previousNumber * 1.1, 300);
+      const min = Math.max(previousNumber * 0.9, 10000);
+      const max = Math.min(previousNumber * 1.1, 30000);
       randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     } else {
-      randomNumber = Math.floor(Math.random() * (300 - 100 + 1)) + 100;
+      randomNumber = Math.floor(Math.random() * (30000 - 10000 + 1)) + 10000;
     }
     previousNumber = randomNumber;
     data.push({ date: formattedDate, value: randomNumber });
   }
 
+
+  // Add today's date
+  const today = new Date();
+  const formattedToday = today.toISOString().split('T')[0];
+  data.push({ date: formattedToday, value: previousNumber });
+
   return data;
 };
 
 const lastYearData = generateDataForLastYear();
-
 
 fs.writeFile("overalData.json", JSON.stringify(lastYearData, null, 2), (err) => {
   if (err) {

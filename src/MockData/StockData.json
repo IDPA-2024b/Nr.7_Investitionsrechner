@@ -1,0 +1,5936 @@
+{
+    "ZWS": [
+      {
+        "date": "2022-04-01",
+        "pricePerUnit": 35.79
+      },
+      {
+        "date": "2022-04-04",
+        "pricePerUnit": 36.24
+      },
+      {
+        "date": "2022-04-05",
+        "pricePerUnit": 34.72
+      },
+      {
+        "date": "2022-04-06",
+        "pricePerUnit": 34.99
+      },
+      {
+        "date": "2022-04-07",
+        "pricePerUnit": 35.63
+      },
+      {
+        "date": "2022-04-08",
+        "pricePerUnit": 35.5
+      },
+      {
+        "date": "2022-04-11",
+        "pricePerUnit": 35.34
+      },
+      {
+        "date": "2022-04-12",
+        "pricePerUnit": 35.53
+      },
+      {
+        "date": "2022-04-13",
+        "pricePerUnit": 36.1
+      },
+      {
+        "date": "2022-04-14",
+        "pricePerUnit": 35.48
+      },
+      {
+        "date": "2022-04-18",
+        "pricePerUnit": 33.96
+      },
+      {
+        "date": "2022-04-19",
+        "pricePerUnit": 34.9
+      },
+      {
+        "date": "2022-04-20",
+        "pricePerUnit": 35.79
+      },
+      {
+        "date": "2022-04-21",
+        "pricePerUnit": 35.66
+      },
+      {
+        "date": "2022-04-22",
+        "pricePerUnit": 34.75
+      },
+      {
+        "date": "2022-04-25",
+        "pricePerUnit": 34.82
+      },
+      {
+        "date": "2022-04-26",
+        "pricePerUnit": 33.24
+      },
+      {
+        "date": "2022-04-27",
+        "pricePerUnit": 32.35
+      },
+      {
+        "date": "2022-04-28",
+        "pricePerUnit": 32.02
+      },
+      {
+        "date": "2022-04-29",
+        "pricePerUnit": 31.22
+      },
+      {
+        "date": "2022-05-02",
+        "pricePerUnit": 30.75
+      },
+      {
+        "date": "2022-05-03",
+        "pricePerUnit": 30.37
+      },
+      {
+        "date": "2022-05-04",
+        "pricePerUnit": 31.09
+      },
+      {
+        "date": "2022-05-05",
+        "pricePerUnit": 29.84
+      },
+      {
+        "date": "2022-05-06",
+        "pricePerUnit": 28.86
+      },
+      {
+        "date": "2022-05-09",
+        "pricePerUnit": 27.44
+      },
+      {
+        "date": "2022-05-10",
+        "pricePerUnit": 27.99
+      },
+      {
+        "date": "2022-05-11",
+        "pricePerUnit": 27.96
+      },
+      {
+        "date": "2022-05-12",
+        "pricePerUnit": 27.98
+      },
+      {
+        "date": "2022-05-13",
+        "pricePerUnit": 28.31
+      },
+      {
+        "date": "2022-05-16",
+        "pricePerUnit": 27.56
+      },
+      {
+        "date": "2022-05-17",
+        "pricePerUnit": 28.09
+      },
+      {
+        "date": "2022-05-18",
+        "pricePerUnit": 26.39
+      },
+      {
+        "date": "2022-05-19",
+        "pricePerUnit": 26.62
+      },
+      {
+        "date": "2022-05-20",
+        "pricePerUnit": 26.71
+      },
+      {
+        "date": "2022-05-23",
+        "pricePerUnit": 26.86
+      },
+      {
+        "date": "2022-05-24",
+        "pricePerUnit": 27.16
+      },
+      {
+        "date": "2022-05-25",
+        "pricePerUnit": 27.01
+      },
+      {
+        "date": "2022-05-26",
+        "pricePerUnit": 27.7
+      },
+      {
+        "date": "2022-05-27",
+        "pricePerUnit": 29.22
+      },
+      {
+        "date": "2022-05-31",
+        "pricePerUnit": 28.82
+      },
+      {
+        "date": "2022-06-01",
+        "pricePerUnit": 30
+      },
+      {
+        "date": "2022-06-02",
+        "pricePerUnit": 31.11
+      },
+      {
+        "date": "2022-06-03",
+        "pricePerUnit": 30.94
+      },
+      {
+        "date": "2022-06-06",
+        "pricePerUnit": 30.55
+      },
+      {
+        "date": "2022-06-07",
+        "pricePerUnit": 30.86
+      },
+      {
+        "date": "2022-06-08",
+        "pricePerUnit": 29.96
+      },
+      {
+        "date": "2022-06-09",
+        "pricePerUnit": 29.51
+      },
+      {
+        "date": "2022-06-10",
+        "pricePerUnit": 28.42
+      },
+      {
+        "date": "2022-06-13",
+        "pricePerUnit": 27.37
+      },
+      {
+        "date": "2022-06-14",
+        "pricePerUnit": 27.91
+      },
+      {
+        "date": "2022-06-15",
+        "pricePerUnit": 28.05
+      },
+      {
+        "date": "2022-06-16",
+        "pricePerUnit": 26.25
+      },
+      {
+        "date": "2022-06-17",
+        "pricePerUnit": 26.51
+      },
+      {
+        "date": "2022-06-21",
+        "pricePerUnit": 27.22
+      },
+      {
+        "date": "2022-06-22",
+        "pricePerUnit": 27
+      },
+      {
+        "date": "2022-06-23",
+        "pricePerUnit": 26.47
+      },
+      {
+        "date": "2022-06-24",
+        "pricePerUnit": 26.94
+      },
+      {
+        "date": "2022-06-27",
+        "pricePerUnit": 27.64
+      },
+      {
+        "date": "2022-06-28",
+        "pricePerUnit": 26.92
+      },
+      {
+        "date": "2022-06-29",
+        "pricePerUnit": 26.76
+      },
+      {
+        "date": "2022-06-30",
+        "pricePerUnit": 27.24
+      },
+      {
+        "date": "2022-07-01",
+        "pricePerUnit": 27.48
+      },
+      {
+        "date": "2022-07-05",
+        "pricePerUnit": 28.14
+      },
+      {
+        "date": "2022-07-06",
+        "pricePerUnit": 28.85
+      },
+      {
+        "date": "2022-07-07",
+        "pricePerUnit": 29.9
+      },
+      {
+        "date": "2022-07-08",
+        "pricePerUnit": 29.71
+      },
+      {
+        "date": "2022-07-11",
+        "pricePerUnit": 28.75
+      },
+      {
+        "date": "2022-07-12",
+        "pricePerUnit": 28.22
+      },
+      {
+        "date": "2022-07-13",
+        "pricePerUnit": 28.1
+      },
+      {
+        "date": "2022-07-14",
+        "pricePerUnit": 27.97
+      },
+      {
+        "date": "2022-07-15",
+        "pricePerUnit": 28.91
+      },
+      {
+        "date": "2022-07-18",
+        "pricePerUnit": 29.15
+      },
+      {
+        "date": "2022-07-19",
+        "pricePerUnit": 30.3
+      },
+      {
+        "date": "2022-07-20",
+        "pricePerUnit": 30.56
+      },
+      {
+        "date": "2022-07-21",
+        "pricePerUnit": 31.68
+      },
+      {
+        "date": "2022-07-22",
+        "pricePerUnit": 31.57
+      },
+      {
+        "date": "2022-07-25",
+        "pricePerUnit": 31.11
+      },
+      {
+        "date": "2022-07-26",
+        "pricePerUnit": 31.62
+      },
+      {
+        "date": "2022-07-27",
+        "pricePerUnit": 28.35
+      },
+      {
+        "date": "2022-07-28",
+        "pricePerUnit": 29.85
+      },
+      {
+        "date": "2022-07-29",
+        "pricePerUnit": 28.95
+      },
+      {
+        "date": "2022-08-01",
+        "pricePerUnit": 28.38
+      },
+      {
+        "date": "2022-08-02",
+        "pricePerUnit": 28.09
+      },
+      {
+        "date": "2022-08-03",
+        "pricePerUnit": 28.34
+      },
+      {
+        "date": "2022-08-04",
+        "pricePerUnit": 28.89
+      },
+      {
+        "date": "2022-08-05",
+        "pricePerUnit": 28.44
+      },
+      {
+        "date": "2022-08-08",
+        "pricePerUnit": 29.25
+      },
+      {
+        "date": "2022-08-09",
+        "pricePerUnit": 29
+      },
+      {
+        "date": "2022-08-10",
+        "pricePerUnit": 29.84
+      },
+      {
+        "date": "2022-08-11",
+        "pricePerUnit": 30.3
+      },
+      {
+        "date": "2022-08-12",
+        "pricePerUnit": 31.16
+      },
+      {
+        "date": "2022-08-15",
+        "pricePerUnit": 31.29
+      },
+      {
+        "date": "2022-08-16",
+        "pricePerUnit": 31.42
+      },
+      {
+        "date": "2022-08-17",
+        "pricePerUnit": 31.64
+      },
+      {
+        "date": "2022-08-18",
+        "pricePerUnit": 31.24
+      },
+      {
+        "date": "2022-08-19",
+        "pricePerUnit": 30.7
+      },
+      {
+        "date": "2022-08-22",
+        "pricePerUnit": 29.47
+      },
+      {
+        "date": "2022-08-23",
+        "pricePerUnit": 29.65
+      },
+      {
+        "date": "2022-08-24",
+        "pricePerUnit": 29.99
+      },
+      {
+        "date": "2022-08-25",
+        "pricePerUnit": 30.31
+      },
+      {
+        "date": "2022-08-26",
+        "pricePerUnit": 28.79
+      },
+      {
+        "date": "2022-08-29",
+        "pricePerUnit": 28.5
+      },
+      {
+        "date": "2022-08-30",
+        "pricePerUnit": 28
+      },
+      {
+        "date": "2022-08-31",
+        "pricePerUnit": 27.58
+      },
+      {
+        "date": "2022-09-01",
+        "pricePerUnit": 27.26
+      },
+      {
+        "date": "2022-09-02",
+        "pricePerUnit": 27.1
+      },
+      {
+        "date": "2022-09-06",
+        "pricePerUnit": 26.99
+      },
+      {
+        "date": "2022-09-07",
+        "pricePerUnit": 27.65
+      },
+      {
+        "date": "2022-09-08",
+        "pricePerUnit": 27.98
+      },
+      {
+        "date": "2022-09-09",
+        "pricePerUnit": 28.55
+      },
+      {
+        "date": "2022-09-12",
+        "pricePerUnit": 29.03
+      },
+      {
+        "date": "2022-09-13",
+        "pricePerUnit": 27.44
+      },
+      {
+        "date": "2022-09-14",
+        "pricePerUnit": 26.92
+      },
+      {
+        "date": "2022-09-15",
+        "pricePerUnit": 26.65
+      },
+      {
+        "date": "2022-09-16",
+        "pricePerUnit": 26.08
+      },
+      {
+        "date": "2022-09-19",
+        "pricePerUnit": 26.62
+      },
+      {
+        "date": "2022-09-20",
+        "pricePerUnit": 25.89
+      },
+      {
+        "date": "2022-09-21",
+        "pricePerUnit": 25.86
+      },
+      {
+        "date": "2022-09-22",
+        "pricePerUnit": 25.88
+      },
+      {
+        "date": "2022-09-23",
+        "pricePerUnit": 24.88
+      },
+      {
+        "date": "2022-09-26",
+        "pricePerUnit": 24.52
+      },
+      {
+        "date": "2022-09-27",
+        "pricePerUnit": 24.69
+      },
+      {
+        "date": "2022-09-28",
+        "pricePerUnit": 25.15
+      },
+      {
+        "date": "2022-09-29",
+        "pricePerUnit": 24.45
+      },
+      {
+        "date": "2022-09-30",
+        "pricePerUnit": 24.5
+      },
+      {
+        "date": "2022-10-03",
+        "pricePerUnit": 25.39
+      },
+      {
+        "date": "2022-10-04",
+        "pricePerUnit": 25.54
+      },
+      {
+        "date": "2022-10-05",
+        "pricePerUnit": 25.47
+      },
+      {
+        "date": "2022-10-06",
+        "pricePerUnit": 25.21
+      },
+      {
+        "date": "2022-10-07",
+        "pricePerUnit": 24.58
+      },
+      {
+        "date": "2022-10-10",
+        "pricePerUnit": 24.64
+      },
+      {
+        "date": "2022-10-11",
+        "pricePerUnit": 24.44
+      },
+      {
+        "date": "2022-10-12",
+        "pricePerUnit": 23.98
+      },
+      {
+        "date": "2022-10-13",
+        "pricePerUnit": 24.59
+      },
+      {
+        "date": "2022-10-14",
+        "pricePerUnit": 23.89
+      },
+      {
+        "date": "2022-10-17",
+        "pricePerUnit": 24.38
+      },
+      {
+        "date": "2022-10-18",
+        "pricePerUnit": 24.98
+      },
+      {
+        "date": "2022-10-19",
+        "pricePerUnit": 24.62
+      },
+      {
+        "date": "2022-10-20",
+        "pricePerUnit": 23.71
+      },
+      {
+        "date": "2022-10-21",
+        "pricePerUnit": 24.45
+      },
+      {
+        "date": "2022-10-24",
+        "pricePerUnit": 24.31
+      },
+      {
+        "date": "2022-10-25",
+        "pricePerUnit": 25.11
+      },
+      {
+        "date": "2022-10-26",
+        "pricePerUnit": 22.34
+      },
+      {
+        "date": "2022-10-27",
+        "pricePerUnit": 22.42
+      },
+      {
+        "date": "2022-10-28",
+        "pricePerUnit": 22.91
+      },
+      {
+        "date": "2022-10-31",
+        "pricePerUnit": 23.49
+      },
+      {
+        "date": "2022-11-01",
+        "pricePerUnit": 23.1
+      },
+      {
+        "date": "2022-11-02",
+        "pricePerUnit": 22.71
+      },
+      {
+        "date": "2022-11-03",
+        "pricePerUnit": 22.72
+      },
+      {
+        "date": "2022-11-04",
+        "pricePerUnit": 22.9
+      },
+      {
+        "date": "2022-11-07",
+        "pricePerUnit": 22.96
+      },
+      {
+        "date": "2022-11-08",
+        "pricePerUnit": 22.6
+      },
+      {
+        "date": "2022-11-09",
+        "pricePerUnit": 21.98
+      },
+      {
+        "date": "2022-11-10",
+        "pricePerUnit": 23.44
+      },
+      {
+        "date": "2022-11-11",
+        "pricePerUnit": 24.2
+      },
+      {
+        "date": "2022-11-14",
+        "pricePerUnit": 23.81
+      },
+      {
+        "date": "2022-11-15",
+        "pricePerUnit": 24.69
+      },
+      {
+        "date": "2022-11-16",
+        "pricePerUnit": 24.19
+      },
+      {
+        "date": "2022-11-17",
+        "pricePerUnit": 23.59
+      },
+      {
+        "date": "2022-11-18",
+        "pricePerUnit": 23.84
+      },
+      {
+        "date": "2022-11-21",
+        "pricePerUnit": 23.86
+      },
+      {
+        "date": "2022-11-22",
+        "pricePerUnit": 24.86
+      },
+      {
+        "date": "2022-11-23",
+        "pricePerUnit": 24.95
+      },
+      {
+        "date": "2022-11-25",
+        "pricePerUnit": 24.87
+      },
+      {
+        "date": "2022-11-28",
+        "pricePerUnit": 23.81
+      },
+      {
+        "date": "2022-11-29",
+        "pricePerUnit": 23.6
+      },
+      {
+        "date": "2022-11-30",
+        "pricePerUnit": 24.21
+      },
+      {
+        "date": "2022-12-01",
+        "pricePerUnit": 24.96
+      },
+      {
+        "date": "2022-12-02",
+        "pricePerUnit": 24.89
+      },
+      {
+        "date": "2022-12-05",
+        "pricePerUnit": 24.35
+      },
+      {
+        "date": "2022-12-06",
+        "pricePerUnit": 24.23
+      },
+      {
+        "date": "2022-12-07",
+        "pricePerUnit": 24.07
+      },
+      {
+        "date": "2022-12-08",
+        "pricePerUnit": 24.35
+      },
+      {
+        "date": "2022-12-09",
+        "pricePerUnit": 24.25
+      },
+      {
+        "date": "2022-12-12",
+        "pricePerUnit": 24.58
+      },
+      {
+        "date": "2022-12-13",
+        "pricePerUnit": 24.95
+      },
+      {
+        "date": "2022-12-14",
+        "pricePerUnit": 24.12
+      },
+      {
+        "date": "2022-12-15",
+        "pricePerUnit": 21.72
+      },
+      {
+        "date": "2022-12-16",
+        "pricePerUnit": 21.83
+      },
+      {
+        "date": "2022-12-19",
+        "pricePerUnit": 21.19
+      },
+      {
+        "date": "2022-12-20",
+        "pricePerUnit": 20.77
+      },
+      {
+        "date": "2022-12-21",
+        "pricePerUnit": 21.42
+      },
+      {
+        "date": "2022-12-22",
+        "pricePerUnit": 21.31
+      },
+      {
+        "date": "2022-12-23",
+        "pricePerUnit": 21.43
+      },
+      {
+        "date": "2022-12-27",
+        "pricePerUnit": 21.55
+      },
+      {
+        "date": "2022-12-28",
+        "pricePerUnit": 21.23
+      },
+      {
+        "date": "2022-12-29",
+        "pricePerUnit": 21.81
+      },
+      {
+        "date": "2022-12-30",
+        "pricePerUnit": 21.15
+      },
+      {
+        "date": "2023-01-03",
+        "pricePerUnit": 21.31
+      },
+      {
+        "date": "2023-01-04",
+        "pricePerUnit": 21.71
+      },
+      {
+        "date": "2023-01-05",
+        "pricePerUnit": 21.47
+      },
+      {
+        "date": "2023-01-06",
+        "pricePerUnit": 22.23
+      },
+      {
+        "date": "2023-01-09",
+        "pricePerUnit": 22.17
+      },
+      {
+        "date": "2023-01-10",
+        "pricePerUnit": 22.35
+      },
+      {
+        "date": "2023-01-11",
+        "pricePerUnit": 22.88
+      },
+      {
+        "date": "2023-01-12",
+        "pricePerUnit": 22.79
+      },
+      {
+        "date": "2023-01-13",
+        "pricePerUnit": 22.43
+      },
+      {
+        "date": "2023-01-17",
+        "pricePerUnit": 22.1
+      },
+      {
+        "date": "2023-01-18",
+        "pricePerUnit": 21.42
+      },
+      {
+        "date": "2023-01-19",
+        "pricePerUnit": 20.44
+      },
+      {
+        "date": "2023-01-20",
+        "pricePerUnit": 20.81
+      },
+      {
+        "date": "2023-01-23",
+        "pricePerUnit": 21.35
+      },
+      {
+        "date": "2023-01-24",
+        "pricePerUnit": 21.35
+      },
+      {
+        "date": "2023-01-25",
+        "pricePerUnit": 21.21
+      },
+      {
+        "date": "2023-01-26",
+        "pricePerUnit": 21.81
+      },
+      {
+        "date": "2023-01-27",
+        "pricePerUnit": 21.49
+      },
+      {
+        "date": "2023-01-30",
+        "pricePerUnit": 20.83
+      },
+      {
+        "date": "2023-01-31",
+        "pricePerUnit": 21.86
+      },
+      {
+        "date": "2023-02-01",
+        "pricePerUnit": 22.11
+      },
+      {
+        "date": "2023-02-02",
+        "pricePerUnit": 22.72
+      },
+      {
+        "date": "2023-02-03",
+        "pricePerUnit": 22.52
+      },
+      {
+        "date": "2023-02-06",
+        "pricePerUnit": 22.3
+      },
+      {
+        "date": "2023-02-07",
+        "pricePerUnit": 22.37
+      },
+      {
+        "date": "2023-02-08",
+        "pricePerUnit": 24.09
+      },
+      {
+        "date": "2023-02-09",
+        "pricePerUnit": 23.78
+      },
+      {
+        "date": "2023-02-10",
+        "pricePerUnit": 23.25
+      },
+      {
+        "date": "2023-02-13",
+        "pricePerUnit": 23.5
+      },
+      {
+        "date": "2023-02-14",
+        "pricePerUnit": 23.89
+      },
+      {
+        "date": "2023-02-15",
+        "pricePerUnit": 24.38
+      },
+      {
+        "date": "2023-02-16",
+        "pricePerUnit": 23.53
+      },
+      {
+        "date": "2023-02-17",
+        "pricePerUnit": 23.36
+      },
+      {
+        "date": "2023-02-21",
+        "pricePerUnit": 22.75
+      },
+      {
+        "date": "2023-02-22",
+        "pricePerUnit": 22.96
+      },
+      {
+        "date": "2023-02-23",
+        "pricePerUnit": 23.11
+      },
+      {
+        "date": "2023-02-24",
+        "pricePerUnit": 22.97
+      },
+      {
+        "date": "2023-02-27",
+        "pricePerUnit": 23.01
+      },
+      {
+        "date": "2023-02-28",
+        "pricePerUnit": 23
+      },
+      {
+        "date": "2023-03-01",
+        "pricePerUnit": 22.4
+      },
+      {
+        "date": "2023-03-02",
+        "pricePerUnit": 23.07
+      },
+      {
+        "date": "2023-03-03",
+        "pricePerUnit": 23.11
+      },
+      {
+        "date": "2023-03-06",
+        "pricePerUnit": 22.56
+      },
+      {
+        "date": "2023-03-07",
+        "pricePerUnit": 22.5
+      },
+      {
+        "date": "2023-03-08",
+        "pricePerUnit": 22.69
+      },
+      {
+        "date": "2023-03-09",
+        "pricePerUnit": 22.3
+      },
+      {
+        "date": "2023-03-10",
+        "pricePerUnit": 21.31
+      },
+      {
+        "date": "2023-03-13",
+        "pricePerUnit": 21.07
+      },
+      {
+        "date": "2023-03-14",
+        "pricePerUnit": 21.38
+      },
+      {
+        "date": "2023-03-15",
+        "pricePerUnit": 20.98
+      },
+      {
+        "date": "2023-03-16",
+        "pricePerUnit": 20.97
+      },
+      {
+        "date": "2023-03-17",
+        "pricePerUnit": 20.53
+      },
+      {
+        "date": "2023-03-20",
+        "pricePerUnit": 20.83
+      },
+      {
+        "date": "2023-03-21",
+        "pricePerUnit": 21.18
+      },
+      {
+        "date": "2023-03-22",
+        "pricePerUnit": 20.27
+      },
+      {
+        "date": "2023-03-23",
+        "pricePerUnit": 19.79
+      },
+      {
+        "date": "2023-03-24",
+        "pricePerUnit": 19.85
+      },
+      {
+        "date": "2023-03-27",
+        "pricePerUnit": 20.36
+      },
+      {
+        "date": "2023-03-28",
+        "pricePerUnit": 20.38
+      },
+      {
+        "date": "2023-03-29",
+        "pricePerUnit": 20.88
+      },
+      {
+        "date": "2023-03-30",
+        "pricePerUnit": 20.91
+      },
+      {
+        "date": "2023-03-31",
+        "pricePerUnit": 21.36
+      },
+      {
+        "date": "2023-04-03",
+        "pricePerUnit": 21.44
+      },
+      {
+        "date": "2023-04-04",
+        "pricePerUnit": 20.61
+      },
+      {
+        "date": "2023-04-05",
+        "pricePerUnit": 20.22
+      },
+      {
+        "date": "2023-04-06",
+        "pricePerUnit": 20.09
+      },
+      {
+        "date": "2023-04-10",
+        "pricePerUnit": 20.47
+      },
+      {
+        "date": "2023-04-11",
+        "pricePerUnit": 20.81
+      },
+      {
+        "date": "2023-04-12",
+        "pricePerUnit": 20.58
+      },
+      {
+        "date": "2023-04-13",
+        "pricePerUnit": 20.91
+      },
+      {
+        "date": "2023-04-14",
+        "pricePerUnit": 20.59
+      },
+      {
+        "date": "2023-04-17",
+        "pricePerUnit": 20.9
+      },
+      {
+        "date": "2023-04-18",
+        "pricePerUnit": 20.9
+      },
+      {
+        "date": "2023-04-19",
+        "pricePerUnit": 21.07
+      },
+      {
+        "date": "2023-04-20",
+        "pricePerUnit": 20.77
+      },
+      {
+        "date": "2023-04-21",
+        "pricePerUnit": 20.99
+      },
+      {
+        "date": "2023-04-24",
+        "pricePerUnit": 21.41
+      },
+      {
+        "date": "2023-04-25",
+        "pricePerUnit": 20.97
+      },
+      {
+        "date": "2023-04-26",
+        "pricePerUnit": 20.44
+      },
+      {
+        "date": "2023-04-27",
+        "pricePerUnit": 20.7
+      },
+      {
+        "date": "2023-04-28",
+        "pricePerUnit": 21.55
+      },
+      {
+        "date": "2023-05-01",
+        "pricePerUnit": 21.72
+      },
+      {
+        "date": "2023-05-02",
+        "pricePerUnit": 21.33
+      },
+      {
+        "date": "2023-05-03",
+        "pricePerUnit": 21.52
+      },
+      {
+        "date": "2023-05-04",
+        "pricePerUnit": 21.25
+      },
+      {
+        "date": "2023-05-05",
+        "pricePerUnit": 21.48
+      },
+      {
+        "date": "2023-05-08",
+        "pricePerUnit": 21.48
+      },
+      {
+        "date": "2023-05-09",
+        "pricePerUnit": 21.26
+      },
+      {
+        "date": "2023-05-10",
+        "pricePerUnit": 21.35
+      },
+      {
+        "date": "2023-05-11",
+        "pricePerUnit": 20.91
+      },
+      {
+        "date": "2023-05-12",
+        "pricePerUnit": 20.97
+      },
+      {
+        "date": "2023-05-15",
+        "pricePerUnit": 21.51
+      },
+      {
+        "date": "2023-05-16",
+        "pricePerUnit": 21.35
+      },
+      {
+        "date": "2023-05-17",
+        "pricePerUnit": 22.02
+      },
+      {
+        "date": "2023-05-18",
+        "pricePerUnit": 22.83
+      },
+      {
+        "date": "2023-05-19",
+        "pricePerUnit": 22.43
+      },
+      {
+        "date": "2023-05-22",
+        "pricePerUnit": 22.71
+      },
+      {
+        "date": "2023-05-23",
+        "pricePerUnit": 22.39
+      },
+      {
+        "date": "2023-05-24",
+        "pricePerUnit": 22
+      },
+      {
+        "date": "2023-05-25",
+        "pricePerUnit": 22.21
+      },
+      {
+        "date": "2023-05-26",
+        "pricePerUnit": 22.56
+      },
+      {
+        "date": "2023-05-30",
+        "pricePerUnit": 22.3
+      },
+      {
+        "date": "2023-05-31",
+        "pricePerUnit": 22.51
+      },
+      {
+        "date": "2023-06-01",
+        "pricePerUnit": 23.21
+      },
+      {
+        "date": "2023-06-02",
+        "pricePerUnit": 24.29
+      },
+      {
+        "date": "2023-06-05",
+        "pricePerUnit": 24.08
+      },
+      {
+        "date": "2023-06-06",
+        "pricePerUnit": 24.81
+      },
+      {
+        "date": "2023-06-07",
+        "pricePerUnit": 25.4
+      },
+      {
+        "date": "2023-06-08",
+        "pricePerUnit": 25.6
+      },
+      {
+        "date": "2023-06-09",
+        "pricePerUnit": 25.66
+      },
+      {
+        "date": "2023-06-12",
+        "pricePerUnit": 25.36
+      },
+      {
+        "date": "2023-06-13",
+        "pricePerUnit": 26.16
+      },
+      {
+        "date": "2023-06-14",
+        "pricePerUnit": 25.79
+      },
+      {
+        "date": "2023-06-15",
+        "pricePerUnit": 25.8
+      },
+      {
+        "date": "2023-06-16",
+        "pricePerUnit": 25.63
+      },
+      {
+        "date": "2023-06-20",
+        "pricePerUnit": 25.86
+      },
+      {
+        "date": "2023-06-21",
+        "pricePerUnit": 26.11
+      },
+      {
+        "date": "2023-06-22",
+        "pricePerUnit": 25.8
+      },
+      {
+        "date": "2023-06-23",
+        "pricePerUnit": 25.48
+      },
+      {
+        "date": "2023-06-26",
+        "pricePerUnit": 25.37
+      },
+      {
+        "date": "2023-06-27",
+        "pricePerUnit": 26.04
+      },
+      {
+        "date": "2023-06-28",
+        "pricePerUnit": 26.03
+      },
+      {
+        "date": "2023-06-29",
+        "pricePerUnit": 26.92
+      },
+      {
+        "date": "2023-06-30",
+        "pricePerUnit": 26.89
+      },
+      {
+        "date": "2023-07-03",
+        "pricePerUnit": 26.79
+      },
+      {
+        "date": "2023-07-05",
+        "pricePerUnit": 26.45
+      },
+      {
+        "date": "2023-07-06",
+        "pricePerUnit": 25.85
+      },
+      {
+        "date": "2023-07-07",
+        "pricePerUnit": 26.1
+      },
+      {
+        "date": "2023-07-10",
+        "pricePerUnit": 26.69
+      },
+      {
+        "date": "2023-07-11",
+        "pricePerUnit": 27.1
+      },
+      {
+        "date": "2023-07-12",
+        "pricePerUnit": 27.18
+      },
+      {
+        "date": "2023-07-13",
+        "pricePerUnit": 27.38
+      },
+      {
+        "date": "2023-07-14",
+        "pricePerUnit": 27.16
+      },
+      {
+        "date": "2023-07-17",
+        "pricePerUnit": 27.66
+      },
+      {
+        "date": "2023-07-18",
+        "pricePerUnit": 27.93
+      },
+      {
+        "date": "2023-07-19",
+        "pricePerUnit": 28
+      },
+      {
+        "date": "2023-07-20",
+        "pricePerUnit": 27.91
+      },
+      {
+        "date": "2023-07-21",
+        "pricePerUnit": 27.33
+      },
+      {
+        "date": "2023-07-24",
+        "pricePerUnit": 27.1
+      },
+      {
+        "date": "2023-07-25",
+        "pricePerUnit": 29.14
+      },
+      {
+        "date": "2023-07-26",
+        "pricePerUnit": 30.64
+      },
+      {
+        "date": "2023-07-27",
+        "pricePerUnit": 29.79
+      },
+      {
+        "date": "2023-07-28",
+        "pricePerUnit": 30.44
+      },
+      {
+        "date": "2023-07-31",
+        "pricePerUnit": 30.44
+      },
+      {
+        "date": "2023-08-01",
+        "pricePerUnit": 30.41
+      },
+      {
+        "date": "2023-08-02",
+        "pricePerUnit": 30.38
+      },
+      {
+        "date": "2023-08-03",
+        "pricePerUnit": 30.16
+      },
+      {
+        "date": "2023-08-04",
+        "pricePerUnit": 29.87
+      },
+      {
+        "date": "2023-08-07",
+        "pricePerUnit": 30.27
+      },
+      {
+        "date": "2023-08-08",
+        "pricePerUnit": 29.91
+      },
+      {
+        "date": "2023-08-09",
+        "pricePerUnit": 29.52
+      },
+      {
+        "date": "2023-08-10",
+        "pricePerUnit": 29.43
+      },
+      {
+        "date": "2023-08-11",
+        "pricePerUnit": 29.37
+      },
+      {
+        "date": "2023-08-14",
+        "pricePerUnit": 29.59
+      },
+      {
+        "date": "2023-08-15",
+        "pricePerUnit": 29.18
+      },
+      {
+        "date": "2023-08-16",
+        "pricePerUnit": 29.03
+      },
+      {
+        "date": "2023-08-17",
+        "pricePerUnit": 28.69
+      },
+      {
+        "date": "2023-08-18",
+        "pricePerUnit": 28.75
+      },
+      {
+        "date": "2023-08-21",
+        "pricePerUnit": 28.79
+      },
+      {
+        "date": "2023-08-22",
+        "pricePerUnit": 28.66
+      },
+      {
+        "date": "2023-08-23",
+        "pricePerUnit": 28.87
+      },
+      {
+        "date": "2023-08-24",
+        "pricePerUnit": 28.84
+      },
+      {
+        "date": "2023-08-25",
+        "pricePerUnit": 28.79
+      },
+      {
+        "date": "2023-08-28",
+        "pricePerUnit": 29.23
+      },
+      {
+        "date": "2023-08-29",
+        "pricePerUnit": 29.39
+      },
+      {
+        "date": "2023-08-30",
+        "pricePerUnit": 29.57
+      },
+      {
+        "date": "2023-08-31",
+        "pricePerUnit": 29.62
+      },
+      {
+        "date": "2023-09-01",
+        "pricePerUnit": 29.65
+      },
+      {
+        "date": "2023-09-05",
+        "pricePerUnit": 29.14
+      },
+      {
+        "date": "2023-09-06",
+        "pricePerUnit": 29.1
+      },
+      {
+        "date": "2023-09-07",
+        "pricePerUnit": 28.97
+      },
+      {
+        "date": "2023-09-08",
+        "pricePerUnit": 28.89
+      },
+      {
+        "date": "2023-09-11",
+        "pricePerUnit": 28.73
+      },
+      {
+        "date": "2023-09-12",
+        "pricePerUnit": 28.38
+      },
+      {
+        "date": "2023-09-13",
+        "pricePerUnit": 28.23
+      },
+      {
+        "date": "2023-09-14",
+        "pricePerUnit": 28.46
+      },
+      {
+        "date": "2023-09-15",
+        "pricePerUnit": 28.46
+      },
+      {
+        "date": "2023-09-18",
+        "pricePerUnit": 28.15
+      },
+      {
+        "date": "2023-09-19",
+        "pricePerUnit": 28.14
+      },
+      {
+        "date": "2023-09-20",
+        "pricePerUnit": 27.97
+      },
+      {
+        "date": "2023-09-21",
+        "pricePerUnit": 27.48
+      },
+      {
+        "date": "2023-09-22",
+        "pricePerUnit": 27.62
+      },
+      {
+        "date": "2023-09-25",
+        "pricePerUnit": 27.74
+      },
+      {
+        "date": "2023-09-26",
+        "pricePerUnit": 27.65
+      },
+      {
+        "date": "2023-09-27",
+        "pricePerUnit": 28.04
+      },
+      {
+        "date": "2023-09-28",
+        "pricePerUnit": 28.42
+      },
+      {
+        "date": "2023-09-29",
+        "pricePerUnit": 28.02
+      },
+      {
+        "date": "2023-10-02",
+        "pricePerUnit": 27.17
+      },
+      {
+        "date": "2023-10-03",
+        "pricePerUnit": 27
+      },
+      {
+        "date": "2023-10-04",
+        "pricePerUnit": 27.24
+      },
+      {
+        "date": "2023-10-05",
+        "pricePerUnit": 27.06
+      },
+      {
+        "date": "2023-10-06",
+        "pricePerUnit": 26.46
+      },
+      {
+        "date": "2023-10-09",
+        "pricePerUnit": 26.25
+      },
+      {
+        "date": "2023-10-10",
+        "pricePerUnit": 26.81
+      },
+      {
+        "date": "2023-10-11",
+        "pricePerUnit": 27.25
+      },
+      {
+        "date": "2023-10-12",
+        "pricePerUnit": 26.94
+      },
+      {
+        "date": "2023-10-13",
+        "pricePerUnit": 26.53
+      },
+      {
+        "date": "2023-10-16",
+        "pricePerUnit": 26.82
+      },
+      {
+        "date": "2023-10-17",
+        "pricePerUnit": 27.04
+      },
+      {
+        "date": "2023-10-18",
+        "pricePerUnit": 25.87
+      },
+      {
+        "date": "2023-10-19",
+        "pricePerUnit": 25.78
+      },
+      {
+        "date": "2023-10-20",
+        "pricePerUnit": 25.59
+      },
+      {
+        "date": "2023-10-23",
+        "pricePerUnit": 25.49
+      },
+      {
+        "date": "2023-10-24",
+        "pricePerUnit": 25.48
+      },
+      {
+        "date": "2023-10-25",
+        "pricePerUnit": 25.39
+      },
+      {
+        "date": "2023-10-26",
+        "pricePerUnit": 26.03
+      },
+      {
+        "date": "2023-10-27",
+        "pricePerUnit": 25.78
+      },
+      {
+        "date": "2023-10-30",
+        "pricePerUnit": 26.06
+      },
+      {
+        "date": "2023-10-31",
+        "pricePerUnit": 26.46
+      },
+      {
+        "date": "2023-11-01",
+        "pricePerUnit": 27.35
+      },
+      {
+        "date": "2023-11-02",
+        "pricePerUnit": 28.13
+      },
+      {
+        "date": "2023-11-03",
+        "pricePerUnit": 28.65
+      },
+      {
+        "date": "2023-11-06",
+        "pricePerUnit": 28.45
+      },
+      {
+        "date": "2023-11-07",
+        "pricePerUnit": 28.3
+      },
+      {
+        "date": "2023-11-08",
+        "pricePerUnit": 28.3
+      },
+      {
+        "date": "2023-11-09",
+        "pricePerUnit": 28.05
+      },
+      {
+        "date": "2023-11-10",
+        "pricePerUnit": 28.8
+      },
+      {
+        "date": "2023-11-13",
+        "pricePerUnit": 28.6
+      },
+      {
+        "date": "2023-11-14",
+        "pricePerUnit": 29.95
+      },
+      {
+        "date": "2023-11-15",
+        "pricePerUnit": 29.31
+      },
+      {
+        "date": "2023-11-16",
+        "pricePerUnit": 29.63
+      },
+      {
+        "date": "2023-11-17",
+        "pricePerUnit": 30.3
+      },
+      {
+        "date": "2023-11-20",
+        "pricePerUnit": 29.47
+      },
+      {
+        "date": "2023-11-21",
+        "pricePerUnit": 29.66
+      },
+      {
+        "date": "2023-11-22",
+        "pricePerUnit": 30.29
+      },
+      {
+        "date": "2023-11-24",
+        "pricePerUnit": 30.2
+      },
+      {
+        "date": "2023-11-27",
+        "pricePerUnit": 29.9
+      },
+      {
+        "date": "2023-11-28",
+        "pricePerUnit": 29.56
+      },
+      {
+        "date": "2023-11-29",
+        "pricePerUnit": 29.56
+      },
+      {
+        "date": "2023-11-30",
+        "pricePerUnit": 29.44
+      },
+      {
+        "date": "2023-12-01",
+        "pricePerUnit": 29.87
+      },
+      {
+        "date": "2023-12-04",
+        "pricePerUnit": 29.91
+      },
+      {
+        "date": "2023-12-05",
+        "pricePerUnit": 29.3
+      },
+      {
+        "date": "2023-12-06",
+        "pricePerUnit": 29.21
+      },
+      {
+        "date": "2023-12-07",
+        "pricePerUnit": 29.48
+      },
+      {
+        "date": "2023-12-08",
+        "pricePerUnit": 29.39
+      },
+      {
+        "date": "2023-12-11",
+        "pricePerUnit": 29.61
+      },
+      {
+        "date": "2023-12-12",
+        "pricePerUnit": 29.23
+      },
+      {
+        "date": "2023-12-13",
+        "pricePerUnit": 29.32
+      },
+      {
+        "date": "2023-12-14",
+        "pricePerUnit": 29.61
+      },
+      {
+        "date": "2023-12-15",
+        "pricePerUnit": 29.35
+      },
+      {
+        "date": "2023-12-18",
+        "pricePerUnit": 29.63
+      },
+      {
+        "date": "2023-12-19",
+        "pricePerUnit": 29.77
+      },
+      {
+        "date": "2023-12-20",
+        "pricePerUnit": 29.63
+      },
+      {
+        "date": "2023-12-21",
+        "pricePerUnit": 29.65
+      },
+      {
+        "date": "2023-12-22",
+        "pricePerUnit": 29.94
+      },
+      {
+        "date": "2023-12-26",
+        "pricePerUnit": 30.16
+      },
+      {
+        "date": "2023-12-27",
+        "pricePerUnit": 29.93
+      },
+      {
+        "date": "2023-12-28",
+        "pricePerUnit": 29.67
+      },
+      {
+        "date": "2023-12-29",
+        "pricePerUnit": 29.41
+      },
+      {
+        "date": "2024-01-02",
+        "pricePerUnit": 29.11
+      },
+      {
+        "date": "2024-01-03",
+        "pricePerUnit": 28.18
+      },
+      {
+        "date": "2024-01-04",
+        "pricePerUnit": 28.32
+      },
+      {
+        "date": "2024-01-05",
+        "pricePerUnit": 27.93
+      },
+      {
+        "date": "2024-01-08",
+        "pricePerUnit": 28.05
+      },
+      {
+        "date": "2024-01-09",
+        "pricePerUnit": 28.04
+      },
+      {
+        "date": "2024-01-10",
+        "pricePerUnit": 28.13
+      },
+      {
+        "date": "2024-01-11",
+        "pricePerUnit": 28
+      },
+      {
+        "date": "2024-01-12",
+        "pricePerUnit": 28.15
+      },
+      {
+        "date": "2024-01-16",
+        "pricePerUnit": 28.31
+      },
+      {
+        "date": "2024-01-17",
+        "pricePerUnit": 28.15
+      },
+      {
+        "date": "2024-01-18",
+        "pricePerUnit": 28.5
+      },
+      {
+        "date": "2024-01-19",
+        "pricePerUnit": 28.89
+      },
+      {
+        "date": "2024-01-22",
+        "pricePerUnit": 29.42
+      },
+      {
+        "date": "2024-01-23",
+        "pricePerUnit": 29.17
+      },
+      {
+        "date": "2024-01-24",
+        "pricePerUnit": 28.6
+      },
+      {
+        "date": "2024-01-25",
+        "pricePerUnit": 29.81
+      },
+      {
+        "date": "2024-01-26",
+        "pricePerUnit": 29.68
+      },
+      {
+        "date": "2024-01-29",
+        "pricePerUnit": 30.42
+      },
+      {
+        "date": "2024-01-30",
+        "pricePerUnit": 30.45
+      },
+      {
+        "date": "2024-01-31",
+        "pricePerUnit": 29.65
+      },
+      {
+        "date": "2024-02-01",
+        "pricePerUnit": 30.26
+      },
+      {
+        "date": "2024-02-02",
+        "pricePerUnit": 30.86
+      },
+      {
+        "date": "2024-02-05",
+        "pricePerUnit": 31.19
+      },
+      {
+        "date": "2024-02-06",
+        "pricePerUnit": 31.87
+      },
+      {
+        "date": "2024-02-07",
+        "pricePerUnit": 33.2
+      },
+      {
+        "date": "2024-02-08",
+        "pricePerUnit": 33.25
+      },
+      {
+        "date": "2024-02-09",
+        "pricePerUnit": 32.21
+      },
+      {
+        "date": "2024-02-12",
+        "pricePerUnit": 32.33
+      },
+      {
+        "date": "2024-02-13",
+        "pricePerUnit": 30.95
+      },
+      {
+        "date": "2024-02-14",
+        "pricePerUnit": 31.7
+      },
+      {
+        "date": "2024-02-15",
+        "pricePerUnit": 32.07
+      },
+      {
+        "date": "2024-02-16",
+        "pricePerUnit": 30.97
+      },
+      {
+        "date": "2024-02-20",
+        "pricePerUnit": 31.35
+      },
+      {
+        "date": "2024-02-21",
+        "pricePerUnit": 31.09
+      },
+      {
+        "date": "2024-02-22",
+        "pricePerUnit": 31.36
+      },
+      {
+        "date": "2024-02-23",
+        "pricePerUnit": 31.56
+      },
+      {
+        "date": "2024-02-26",
+        "pricePerUnit": 31.31
+      },
+      {
+        "date": "2024-02-27",
+        "pricePerUnit": 31.56
+      },
+      {
+        "date": "2024-02-28",
+        "pricePerUnit": 31.28
+      },
+      {
+        "date": "2024-02-29",
+        "pricePerUnit": 31.75
+      },
+      {
+        "date": "2024-03-01",
+        "pricePerUnit": 32.07
+      },
+      {
+        "date": "2024-03-04",
+        "pricePerUnit": 32.06
+      },
+      {
+        "date": "2024-03-05",
+        "pricePerUnit": 31.35
+      },
+      {
+        "date": "2024-03-06",
+        "pricePerUnit": 31.4
+      },
+      {
+        "date": "2024-03-07",
+        "pricePerUnit": 32.03
+      },
+      {
+        "date": "2024-03-08",
+        "pricePerUnit": 31.97
+      },
+      {
+        "date": "2024-03-11",
+        "pricePerUnit": 31.53
+      },
+      {
+        "date": "2024-03-12",
+        "pricePerUnit": 31.77
+      },
+      {
+        "date": "2024-03-13",
+        "pricePerUnit": 31.66
+      },
+      {
+        "date": "2024-03-14",
+        "pricePerUnit": 31.36
+      },
+      {
+        "date": "2024-03-15",
+        "pricePerUnit": 31.52
+      },
+      {
+        "date": "2024-03-18",
+        "pricePerUnit": 31.13
+      },
+      {
+        "date": "2024-03-19",
+        "pricePerUnit": 32.13
+      },
+      {
+        "date": "2024-03-20",
+        "pricePerUnit": 32.58
+      }
+    ],
+    "AAPL": [
+      {
+        "date": "2022-04-01",
+        "pricePerUnit": 174.31
+      },
+      {
+        "date": "2022-04-04",
+        "pricePerUnit": 178.44
+      },
+      {
+        "date": "2022-04-05",
+        "pricePerUnit": 175.06
+      },
+      {
+        "date": "2022-04-06",
+        "pricePerUnit": 171.83
+      },
+      {
+        "date": "2022-04-07",
+        "pricePerUnit": 172.14
+      },
+      {
+        "date": "2022-04-08",
+        "pricePerUnit": 170.09
+      },
+      {
+        "date": "2022-04-11",
+        "pricePerUnit": 165.75
+      },
+      {
+        "date": "2022-04-12",
+        "pricePerUnit": 167.66
+      },
+      {
+        "date": "2022-04-13",
+        "pricePerUnit": 170.4
+      },
+      {
+        "date": "2022-04-14",
+        "pricePerUnit": 165.29
+      },
+      {
+        "date": "2022-04-18",
+        "pricePerUnit": 165.07
+      },
+      {
+        "date": "2022-04-19",
+        "pricePerUnit": 167.4
+      },
+      {
+        "date": "2022-04-20",
+        "pricePerUnit": 167.23
+      },
+      {
+        "date": "2022-04-21",
+        "pricePerUnit": 166.42
+      },
+      {
+        "date": "2022-04-22",
+        "pricePerUnit": 161.79
+      },
+      {
+        "date": "2022-04-25",
+        "pricePerUnit": 162.88
+      },
+      {
+        "date": "2022-04-26",
+        "pricePerUnit": 156.8
+      },
+      {
+        "date": "2022-04-27",
+        "pricePerUnit": 156.57
+      },
+      {
+        "date": "2022-04-28",
+        "pricePerUnit": 163.64
+      },
+      {
+        "date": "2022-04-29",
+        "pricePerUnit": 157.65
+      },
+      {
+        "date": "2022-05-02",
+        "pricePerUnit": 157.96
+      },
+      {
+        "date": "2022-05-03",
+        "pricePerUnit": 159.48
+      },
+      {
+        "date": "2022-05-04",
+        "pricePerUnit": 166.02
+      },
+      {
+        "date": "2022-05-05",
+        "pricePerUnit": 156.77
+      },
+      {
+        "date": "2022-05-06",
+        "pricePerUnit": 157.28
+      },
+      {
+        "date": "2022-05-09",
+        "pricePerUnit": 152.06
+      },
+      {
+        "date": "2022-05-10",
+        "pricePerUnit": 154.51
+      },
+      {
+        "date": "2022-05-11",
+        "pricePerUnit": 146.5
+      },
+      {
+        "date": "2022-05-12",
+        "pricePerUnit": 142.56
+      },
+      {
+        "date": "2022-05-13",
+        "pricePerUnit": 147.11
+      },
+      {
+        "date": "2022-05-16",
+        "pricePerUnit": 145.54
+      },
+      {
+        "date": "2022-05-17",
+        "pricePerUnit": 149.24
+      },
+      {
+        "date": "2022-05-18",
+        "pricePerUnit": 140.82
+      },
+      {
+        "date": "2022-05-19",
+        "pricePerUnit": 137.35
+      },
+      {
+        "date": "2022-05-20",
+        "pricePerUnit": 137.59
+      },
+      {
+        "date": "2022-05-23",
+        "pricePerUnit": 143.11
+      },
+      {
+        "date": "2022-05-24",
+        "pricePerUnit": 140.36
+      },
+      {
+        "date": "2022-05-25",
+        "pricePerUnit": 140.52
+      },
+      {
+        "date": "2022-05-26",
+        "pricePerUnit": 143.78
+      },
+      {
+        "date": "2022-05-27",
+        "pricePerUnit": 149.64
+      },
+      {
+        "date": "2022-05-31",
+        "pricePerUnit": 148.84
+      },
+      {
+        "date": "2022-06-01",
+        "pricePerUnit": 148.71
+      },
+      {
+        "date": "2022-06-02",
+        "pricePerUnit": 151.21
+      },
+      {
+        "date": "2022-06-03",
+        "pricePerUnit": 145.38
+      },
+      {
+        "date": "2022-06-06",
+        "pricePerUnit": 146.14
+      },
+      {
+        "date": "2022-06-07",
+        "pricePerUnit": 148.71
+      },
+      {
+        "date": "2022-06-08",
+        "pricePerUnit": 147.96
+      },
+      {
+        "date": "2022-06-09",
+        "pricePerUnit": 142.64
+      },
+      {
+        "date": "2022-06-10",
+        "pricePerUnit": 137.13
+      },
+      {
+        "date": "2022-06-13",
+        "pricePerUnit": 131.88
+      },
+      {
+        "date": "2022-06-14",
+        "pricePerUnit": 132.76
+      },
+      {
+        "date": "2022-06-15",
+        "pricePerUnit": 135.43
+      },
+      {
+        "date": "2022-06-16",
+        "pricePerUnit": 130.06
+      },
+      {
+        "date": "2022-06-17",
+        "pricePerUnit": 131.56
+      },
+      {
+        "date": "2022-06-21",
+        "pricePerUnit": 135.87
+      },
+      {
+        "date": "2022-06-22",
+        "pricePerUnit": 135.35
+      },
+      {
+        "date": "2022-06-23",
+        "pricePerUnit": 138.27
+      },
+      {
+        "date": "2022-06-24",
+        "pricePerUnit": 141.66
+      },
+      {
+        "date": "2022-06-27",
+        "pricePerUnit": 141.66
+      },
+      {
+        "date": "2022-06-28",
+        "pricePerUnit": 137.44
+      },
+      {
+        "date": "2022-06-29",
+        "pricePerUnit": 139.23
+      },
+      {
+        "date": "2022-06-30",
+        "pricePerUnit": 136.72
+      },
+      {
+        "date": "2022-07-01",
+        "pricePerUnit": 138.93
+      },
+      {
+        "date": "2022-07-05",
+        "pricePerUnit": 141.56
+      },
+      {
+        "date": "2022-07-06",
+        "pricePerUnit": 142.92
+      },
+      {
+        "date": "2022-07-07",
+        "pricePerUnit": 146.35
+      },
+      {
+        "date": "2022-07-08",
+        "pricePerUnit": 147.04
+      },
+      {
+        "date": "2022-07-11",
+        "pricePerUnit": 144.87
+      },
+      {
+        "date": "2022-07-12",
+        "pricePerUnit": 145.86
+      },
+      {
+        "date": "2022-07-13",
+        "pricePerUnit": 145.49
+      },
+      {
+        "date": "2022-07-14",
+        "pricePerUnit": 148.47
+      },
+      {
+        "date": "2022-07-15",
+        "pricePerUnit": 150.17
+      },
+      {
+        "date": "2022-07-18",
+        "pricePerUnit": 147.07
+      },
+      {
+        "date": "2022-07-19",
+        "pricePerUnit": 151
+      },
+      {
+        "date": "2022-07-20",
+        "pricePerUnit": 153.04
+      },
+      {
+        "date": "2022-07-21",
+        "pricePerUnit": 155.35
+      },
+      {
+        "date": "2022-07-22",
+        "pricePerUnit": 154.09
+      },
+      {
+        "date": "2022-07-25",
+        "pricePerUnit": 152.95
+      },
+      {
+        "date": "2022-07-26",
+        "pricePerUnit": 151.6
+      },
+      {
+        "date": "2022-07-27",
+        "pricePerUnit": 156.79
+      },
+      {
+        "date": "2022-07-28",
+        "pricePerUnit": 157.35
+      },
+      {
+        "date": "2022-07-29",
+        "pricePerUnit": 162.51
+      },
+      {
+        "date": "2022-08-01",
+        "pricePerUnit": 161.51
+      },
+      {
+        "date": "2022-08-02",
+        "pricePerUnit": 160.01
+      },
+      {
+        "date": "2022-08-03",
+        "pricePerUnit": 166.13
+      },
+      {
+        "date": "2022-08-04",
+        "pricePerUnit": 165.81
+      },
+      {
+        "date": "2022-08-05",
+        "pricePerUnit": 165.35
+      },
+      {
+        "date": "2022-08-08",
+        "pricePerUnit": 164.87
+      },
+      {
+        "date": "2022-08-09",
+        "pricePerUnit": 164.92
+      },
+      {
+        "date": "2022-08-10",
+        "pricePerUnit": 169.24
+      },
+      {
+        "date": "2022-08-11",
+        "pricePerUnit": 168.49
+      },
+      {
+        "date": "2022-08-12",
+        "pricePerUnit": 172.1
+      },
+      {
+        "date": "2022-08-15",
+        "pricePerUnit": 173.19
+      },
+      {
+        "date": "2022-08-16",
+        "pricePerUnit": 173.03
+      },
+      {
+        "date": "2022-08-17",
+        "pricePerUnit": 174.55
+      },
+      {
+        "date": "2022-08-18",
+        "pricePerUnit": 174.15
+      },
+      {
+        "date": "2022-08-19",
+        "pricePerUnit": 171.52
+      },
+      {
+        "date": "2022-08-22",
+        "pricePerUnit": 167.57
+      },
+      {
+        "date": "2022-08-23",
+        "pricePerUnit": 167.23
+      },
+      {
+        "date": "2022-08-24",
+        "pricePerUnit": 167.53
+      },
+      {
+        "date": "2022-08-25",
+        "pricePerUnit": 170.03
+      },
+      {
+        "date": "2022-08-26",
+        "pricePerUnit": 163.62
+      },
+      {
+        "date": "2022-08-29",
+        "pricePerUnit": 161.38
+      },
+      {
+        "date": "2022-08-30",
+        "pricePerUnit": 158.91
+      },
+      {
+        "date": "2022-08-31",
+        "pricePerUnit": 157.22
+      },
+      {
+        "date": "2022-09-01",
+        "pricePerUnit": 157.96
+      },
+      {
+        "date": "2022-09-02",
+        "pricePerUnit": 155.81
+      },
+      {
+        "date": "2022-09-06",
+        "pricePerUnit": 154.53
+      },
+      {
+        "date": "2022-09-07",
+        "pricePerUnit": 155.96
+      },
+      {
+        "date": "2022-09-08",
+        "pricePerUnit": 154.46
+      },
+      {
+        "date": "2022-09-09",
+        "pricePerUnit": 157.37
+      },
+      {
+        "date": "2022-09-12",
+        "pricePerUnit": 163.43
+      },
+      {
+        "date": "2022-09-13",
+        "pricePerUnit": 153.84
+      },
+      {
+        "date": "2022-09-14",
+        "pricePerUnit": 155.31
+      },
+      {
+        "date": "2022-09-15",
+        "pricePerUnit": 152.37
+      },
+      {
+        "date": "2022-09-16",
+        "pricePerUnit": 150.7
+      },
+      {
+        "date": "2022-09-19",
+        "pricePerUnit": 154.48
+      },
+      {
+        "date": "2022-09-20",
+        "pricePerUnit": 156.9
+      },
+      {
+        "date": "2022-09-21",
+        "pricePerUnit": 153.72
+      },
+      {
+        "date": "2022-09-22",
+        "pricePerUnit": 152.74
+      },
+      {
+        "date": "2022-09-23",
+        "pricePerUnit": 150.43
+      },
+      {
+        "date": "2022-09-26",
+        "pricePerUnit": 150.77
+      },
+      {
+        "date": "2022-09-27",
+        "pricePerUnit": 151.76
+      },
+      {
+        "date": "2022-09-28",
+        "pricePerUnit": 149.84
+      },
+      {
+        "date": "2022-09-29",
+        "pricePerUnit": 142.48
+      },
+      {
+        "date": "2022-09-30",
+        "pricePerUnit": 138.2
+      },
+      {
+        "date": "2022-10-03",
+        "pricePerUnit": 142.45
+      },
+      {
+        "date": "2022-10-04",
+        "pricePerUnit": 146.1
+      },
+      {
+        "date": "2022-10-05",
+        "pricePerUnit": 146.4
+      },
+      {
+        "date": "2022-10-06",
+        "pricePerUnit": 145.43
+      },
+      {
+        "date": "2022-10-07",
+        "pricePerUnit": 140.09
+      },
+      {
+        "date": "2022-10-10",
+        "pricePerUnit": 140.42
+      },
+      {
+        "date": "2022-10-11",
+        "pricePerUnit": 138.98
+      },
+      {
+        "date": "2022-10-12",
+        "pricePerUnit": 138.34
+      },
+      {
+        "date": "2022-10-13",
+        "pricePerUnit": 142.99
+      },
+      {
+        "date": "2022-10-14",
+        "pricePerUnit": 138.38
+      },
+      {
+        "date": "2022-10-17",
+        "pricePerUnit": 142.41
+      },
+      {
+        "date": "2022-10-18",
+        "pricePerUnit": 143.75
+      },
+      {
+        "date": "2022-10-19",
+        "pricePerUnit": 143.86
+      },
+      {
+        "date": "2022-10-20",
+        "pricePerUnit": 143.39
+      },
+      {
+        "date": "2022-10-21",
+        "pricePerUnit": 147.27
+      },
+      {
+        "date": "2022-10-24",
+        "pricePerUnit": 149.45
+      },
+      {
+        "date": "2022-10-25",
+        "pricePerUnit": 152.34
+      },
+      {
+        "date": "2022-10-26",
+        "pricePerUnit": 149.35
+      },
+      {
+        "date": "2022-10-27",
+        "pricePerUnit": 144.8
+      },
+      {
+        "date": "2022-10-28",
+        "pricePerUnit": 155.74
+      },
+      {
+        "date": "2022-10-31",
+        "pricePerUnit": 153.34
+      },
+      {
+        "date": "2022-11-01",
+        "pricePerUnit": 150.65
+      },
+      {
+        "date": "2022-11-02",
+        "pricePerUnit": 145.03
+      },
+      {
+        "date": "2022-11-03",
+        "pricePerUnit": 138.88
+      },
+      {
+        "date": "2022-11-04",
+        "pricePerUnit": 138.38
+      },
+      {
+        "date": "2022-11-07",
+        "pricePerUnit": 138.92
+      },
+      {
+        "date": "2022-11-08",
+        "pricePerUnit": 139.5
+      },
+      {
+        "date": "2022-11-09",
+        "pricePerUnit": 134.87
+      },
+      {
+        "date": "2022-11-10",
+        "pricePerUnit": 146.87
+      },
+      {
+        "date": "2022-11-11",
+        "pricePerUnit": 149.7
+      },
+      {
+        "date": "2022-11-14",
+        "pricePerUnit": 148.28
+      },
+      {
+        "date": "2022-11-15",
+        "pricePerUnit": 150.04
+      },
+      {
+        "date": "2022-11-16",
+        "pricePerUnit": 148.79
+      },
+      {
+        "date": "2022-11-17",
+        "pricePerUnit": 150.72
+      },
+      {
+        "date": "2022-11-18",
+        "pricePerUnit": 151.29
+      },
+      {
+        "date": "2022-11-21",
+        "pricePerUnit": 148.01
+      },
+      {
+        "date": "2022-11-22",
+        "pricePerUnit": 150.18
+      },
+      {
+        "date": "2022-11-23",
+        "pricePerUnit": 151.07
+      },
+      {
+        "date": "2022-11-25",
+        "pricePerUnit": 148.11
+      },
+      {
+        "date": "2022-11-28",
+        "pricePerUnit": 144.22
+      },
+      {
+        "date": "2022-11-29",
+        "pricePerUnit": 141.17
+      },
+      {
+        "date": "2022-11-30",
+        "pricePerUnit": 148.03
+      },
+      {
+        "date": "2022-12-01",
+        "pricePerUnit": 148.31
+      },
+      {
+        "date": "2022-12-02",
+        "pricePerUnit": 147.81
+      },
+      {
+        "date": "2022-12-05",
+        "pricePerUnit": 146.63
+      },
+      {
+        "date": "2022-12-06",
+        "pricePerUnit": 142.91
+      },
+      {
+        "date": "2022-12-07",
+        "pricePerUnit": 140.94
+      },
+      {
+        "date": "2022-12-08",
+        "pricePerUnit": 142.65
+      },
+      {
+        "date": "2022-12-09",
+        "pricePerUnit": 142.16
+      },
+      {
+        "date": "2022-12-12",
+        "pricePerUnit": 144.49
+      },
+      {
+        "date": "2022-12-13",
+        "pricePerUnit": 145.47
+      },
+      {
+        "date": "2022-12-14",
+        "pricePerUnit": 143.21
+      },
+      {
+        "date": "2022-12-15",
+        "pricePerUnit": 136.5
+      },
+      {
+        "date": "2022-12-16",
+        "pricePerUnit": 134.51
+      },
+      {
+        "date": "2022-12-19",
+        "pricePerUnit": 132.37
+      },
+      {
+        "date": "2022-12-20",
+        "pricePerUnit": 132.3
+      },
+      {
+        "date": "2022-12-21",
+        "pricePerUnit": 135.45
+      },
+      {
+        "date": "2022-12-22",
+        "pricePerUnit": 132.23
+      },
+      {
+        "date": "2022-12-23",
+        "pricePerUnit": 131.86
+      },
+      {
+        "date": "2022-12-27",
+        "pricePerUnit": 130.03
+      },
+      {
+        "date": "2022-12-28",
+        "pricePerUnit": 126.04
+      },
+      {
+        "date": "2022-12-29",
+        "pricePerUnit": 129.61
+      },
+      {
+        "date": "2022-12-30",
+        "pricePerUnit": 129.93
+      },
+      {
+        "date": "2023-01-03",
+        "pricePerUnit": 125.07
+      },
+      {
+        "date": "2023-01-04",
+        "pricePerUnit": 126.36
+      },
+      {
+        "date": "2023-01-05",
+        "pricePerUnit": 125.02
+      },
+      {
+        "date": "2023-01-06",
+        "pricePerUnit": 129.62
+      },
+      {
+        "date": "2023-01-09",
+        "pricePerUnit": 130.15
+      },
+      {
+        "date": "2023-01-10",
+        "pricePerUnit": 130.73
+      },
+      {
+        "date": "2023-01-11",
+        "pricePerUnit": 133.49
+      },
+      {
+        "date": "2023-01-12",
+        "pricePerUnit": 133.41
+      },
+      {
+        "date": "2023-01-13",
+        "pricePerUnit": 134.76
+      },
+      {
+        "date": "2023-01-17",
+        "pricePerUnit": 135.94
+      },
+      {
+        "date": "2023-01-18",
+        "pricePerUnit": 135.21
+      },
+      {
+        "date": "2023-01-19",
+        "pricePerUnit": 135.27
+      },
+      {
+        "date": "2023-01-20",
+        "pricePerUnit": 137.87
+      },
+      {
+        "date": "2023-01-23",
+        "pricePerUnit": 141.11
+      },
+      {
+        "date": "2023-01-24",
+        "pricePerUnit": 142.53
+      },
+      {
+        "date": "2023-01-25",
+        "pricePerUnit": 141.86
+      },
+      {
+        "date": "2023-01-26",
+        "pricePerUnit": 143.96
+      },
+      {
+        "date": "2023-01-27",
+        "pricePerUnit": 145.93
+      },
+      {
+        "date": "2023-01-30",
+        "pricePerUnit": 143
+      },
+      {
+        "date": "2023-01-31",
+        "pricePerUnit": 144.29
+      },
+      {
+        "date": "2023-02-01",
+        "pricePerUnit": 145.43
+      },
+      {
+        "date": "2023-02-02",
+        "pricePerUnit": 150.82
+      },
+      {
+        "date": "2023-02-03",
+        "pricePerUnit": 154.5
+      },
+      {
+        "date": "2023-02-06",
+        "pricePerUnit": 151.73
+      },
+      {
+        "date": "2023-02-07",
+        "pricePerUnit": 154.65
+      },
+      {
+        "date": "2023-02-08",
+        "pricePerUnit": 151.92
+      },
+      {
+        "date": "2023-02-09",
+        "pricePerUnit": 150.87
+      },
+      {
+        "date": "2023-02-10",
+        "pricePerUnit": 151.01
+      },
+      {
+        "date": "2023-02-13",
+        "pricePerUnit": 153.85
+      },
+      {
+        "date": "2023-02-14",
+        "pricePerUnit": 153.2
+      },
+      {
+        "date": "2023-02-15",
+        "pricePerUnit": 155.33
+      },
+      {
+        "date": "2023-02-16",
+        "pricePerUnit": 153.71
+      },
+      {
+        "date": "2023-02-17",
+        "pricePerUnit": 152.55
+      },
+      {
+        "date": "2023-02-21",
+        "pricePerUnit": 148.48
+      },
+      {
+        "date": "2023-02-22",
+        "pricePerUnit": 148.91
+      },
+      {
+        "date": "2023-02-23",
+        "pricePerUnit": 149.4
+      },
+      {
+        "date": "2023-02-24",
+        "pricePerUnit": 146.71
+      },
+      {
+        "date": "2023-02-27",
+        "pricePerUnit": 147.92
+      },
+      {
+        "date": "2023-02-28",
+        "pricePerUnit": 147.41
+      },
+      {
+        "date": "2023-03-01",
+        "pricePerUnit": 145.31
+      },
+      {
+        "date": "2023-03-02",
+        "pricePerUnit": 145.91
+      },
+      {
+        "date": "2023-03-03",
+        "pricePerUnit": 151.03
+      },
+      {
+        "date": "2023-03-06",
+        "pricePerUnit": 153.83
+      },
+      {
+        "date": "2023-03-07",
+        "pricePerUnit": 151.6
+      },
+      {
+        "date": "2023-03-08",
+        "pricePerUnit": 152.87
+      },
+      {
+        "date": "2023-03-09",
+        "pricePerUnit": 150.59
+      },
+      {
+        "date": "2023-03-10",
+        "pricePerUnit": 148.5
+      },
+      {
+        "date": "2023-03-13",
+        "pricePerUnit": 150.47
+      },
+      {
+        "date": "2023-03-14",
+        "pricePerUnit": 152.59
+      },
+      {
+        "date": "2023-03-15",
+        "pricePerUnit": 152.99
+      },
+      {
+        "date": "2023-03-16",
+        "pricePerUnit": 155.85
+      },
+      {
+        "date": "2023-03-17",
+        "pricePerUnit": 155
+      },
+      {
+        "date": "2023-03-20",
+        "pricePerUnit": 157.4
+      },
+      {
+        "date": "2023-03-21",
+        "pricePerUnit": 159.28
+      },
+      {
+        "date": "2023-03-22",
+        "pricePerUnit": 157.83
+      },
+      {
+        "date": "2023-03-23",
+        "pricePerUnit": 158.93
+      },
+      {
+        "date": "2023-03-24",
+        "pricePerUnit": 160.25
+      },
+      {
+        "date": "2023-03-27",
+        "pricePerUnit": 158.28
+      },
+      {
+        "date": "2023-03-28",
+        "pricePerUnit": 157.65
+      },
+      {
+        "date": "2023-03-29",
+        "pricePerUnit": 160.77
+      },
+      {
+        "date": "2023-03-30",
+        "pricePerUnit": 162.36
+      },
+      {
+        "date": "2023-03-31",
+        "pricePerUnit": 164.9
+      },
+      {
+        "date": "2023-04-03",
+        "pricePerUnit": 166.17
+      },
+      {
+        "date": "2023-04-04",
+        "pricePerUnit": 165.63
+      },
+      {
+        "date": "2023-04-05",
+        "pricePerUnit": 163.76
+      },
+      {
+        "date": "2023-04-06",
+        "pricePerUnit": 164.66
+      },
+      {
+        "date": "2023-04-10",
+        "pricePerUnit": 162.03
+      },
+      {
+        "date": "2023-04-11",
+        "pricePerUnit": 160.8
+      },
+      {
+        "date": "2023-04-12",
+        "pricePerUnit": 160.1
+      },
+      {
+        "date": "2023-04-13",
+        "pricePerUnit": 165.56
+      },
+      {
+        "date": "2023-04-14",
+        "pricePerUnit": 165.21
+      },
+      {
+        "date": "2023-04-17",
+        "pricePerUnit": 165.23
+      },
+      {
+        "date": "2023-04-18",
+        "pricePerUnit": 166.47
+      },
+      {
+        "date": "2023-04-19",
+        "pricePerUnit": 167.63
+      },
+      {
+        "date": "2023-04-20",
+        "pricePerUnit": 166.65
+      },
+      {
+        "date": "2023-04-21",
+        "pricePerUnit": 165.02
+      },
+      {
+        "date": "2023-04-24",
+        "pricePerUnit": 165.33
+      },
+      {
+        "date": "2023-04-25",
+        "pricePerUnit": 163.77
+      },
+      {
+        "date": "2023-04-26",
+        "pricePerUnit": 163.76
+      },
+      {
+        "date": "2023-04-27",
+        "pricePerUnit": 168.41
+      },
+      {
+        "date": "2023-04-28",
+        "pricePerUnit": 169.68
+      },
+      {
+        "date": "2023-05-01",
+        "pricePerUnit": 169.59
+      },
+      {
+        "date": "2023-05-02",
+        "pricePerUnit": 168.54
+      },
+      {
+        "date": "2023-05-03",
+        "pricePerUnit": 167.45
+      },
+      {
+        "date": "2023-05-04",
+        "pricePerUnit": 165.79
+      },
+      {
+        "date": "2023-05-05",
+        "pricePerUnit": 173.57
+      },
+      {
+        "date": "2023-05-08",
+        "pricePerUnit": 173.5
+      },
+      {
+        "date": "2023-05-09",
+        "pricePerUnit": 171.77
+      },
+      {
+        "date": "2023-05-10",
+        "pricePerUnit": 173.555
+      },
+      {
+        "date": "2023-05-11",
+        "pricePerUnit": 173.75
+      },
+      {
+        "date": "2023-05-12",
+        "pricePerUnit": 172.57
+      },
+      {
+        "date": "2023-05-15",
+        "pricePerUnit": 172.07
+      },
+      {
+        "date": "2023-05-16",
+        "pricePerUnit": 172.07
+      },
+      {
+        "date": "2023-05-17",
+        "pricePerUnit": 172.69
+      },
+      {
+        "date": "2023-05-18",
+        "pricePerUnit": 175.05
+      },
+      {
+        "date": "2023-05-19",
+        "pricePerUnit": 175.16
+      },
+      {
+        "date": "2023-05-22",
+        "pricePerUnit": 174.2
+      },
+      {
+        "date": "2023-05-23",
+        "pricePerUnit": 171.56
+      },
+      {
+        "date": "2023-05-24",
+        "pricePerUnit": 171.84
+      },
+      {
+        "date": "2023-05-25",
+        "pricePerUnit": 172.99
+      },
+      {
+        "date": "2023-05-26",
+        "pricePerUnit": 175.43
+      },
+      {
+        "date": "2023-05-30",
+        "pricePerUnit": 177.3
+      },
+      {
+        "date": "2023-05-31",
+        "pricePerUnit": 177.25
+      },
+      {
+        "date": "2023-06-01",
+        "pricePerUnit": 180.09
+      },
+      {
+        "date": "2023-06-02",
+        "pricePerUnit": 180.95
+      },
+      {
+        "date": "2023-06-05",
+        "pricePerUnit": 179.58
+      },
+      {
+        "date": "2023-06-06",
+        "pricePerUnit": 179.21
+      },
+      {
+        "date": "2023-06-07",
+        "pricePerUnit": 177.82
+      },
+      {
+        "date": "2023-06-08",
+        "pricePerUnit": 180.57
+      },
+      {
+        "date": "2023-06-09",
+        "pricePerUnit": 180.96
+      },
+      {
+        "date": "2023-06-12",
+        "pricePerUnit": 183.79
+      },
+      {
+        "date": "2023-06-13",
+        "pricePerUnit": 183.31
+      },
+      {
+        "date": "2023-06-14",
+        "pricePerUnit": 183.95
+      },
+      {
+        "date": "2023-06-15",
+        "pricePerUnit": 186.01
+      },
+      {
+        "date": "2023-06-16",
+        "pricePerUnit": 184.92
+      },
+      {
+        "date": "2023-06-20",
+        "pricePerUnit": 185.01
+      },
+      {
+        "date": "2023-06-21",
+        "pricePerUnit": 183.96
+      },
+      {
+        "date": "2023-06-22",
+        "pricePerUnit": 187
+      },
+      {
+        "date": "2023-06-23",
+        "pricePerUnit": 186.68
+      },
+      {
+        "date": "2023-06-26",
+        "pricePerUnit": 185.27
+      },
+      {
+        "date": "2023-06-27",
+        "pricePerUnit": 188.06
+      },
+      {
+        "date": "2023-06-28",
+        "pricePerUnit": 189.25
+      },
+      {
+        "date": "2023-06-29",
+        "pricePerUnit": 189.59
+      },
+      {
+        "date": "2023-06-30",
+        "pricePerUnit": 193.97
+      },
+      {
+        "date": "2023-07-03",
+        "pricePerUnit": 192.46
+      },
+      {
+        "date": "2023-07-05",
+        "pricePerUnit": 191.33
+      },
+      {
+        "date": "2023-07-06",
+        "pricePerUnit": 191.81
+      },
+      {
+        "date": "2023-07-07",
+        "pricePerUnit": 190.68
+      },
+      {
+        "date": "2023-07-10",
+        "pricePerUnit": 188.61
+      },
+      {
+        "date": "2023-07-11",
+        "pricePerUnit": 188.08
+      },
+      {
+        "date": "2023-07-12",
+        "pricePerUnit": 189.77
+      },
+      {
+        "date": "2023-07-13",
+        "pricePerUnit": 190.54
+      },
+      {
+        "date": "2023-07-14",
+        "pricePerUnit": 190.69
+      },
+      {
+        "date": "2023-07-17",
+        "pricePerUnit": 193.99
+      },
+      {
+        "date": "2023-07-18",
+        "pricePerUnit": 193.73
+      },
+      {
+        "date": "2023-07-19",
+        "pricePerUnit": 195.1
+      },
+      {
+        "date": "2023-07-20",
+        "pricePerUnit": 193.13
+      },
+      {
+        "date": "2023-07-21",
+        "pricePerUnit": 191.94
+      },
+      {
+        "date": "2023-07-24",
+        "pricePerUnit": 192.75
+      },
+      {
+        "date": "2023-07-25",
+        "pricePerUnit": 193.62
+      },
+      {
+        "date": "2023-07-26",
+        "pricePerUnit": 194.5
+      },
+      {
+        "date": "2023-07-27",
+        "pricePerUnit": 193.22
+      },
+      {
+        "date": "2023-07-28",
+        "pricePerUnit": 195.83
+      },
+      {
+        "date": "2023-07-31",
+        "pricePerUnit": 196.45
+      },
+      {
+        "date": "2023-08-01",
+        "pricePerUnit": 195.605
+      },
+      {
+        "date": "2023-08-02",
+        "pricePerUnit": 192.58
+      },
+      {
+        "date": "2023-08-03",
+        "pricePerUnit": 191.17
+      },
+      {
+        "date": "2023-08-04",
+        "pricePerUnit": 181.99
+      },
+      {
+        "date": "2023-08-07",
+        "pricePerUnit": 178.85
+      },
+      {
+        "date": "2023-08-08",
+        "pricePerUnit": 179.8
+      },
+      {
+        "date": "2023-08-09",
+        "pricePerUnit": 178.19
+      },
+      {
+        "date": "2023-08-10",
+        "pricePerUnit": 177.97
+      },
+      {
+        "date": "2023-08-11",
+        "pricePerUnit": 177.79
+      },
+      {
+        "date": "2023-08-14",
+        "pricePerUnit": 179.46
+      },
+      {
+        "date": "2023-08-15",
+        "pricePerUnit": 177.45
+      },
+      {
+        "date": "2023-08-16",
+        "pricePerUnit": 176.57
+      },
+      {
+        "date": "2023-08-17",
+        "pricePerUnit": 174
+      },
+      {
+        "date": "2023-08-18",
+        "pricePerUnit": 174.49
+      },
+      {
+        "date": "2023-08-21",
+        "pricePerUnit": 175.84
+      },
+      {
+        "date": "2023-08-22",
+        "pricePerUnit": 177.23
+      },
+      {
+        "date": "2023-08-23",
+        "pricePerUnit": 181.12
+      },
+      {
+        "date": "2023-08-24",
+        "pricePerUnit": 176.38
+      },
+      {
+        "date": "2023-08-25",
+        "pricePerUnit": 178.61
+      },
+      {
+        "date": "2023-08-28",
+        "pricePerUnit": 180.19
+      },
+      {
+        "date": "2023-08-29",
+        "pricePerUnit": 184.12
+      },
+      {
+        "date": "2023-08-30",
+        "pricePerUnit": 187.65
+      },
+      {
+        "date": "2023-08-31",
+        "pricePerUnit": 187.87
+      },
+      {
+        "date": "2023-09-01",
+        "pricePerUnit": 189.46
+      },
+      {
+        "date": "2023-09-05",
+        "pricePerUnit": 189.7
+      },
+      {
+        "date": "2023-09-06",
+        "pricePerUnit": 182.91
+      },
+      {
+        "date": "2023-09-07",
+        "pricePerUnit": 177.56
+      },
+      {
+        "date": "2023-09-08",
+        "pricePerUnit": 178.18
+      },
+      {
+        "date": "2023-09-11",
+        "pricePerUnit": 179.36
+      },
+      {
+        "date": "2023-09-12",
+        "pricePerUnit": 176.3
+      },
+      {
+        "date": "2023-09-13",
+        "pricePerUnit": 174.21
+      },
+      {
+        "date": "2023-09-14",
+        "pricePerUnit": 175.74
+      },
+      {
+        "date": "2023-09-15",
+        "pricePerUnit": 175.01
+      },
+      {
+        "date": "2023-09-18",
+        "pricePerUnit": 177.97
+      },
+      {
+        "date": "2023-09-19",
+        "pricePerUnit": 179.07
+      },
+      {
+        "date": "2023-09-20",
+        "pricePerUnit": 175.49
+      },
+      {
+        "date": "2023-09-21",
+        "pricePerUnit": 173.93
+      },
+      {
+        "date": "2023-09-22",
+        "pricePerUnit": 174.79
+      },
+      {
+        "date": "2023-09-25",
+        "pricePerUnit": 176.08
+      },
+      {
+        "date": "2023-09-26",
+        "pricePerUnit": 171.96
+      },
+      {
+        "date": "2023-09-27",
+        "pricePerUnit": 170.43
+      },
+      {
+        "date": "2023-09-28",
+        "pricePerUnit": 170.69
+      },
+      {
+        "date": "2023-09-29",
+        "pricePerUnit": 171.21
+      },
+      {
+        "date": "2023-10-02",
+        "pricePerUnit": 173.75
+      },
+      {
+        "date": "2023-10-03",
+        "pricePerUnit": 172.4
+      },
+      {
+        "date": "2023-10-04",
+        "pricePerUnit": 173.66
+      },
+      {
+        "date": "2023-10-05",
+        "pricePerUnit": 174.91
+      },
+      {
+        "date": "2023-10-06",
+        "pricePerUnit": 177.49
+      },
+      {
+        "date": "2023-10-09",
+        "pricePerUnit": 178.99
+      },
+      {
+        "date": "2023-10-10",
+        "pricePerUnit": 178.39
+      },
+      {
+        "date": "2023-10-11",
+        "pricePerUnit": 179.8
+      },
+      {
+        "date": "2023-10-12",
+        "pricePerUnit": 180.71
+      },
+      {
+        "date": "2023-10-13",
+        "pricePerUnit": 178.85
+      },
+      {
+        "date": "2023-10-16",
+        "pricePerUnit": 178.72
+      },
+      {
+        "date": "2023-10-17",
+        "pricePerUnit": 177.15
+      },
+      {
+        "date": "2023-10-18",
+        "pricePerUnit": 175.84
+      },
+      {
+        "date": "2023-10-19",
+        "pricePerUnit": 175.46
+      },
+      {
+        "date": "2023-10-20",
+        "pricePerUnit": 172.88
+      },
+      {
+        "date": "2023-10-23",
+        "pricePerUnit": 173
+      },
+      {
+        "date": "2023-10-24",
+        "pricePerUnit": 173.44
+      },
+      {
+        "date": "2023-10-25",
+        "pricePerUnit": 171.1
+      },
+      {
+        "date": "2023-10-26",
+        "pricePerUnit": 166.89
+      },
+      {
+        "date": "2023-10-27",
+        "pricePerUnit": 168.22
+      },
+      {
+        "date": "2023-10-30",
+        "pricePerUnit": 170.29
+      },
+      {
+        "date": "2023-10-31",
+        "pricePerUnit": 170.77
+      },
+      {
+        "date": "2023-11-01",
+        "pricePerUnit": 173.97
+      },
+      {
+        "date": "2023-11-02",
+        "pricePerUnit": 177.57
+      },
+      {
+        "date": "2023-11-03",
+        "pricePerUnit": 176.65
+      },
+      {
+        "date": "2023-11-06",
+        "pricePerUnit": 179.23
+      },
+      {
+        "date": "2023-11-07",
+        "pricePerUnit": 181.82
+      },
+      {
+        "date": "2023-11-08",
+        "pricePerUnit": 182.89
+      },
+      {
+        "date": "2023-11-09",
+        "pricePerUnit": 182.41
+      },
+      {
+        "date": "2023-11-10",
+        "pricePerUnit": 186.4
+      },
+      {
+        "date": "2023-11-13",
+        "pricePerUnit": 184.8
+      },
+      {
+        "date": "2023-11-14",
+        "pricePerUnit": 187.44
+      },
+      {
+        "date": "2023-11-15",
+        "pricePerUnit": 188.01
+      },
+      {
+        "date": "2023-11-16",
+        "pricePerUnit": 189.71
+      },
+      {
+        "date": "2023-11-17",
+        "pricePerUnit": 189.69
+      },
+      {
+        "date": "2023-11-20",
+        "pricePerUnit": 191.45
+      },
+      {
+        "date": "2023-11-21",
+        "pricePerUnit": 190.64
+      },
+      {
+        "date": "2023-11-22",
+        "pricePerUnit": 191.31
+      },
+      {
+        "date": "2023-11-24",
+        "pricePerUnit": 189.97
+      },
+      {
+        "date": "2023-11-27",
+        "pricePerUnit": 189.79
+      },
+      {
+        "date": "2023-11-28",
+        "pricePerUnit": 190.4
+      },
+      {
+        "date": "2023-11-29",
+        "pricePerUnit": 189.37
+      },
+      {
+        "date": "2023-11-30",
+        "pricePerUnit": 189.95
+      },
+      {
+        "date": "2023-12-01",
+        "pricePerUnit": 191.24
+      },
+      {
+        "date": "2023-12-04",
+        "pricePerUnit": 189.43
+      },
+      {
+        "date": "2023-12-05",
+        "pricePerUnit": 193.42
+      },
+      {
+        "date": "2023-12-06",
+        "pricePerUnit": 192.32
+      },
+      {
+        "date": "2023-12-07",
+        "pricePerUnit": 194.27
+      },
+      {
+        "date": "2023-12-08",
+        "pricePerUnit": 195.71
+      },
+      {
+        "date": "2023-12-11",
+        "pricePerUnit": 193.18
+      },
+      {
+        "date": "2023-12-12",
+        "pricePerUnit": 194.71
+      },
+      {
+        "date": "2023-12-13",
+        "pricePerUnit": 197.96
+      },
+      {
+        "date": "2023-12-14",
+        "pricePerUnit": 198.11
+      },
+      {
+        "date": "2023-12-15",
+        "pricePerUnit": 197.57
+      },
+      {
+        "date": "2023-12-18",
+        "pricePerUnit": 195.89
+      },
+      {
+        "date": "2023-12-19",
+        "pricePerUnit": 196.94
+      },
+      {
+        "date": "2023-12-20",
+        "pricePerUnit": 194.83
+      },
+      {
+        "date": "2023-12-21",
+        "pricePerUnit": 194.68
+      },
+      {
+        "date": "2023-12-22",
+        "pricePerUnit": 193.6
+      },
+      {
+        "date": "2023-12-26",
+        "pricePerUnit": 193.05
+      },
+      {
+        "date": "2023-12-27",
+        "pricePerUnit": 193.15
+      },
+      {
+        "date": "2023-12-28",
+        "pricePerUnit": 193.58
+      },
+      {
+        "date": "2023-12-29",
+        "pricePerUnit": 192.53
+      },
+      {
+        "date": "2024-01-02",
+        "pricePerUnit": 185.64
+      },
+      {
+        "date": "2024-01-03",
+        "pricePerUnit": 184.25
+      },
+      {
+        "date": "2024-01-04",
+        "pricePerUnit": 181.91
+      },
+      {
+        "date": "2024-01-05",
+        "pricePerUnit": 181.18
+      },
+      {
+        "date": "2024-01-08",
+        "pricePerUnit": 185.56
+      },
+      {
+        "date": "2024-01-09",
+        "pricePerUnit": 185.14
+      },
+      {
+        "date": "2024-01-10",
+        "pricePerUnit": 186.19
+      },
+      {
+        "date": "2024-01-11",
+        "pricePerUnit": 185.59
+      },
+      {
+        "date": "2024-01-12",
+        "pricePerUnit": 185.92
+      },
+      {
+        "date": "2024-01-16",
+        "pricePerUnit": 183.63
+      },
+      {
+        "date": "2024-01-17",
+        "pricePerUnit": 182.68
+      },
+      {
+        "date": "2024-01-18",
+        "pricePerUnit": 188.63
+      },
+      {
+        "date": "2024-01-19",
+        "pricePerUnit": 191.56
+      },
+      {
+        "date": "2024-01-22",
+        "pricePerUnit": 193.89
+      },
+      {
+        "date": "2024-01-23",
+        "pricePerUnit": 195.18
+      },
+      {
+        "date": "2024-01-24",
+        "pricePerUnit": 194.5
+      },
+      {
+        "date": "2024-01-25",
+        "pricePerUnit": 194.17
+      },
+      {
+        "date": "2024-01-26",
+        "pricePerUnit": 192.42
+      },
+      {
+        "date": "2024-01-29",
+        "pricePerUnit": 191.73
+      },
+      {
+        "date": "2024-01-30",
+        "pricePerUnit": 188.04
+      },
+      {
+        "date": "2024-01-31",
+        "pricePerUnit": 184.4
+      },
+      {
+        "date": "2024-02-01",
+        "pricePerUnit": 186.86
+      },
+      {
+        "date": "2024-02-02",
+        "pricePerUnit": 185.85
+      },
+      {
+        "date": "2024-02-05",
+        "pricePerUnit": 187.68
+      },
+      {
+        "date": "2024-02-06",
+        "pricePerUnit": 189.3
+      },
+      {
+        "date": "2024-02-07",
+        "pricePerUnit": 189.41
+      },
+      {
+        "date": "2024-02-08",
+        "pricePerUnit": 188.32
+      },
+      {
+        "date": "2024-02-09",
+        "pricePerUnit": 188.85
+      },
+      {
+        "date": "2024-02-12",
+        "pricePerUnit": 187.15
+      },
+      {
+        "date": "2024-02-13",
+        "pricePerUnit": 185.04
+      },
+      {
+        "date": "2024-02-14",
+        "pricePerUnit": 184.15
+      },
+      {
+        "date": "2024-02-15",
+        "pricePerUnit": 183.86
+      },
+      {
+        "date": "2024-02-16",
+        "pricePerUnit": 182.31
+      },
+      {
+        "date": "2024-02-20",
+        "pricePerUnit": 181.56
+      },
+      {
+        "date": "2024-02-21",
+        "pricePerUnit": 182.32
+      },
+      {
+        "date": "2024-02-22",
+        "pricePerUnit": 184.37
+      },
+      {
+        "date": "2024-02-23",
+        "pricePerUnit": 182.52
+      },
+      {
+        "date": "2024-02-26",
+        "pricePerUnit": 181.16
+      },
+      {
+        "date": "2024-02-27",
+        "pricePerUnit": 182.63
+      },
+      {
+        "date": "2024-02-28",
+        "pricePerUnit": 181.42
+      },
+      {
+        "date": "2024-02-29",
+        "pricePerUnit": 180.75
+      },
+      {
+        "date": "2024-03-01",
+        "pricePerUnit": 179.66
+      },
+      {
+        "date": "2024-03-04",
+        "pricePerUnit": 175.1
+      },
+      {
+        "date": "2024-03-05",
+        "pricePerUnit": 170.12
+      },
+      {
+        "date": "2024-03-06",
+        "pricePerUnit": 169.12
+      },
+      {
+        "date": "2024-03-07",
+        "pricePerUnit": 169
+      },
+      {
+        "date": "2024-03-08",
+        "pricePerUnit": 170.73
+      },
+      {
+        "date": "2024-03-11",
+        "pricePerUnit": 172.75
+      },
+      {
+        "date": "2024-03-12",
+        "pricePerUnit": 173.23
+      },
+      {
+        "date": "2024-03-13",
+        "pricePerUnit": 171.13
+      },
+      {
+        "date": "2024-03-14",
+        "pricePerUnit": 173
+      },
+      {
+        "date": "2024-03-15",
+        "pricePerUnit": 172.62
+      },
+      {
+        "date": "2024-03-18",
+        "pricePerUnit": 173.72
+      },
+      {
+        "date": "2024-03-19",
+        "pricePerUnit": 176.08
+      },
+      {
+        "date": "2024-03-20",
+        "pricePerUnit": 178.67
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2022-04-01",
+        "pricePerUnit": 361.53
+      },
+      {
+        "date": "2022-04-04",
+        "pricePerUnit": 381.8167
+      },
+      {
+        "date": "2022-04-05",
+        "pricePerUnit": 363.7533
+      },
+      {
+        "date": "2022-04-06",
+        "pricePerUnit": 348.5867
+      },
+      {
+        "date": "2022-04-07",
+        "pricePerUnit": 352.42
+      },
+      {
+        "date": "2022-04-08",
+        "pricePerUnit": 341.83
+      },
+      {
+        "date": "2022-04-11",
+        "pricePerUnit": 325.31
+      },
+      {
+        "date": "2022-04-12",
+        "pricePerUnit": 328.9833
+      },
+      {
+        "date": "2022-04-13",
+        "pricePerUnit": 340.79
+      },
+      {
+        "date": "2022-04-14",
+        "pricePerUnit": 328.3333
+      },
+      {
+        "date": "2022-04-18",
+        "pricePerUnit": 334.7633
+      },
+      {
+        "date": "2022-04-19",
+        "pricePerUnit": 342.7167
+      },
+      {
+        "date": "2022-04-20",
+        "pricePerUnit": 325.7333
+      },
+      {
+        "date": "2022-04-21",
+        "pricePerUnit": 336.26
+      },
+      {
+        "date": "2022-04-22",
+        "pricePerUnit": 335.0167
+      },
+      {
+        "date": "2022-04-25",
+        "pricePerUnit": 332.6733
+      },
+      {
+        "date": "2022-04-26",
+        "pricePerUnit": 292.14
+      },
+      {
+        "date": "2022-04-27",
+        "pricePerUnit": 293.8367
+      },
+      {
+        "date": "2022-04-28",
+        "pricePerUnit": 292.5033
+      },
+      {
+        "date": "2022-04-29",
+        "pricePerUnit": 290.2533
+      },
+      {
+        "date": "2022-05-02",
+        "pricePerUnit": 300.98
+      },
+      {
+        "date": "2022-05-03",
+        "pricePerUnit": 303.0833
+      },
+      {
+        "date": "2022-05-04",
+        "pricePerUnit": 317.54
+      },
+      {
+        "date": "2022-05-05",
+        "pricePerUnit": 291.0933
+      },
+      {
+        "date": "2022-05-06",
+        "pricePerUnit": 288.55
+      },
+      {
+        "date": "2022-05-09",
+        "pricePerUnit": 262.37
+      },
+      {
+        "date": "2022-05-10",
+        "pricePerUnit": 266.68
+      },
+      {
+        "date": "2022-05-11",
+        "pricePerUnit": 244.6667
+      },
+      {
+        "date": "2022-05-12",
+        "pricePerUnit": 242.6667
+      },
+      {
+        "date": "2022-05-13",
+        "pricePerUnit": 256.53
+      },
+      {
+        "date": "2022-05-16",
+        "pricePerUnit": 241.4567
+      },
+      {
+        "date": "2022-05-17",
+        "pricePerUnit": 253.87
+      },
+      {
+        "date": "2022-05-18",
+        "pricePerUnit": 236.6033
+      },
+      {
+        "date": "2022-05-19",
+        "pricePerUnit": 236.4733
+      },
+      {
+        "date": "2022-05-20",
+        "pricePerUnit": 221.3
+      },
+      {
+        "date": "2022-05-23",
+        "pricePerUnit": 224.9667
+      },
+      {
+        "date": "2022-05-24",
+        "pricePerUnit": 209.3867
+      },
+      {
+        "date": "2022-05-25",
+        "pricePerUnit": 219.6
+      },
+      {
+        "date": "2022-05-26",
+        "pricePerUnit": 235.91
+      },
+      {
+        "date": "2022-05-27",
+        "pricePerUnit": 253.21
+      },
+      {
+        "date": "2022-05-31",
+        "pricePerUnit": 252.7533
+      },
+      {
+        "date": "2022-06-01",
+        "pricePerUnit": 246.79
+      },
+      {
+        "date": "2022-06-02",
+        "pricePerUnit": 258.3333
+      },
+      {
+        "date": "2022-06-03",
+        "pricePerUnit": 234.5167
+      },
+      {
+        "date": "2022-06-06",
+        "pricePerUnit": 238.28
+      },
+      {
+        "date": "2022-06-07",
+        "pricePerUnit": 238.8867
+      },
+      {
+        "date": "2022-06-08",
+        "pricePerUnit": 241.8667
+      },
+      {
+        "date": "2022-06-09",
+        "pricePerUnit": 239.7067
+      },
+      {
+        "date": "2022-06-10",
+        "pricePerUnit": 232.23
+      },
+      {
+        "date": "2022-06-13",
+        "pricePerUnit": 215.7367
+      },
+      {
+        "date": "2022-06-14",
+        "pricePerUnit": 220.89
+      },
+      {
+        "date": "2022-06-15",
+        "pricePerUnit": 233
+      },
+      {
+        "date": "2022-06-16",
+        "pricePerUnit": 213.1
+      },
+      {
+        "date": "2022-06-17",
+        "pricePerUnit": 216.76
+      },
+      {
+        "date": "2022-06-21",
+        "pricePerUnit": 237.0367
+      },
+      {
+        "date": "2022-06-22",
+        "pricePerUnit": 236.0867
+      },
+      {
+        "date": "2022-06-23",
+        "pricePerUnit": 235.07
+      },
+      {
+        "date": "2022-06-24",
+        "pricePerUnit": 245.7067
+      },
+      {
+        "date": "2022-06-27",
+        "pricePerUnit": 244.92
+      },
+      {
+        "date": "2022-06-28",
+        "pricePerUnit": 232.6633
+      },
+      {
+        "date": "2022-06-29",
+        "pricePerUnit": 228.49
+      },
+      {
+        "date": "2022-06-30",
+        "pricePerUnit": 224.4733
+      },
+      {
+        "date": "2022-07-01",
+        "pricePerUnit": 227.2633
+      },
+      {
+        "date": "2022-07-05",
+        "pricePerUnit": 233.0667
+      },
+      {
+        "date": "2022-07-06",
+        "pricePerUnit": 231.7333
+      },
+      {
+        "date": "2022-07-07",
+        "pricePerUnit": 244.5433
+      },
+      {
+        "date": "2022-07-08",
+        "pricePerUnit": 250.7633
+      },
+      {
+        "date": "2022-07-11",
+        "pricePerUnit": 234.3433
+      },
+      {
+        "date": "2022-07-12",
+        "pricePerUnit": 233.07
+      },
+      {
+        "date": "2022-07-13",
+        "pricePerUnit": 237.04
+      },
+      {
+        "date": "2022-07-14",
+        "pricePerUnit": 238.3133
+      },
+      {
+        "date": "2022-07-15",
+        "pricePerUnit": 240.0667
+      },
+      {
+        "date": "2022-07-18",
+        "pricePerUnit": 240.5467
+      },
+      {
+        "date": "2022-07-19",
+        "pricePerUnit": 245.53
+      },
+      {
+        "date": "2022-07-20",
+        "pricePerUnit": 247.5
+      },
+      {
+        "date": "2022-07-21",
+        "pricePerUnit": 271.7067
+      },
+      {
+        "date": "2022-07-22",
+        "pricePerUnit": 272.2433
+      },
+      {
+        "date": "2022-07-25",
+        "pricePerUnit": 268.4333
+      },
+      {
+        "date": "2022-07-26",
+        "pricePerUnit": 258.86
+      },
+      {
+        "date": "2022-07-27",
+        "pricePerUnit": 274.82
+      },
+      {
+        "date": "2022-07-28",
+        "pricePerUnit": 280.9
+      },
+      {
+        "date": "2022-07-29",
+        "pricePerUnit": 297.15
+      },
+      {
+        "date": "2022-08-01",
+        "pricePerUnit": 297.2767
+      },
+      {
+        "date": "2022-08-02",
+        "pricePerUnit": 300.5867
+      },
+      {
+        "date": "2022-08-03",
+        "pricePerUnit": 307.3967
+      },
+      {
+        "date": "2022-08-04",
+        "pricePerUnit": 308.6333
+      },
+      {
+        "date": "2022-08-05",
+        "pricePerUnit": 288.17
+      },
+      {
+        "date": "2022-08-08",
+        "pricePerUnit": 290.4233
+      },
+      {
+        "date": "2022-08-09",
+        "pricePerUnit": 283.3333
+      },
+      {
+        "date": "2022-08-10",
+        "pricePerUnit": 294.3567
+      },
+      {
+        "date": "2022-08-11",
+        "pricePerUnit": 286.63
+      },
+      {
+        "date": "2022-08-12",
+        "pricePerUnit": 300.03
+      },
+      {
+        "date": "2022-08-15",
+        "pricePerUnit": 309.32
+      },
+      {
+        "date": "2022-08-16",
+        "pricePerUnit": 306.5633
+      },
+      {
+        "date": "2022-08-17",
+        "pricePerUnit": 303.9967
+      },
+      {
+        "date": "2022-08-18",
+        "pricePerUnit": 302.87
+      },
+      {
+        "date": "2022-08-19",
+        "pricePerUnit": 296.6667
+      },
+      {
+        "date": "2022-08-22",
+        "pricePerUnit": 289.9133
+      },
+      {
+        "date": "2022-08-23",
+        "pricePerUnit": 296.4533
+      },
+      {
+        "date": "2022-08-24",
+        "pricePerUnit": 297.0967
+      },
+      {
+        "date": "2022-08-25",
+        "pricePerUnit": 296.07
+      },
+      {
+        "date": "2022-08-26",
+        "pricePerUnit": 288.09
+      },
+      {
+        "date": "2022-08-29",
+        "pricePerUnit": 284.82
+      },
+      {
+        "date": "2022-08-30",
+        "pricePerUnit": 277.7
+      },
+      {
+        "date": "2022-08-31",
+        "pricePerUnit": 275.61
+      },
+      {
+        "date": "2022-09-01",
+        "pricePerUnit": 277.16
+      },
+      {
+        "date": "2022-09-02",
+        "pricePerUnit": 270.21
+      },
+      {
+        "date": "2022-09-06",
+        "pricePerUnit": 274.42
+      },
+      {
+        "date": "2022-09-07",
+        "pricePerUnit": 283.7
+      },
+      {
+        "date": "2022-09-08",
+        "pricePerUnit": 289.26
+      },
+      {
+        "date": "2022-09-09",
+        "pricePerUnit": 299.68
+      },
+      {
+        "date": "2022-09-12",
+        "pricePerUnit": 304.42
+      },
+      {
+        "date": "2022-09-13",
+        "pricePerUnit": 292.13
+      },
+      {
+        "date": "2022-09-14",
+        "pricePerUnit": 302.61
+      },
+      {
+        "date": "2022-09-15",
+        "pricePerUnit": 303.75
+      },
+      {
+        "date": "2022-09-16",
+        "pricePerUnit": 303.35
+      },
+      {
+        "date": "2022-09-19",
+        "pricePerUnit": 309.07
+      },
+      {
+        "date": "2022-09-20",
+        "pricePerUnit": 308.73
+      },
+      {
+        "date": "2022-09-21",
+        "pricePerUnit": 300.8
+      },
+      {
+        "date": "2022-09-22",
+        "pricePerUnit": 288.59
+      },
+      {
+        "date": "2022-09-23",
+        "pricePerUnit": 275.33
+      },
+      {
+        "date": "2022-09-26",
+        "pricePerUnit": 276.01
+      },
+      {
+        "date": "2022-09-27",
+        "pricePerUnit": 282.94
+      },
+      {
+        "date": "2022-09-28",
+        "pricePerUnit": 287.81
+      },
+      {
+        "date": "2022-09-29",
+        "pricePerUnit": 268.21
+      },
+      {
+        "date": "2022-09-30",
+        "pricePerUnit": 265.25
+      },
+      {
+        "date": "2022-10-03",
+        "pricePerUnit": 242.4
+      },
+      {
+        "date": "2022-10-04",
+        "pricePerUnit": 249.44
+      },
+      {
+        "date": "2022-10-05",
+        "pricePerUnit": 240.81
+      },
+      {
+        "date": "2022-10-06",
+        "pricePerUnit": 238.13
+      },
+      {
+        "date": "2022-10-07",
+        "pricePerUnit": 223.07
+      },
+      {
+        "date": "2022-10-10",
+        "pricePerUnit": 222.96
+      },
+      {
+        "date": "2022-10-11",
+        "pricePerUnit": 216.5
+      },
+      {
+        "date": "2022-10-12",
+        "pricePerUnit": 217.24
+      },
+      {
+        "date": "2022-10-13",
+        "pricePerUnit": 221.72
+      },
+      {
+        "date": "2022-10-14",
+        "pricePerUnit": 204.99
+      },
+      {
+        "date": "2022-10-17",
+        "pricePerUnit": 219.35
+      },
+      {
+        "date": "2022-10-18",
+        "pricePerUnit": 220.19
+      },
+      {
+        "date": "2022-10-19",
+        "pricePerUnit": 222.04
+      },
+      {
+        "date": "2022-10-20",
+        "pricePerUnit": 207.28
+      },
+      {
+        "date": "2022-10-21",
+        "pricePerUnit": 214.44
+      },
+      {
+        "date": "2022-10-24",
+        "pricePerUnit": 211.25
+      },
+      {
+        "date": "2022-10-25",
+        "pricePerUnit": 222.415
+      },
+      {
+        "date": "2022-10-26",
+        "pricePerUnit": 224.64
+      },
+      {
+        "date": "2022-10-27",
+        "pricePerUnit": 225.09
+      },
+      {
+        "date": "2022-10-28",
+        "pricePerUnit": 228.52
+      },
+      {
+        "date": "2022-10-31",
+        "pricePerUnit": 227.54
+      },
+      {
+        "date": "2022-11-01",
+        "pricePerUnit": 227.82
+      },
+      {
+        "date": "2022-11-02",
+        "pricePerUnit": 214.98
+      },
+      {
+        "date": "2022-11-03",
+        "pricePerUnit": 215.31
+      },
+      {
+        "date": "2022-11-04",
+        "pricePerUnit": 207.47
+      },
+      {
+        "date": "2022-11-07",
+        "pricePerUnit": 197.08
+      },
+      {
+        "date": "2022-11-08",
+        "pricePerUnit": 191.3
+      },
+      {
+        "date": "2022-11-09",
+        "pricePerUnit": 177.59
+      },
+      {
+        "date": "2022-11-10",
+        "pricePerUnit": 190.72
+      },
+      {
+        "date": "2022-11-11",
+        "pricePerUnit": 195.97
+      },
+      {
+        "date": "2022-11-14",
+        "pricePerUnit": 190.95
+      },
+      {
+        "date": "2022-11-15",
+        "pricePerUnit": 194.42
+      },
+      {
+        "date": "2022-11-16",
+        "pricePerUnit": 186.92
+      },
+      {
+        "date": "2022-11-17",
+        "pricePerUnit": 183.17
+      },
+      {
+        "date": "2022-11-18",
+        "pricePerUnit": 180.19
+      },
+      {
+        "date": "2022-11-21",
+        "pricePerUnit": 167.87
+      },
+      {
+        "date": "2022-11-22",
+        "pricePerUnit": 169.91
+      },
+      {
+        "date": "2022-11-23",
+        "pricePerUnit": 183.2
+      },
+      {
+        "date": "2022-11-25",
+        "pricePerUnit": 182.86
+      },
+      {
+        "date": "2022-11-28",
+        "pricePerUnit": 182.92
+      },
+      {
+        "date": "2022-11-29",
+        "pricePerUnit": 180.83
+      },
+      {
+        "date": "2022-11-30",
+        "pricePerUnit": 194.7
+      },
+      {
+        "date": "2022-12-01",
+        "pricePerUnit": 194.7
+      },
+      {
+        "date": "2022-12-02",
+        "pricePerUnit": 194.86
+      },
+      {
+        "date": "2022-12-05",
+        "pricePerUnit": 182.45
+      },
+      {
+        "date": "2022-12-06",
+        "pricePerUnit": 179.82
+      },
+      {
+        "date": "2022-12-07",
+        "pricePerUnit": 174.04
+      },
+      {
+        "date": "2022-12-08",
+        "pricePerUnit": 173.44
+      },
+      {
+        "date": "2022-12-09",
+        "pricePerUnit": 179.05
+      },
+      {
+        "date": "2022-12-12",
+        "pricePerUnit": 167.82
+      },
+      {
+        "date": "2022-12-13",
+        "pricePerUnit": 160.95
+      },
+      {
+        "date": "2022-12-14",
+        "pricePerUnit": 156.8
+      },
+      {
+        "date": "2022-12-15",
+        "pricePerUnit": 157.67
+      },
+      {
+        "date": "2022-12-16",
+        "pricePerUnit": 150.23
+      },
+      {
+        "date": "2022-12-19",
+        "pricePerUnit": 149.87
+      },
+      {
+        "date": "2022-12-20",
+        "pricePerUnit": 137.8
+      },
+      {
+        "date": "2022-12-21",
+        "pricePerUnit": 137.57
+      },
+      {
+        "date": "2022-12-22",
+        "pricePerUnit": 125.35
+      },
+      {
+        "date": "2022-12-23",
+        "pricePerUnit": 123.15
+      },
+      {
+        "date": "2022-12-27",
+        "pricePerUnit": 109.1
+      },
+      {
+        "date": "2022-12-28",
+        "pricePerUnit": 112.71
+      },
+      {
+        "date": "2022-12-29",
+        "pricePerUnit": 121.82
+      },
+      {
+        "date": "2022-12-30",
+        "pricePerUnit": 123.18
+      },
+      {
+        "date": "2023-01-03",
+        "pricePerUnit": 108.1
+      },
+      {
+        "date": "2023-01-04",
+        "pricePerUnit": 113.64
+      },
+      {
+        "date": "2023-01-05",
+        "pricePerUnit": 110.34
+      },
+      {
+        "date": "2023-01-06",
+        "pricePerUnit": 113.06
+      },
+      {
+        "date": "2023-01-09",
+        "pricePerUnit": 119.77
+      },
+      {
+        "date": "2023-01-10",
+        "pricePerUnit": 118.85
+      },
+      {
+        "date": "2023-01-11",
+        "pricePerUnit": 123.22
+      },
+      {
+        "date": "2023-01-12",
+        "pricePerUnit": 123.56
+      },
+      {
+        "date": "2023-01-13",
+        "pricePerUnit": 122.4
+      },
+      {
+        "date": "2023-01-17",
+        "pricePerUnit": 131.49
+      },
+      {
+        "date": "2023-01-18",
+        "pricePerUnit": 128.78
+      },
+      {
+        "date": "2023-01-19",
+        "pricePerUnit": 127.17
+      },
+      {
+        "date": "2023-01-20",
+        "pricePerUnit": 133.42
+      },
+      {
+        "date": "2023-01-23",
+        "pricePerUnit": 143.75
+      },
+      {
+        "date": "2023-01-24",
+        "pricePerUnit": 143.89
+      },
+      {
+        "date": "2023-01-25",
+        "pricePerUnit": 144.43
+      },
+      {
+        "date": "2023-01-26",
+        "pricePerUnit": 160.27
+      },
+      {
+        "date": "2023-01-27",
+        "pricePerUnit": 177.9
+      },
+      {
+        "date": "2023-01-30",
+        "pricePerUnit": 166.66
+      },
+      {
+        "date": "2023-01-31",
+        "pricePerUnit": 173.22
+      },
+      {
+        "date": "2023-02-01",
+        "pricePerUnit": 181.41
+      },
+      {
+        "date": "2023-02-02",
+        "pricePerUnit": 188.27
+      },
+      {
+        "date": "2023-02-03",
+        "pricePerUnit": 189.98
+      },
+      {
+        "date": "2023-02-06",
+        "pricePerUnit": 194.76
+      },
+      {
+        "date": "2023-02-07",
+        "pricePerUnit": 196.81
+      },
+      {
+        "date": "2023-02-08",
+        "pricePerUnit": 201.29
+      },
+      {
+        "date": "2023-02-09",
+        "pricePerUnit": 207.32
+      },
+      {
+        "date": "2023-02-10",
+        "pricePerUnit": 196.89
+      },
+      {
+        "date": "2023-02-13",
+        "pricePerUnit": 194.64
+      },
+      {
+        "date": "2023-02-14",
+        "pricePerUnit": 209.25
+      },
+      {
+        "date": "2023-02-15",
+        "pricePerUnit": 214.24
+      },
+      {
+        "date": "2023-02-16",
+        "pricePerUnit": 202.04
+      },
+      {
+        "date": "2023-02-17",
+        "pricePerUnit": 208.31
+      },
+      {
+        "date": "2023-02-21",
+        "pricePerUnit": 197.37
+      },
+      {
+        "date": "2023-02-22",
+        "pricePerUnit": 200.86
+      },
+      {
+        "date": "2023-02-23",
+        "pricePerUnit": 202.07
+      },
+      {
+        "date": "2023-02-24",
+        "pricePerUnit": 196.88
+      },
+      {
+        "date": "2023-02-27",
+        "pricePerUnit": 207.63
+      },
+      {
+        "date": "2023-02-28",
+        "pricePerUnit": 205.71
+      },
+      {
+        "date": "2023-03-01",
+        "pricePerUnit": 202.77
+      },
+      {
+        "date": "2023-03-02",
+        "pricePerUnit": 190.9
+      },
+      {
+        "date": "2023-03-03",
+        "pricePerUnit": 197.79
+      },
+      {
+        "date": "2023-03-06",
+        "pricePerUnit": 193.81
+      },
+      {
+        "date": "2023-03-07",
+        "pricePerUnit": 187.71
+      },
+      {
+        "date": "2023-03-08",
+        "pricePerUnit": 182
+      },
+      {
+        "date": "2023-03-09",
+        "pricePerUnit": 172.92
+      },
+      {
+        "date": "2023-03-10",
+        "pricePerUnit": 173.44
+      },
+      {
+        "date": "2023-03-13",
+        "pricePerUnit": 174.48
+      },
+      {
+        "date": "2023-03-14",
+        "pricePerUnit": 183.26
+      },
+      {
+        "date": "2023-03-15",
+        "pricePerUnit": 180.45
+      },
+      {
+        "date": "2023-03-16",
+        "pricePerUnit": 184.13
+      },
+      {
+        "date": "2023-03-17",
+        "pricePerUnit": 180.13
+      },
+      {
+        "date": "2023-03-20",
+        "pricePerUnit": 183.25
+      },
+      {
+        "date": "2023-03-21",
+        "pricePerUnit": 197.58
+      },
+      {
+        "date": "2023-03-22",
+        "pricePerUnit": 191.15
+      },
+      {
+        "date": "2023-03-23",
+        "pricePerUnit": 192.22
+      },
+      {
+        "date": "2023-03-24",
+        "pricePerUnit": 190.41
+      },
+      {
+        "date": "2023-03-27",
+        "pricePerUnit": 191.81
+      },
+      {
+        "date": "2023-03-28",
+        "pricePerUnit": 189.19
+      },
+      {
+        "date": "2023-03-29",
+        "pricePerUnit": 193.88
+      },
+      {
+        "date": "2023-03-30",
+        "pricePerUnit": 195.28
+      },
+      {
+        "date": "2023-03-31",
+        "pricePerUnit": 207.46
+      },
+      {
+        "date": "2023-04-03",
+        "pricePerUnit": 194.77
+      },
+      {
+        "date": "2023-04-04",
+        "pricePerUnit": 192.58
+      },
+      {
+        "date": "2023-04-05",
+        "pricePerUnit": 185.52
+      },
+      {
+        "date": "2023-04-06",
+        "pricePerUnit": 185.06
+      },
+      {
+        "date": "2023-04-10",
+        "pricePerUnit": 184.51
+      },
+      {
+        "date": "2023-04-11",
+        "pricePerUnit": 186.79
+      },
+      {
+        "date": "2023-04-12",
+        "pricePerUnit": 180.54
+      },
+      {
+        "date": "2023-04-13",
+        "pricePerUnit": 185.9
+      },
+      {
+        "date": "2023-04-14",
+        "pricePerUnit": 185
+      },
+      {
+        "date": "2023-04-17",
+        "pricePerUnit": 187.04
+      },
+      {
+        "date": "2023-04-18",
+        "pricePerUnit": 184.31
+      },
+      {
+        "date": "2023-04-19",
+        "pricePerUnit": 180.59
+      },
+      {
+        "date": "2023-04-20",
+        "pricePerUnit": 162.99
+      },
+      {
+        "date": "2023-04-21",
+        "pricePerUnit": 165.08
+      },
+      {
+        "date": "2023-04-24",
+        "pricePerUnit": 162.55
+      },
+      {
+        "date": "2023-04-25",
+        "pricePerUnit": 160.67
+      },
+      {
+        "date": "2023-04-26",
+        "pricePerUnit": 153.75
+      },
+      {
+        "date": "2023-04-27",
+        "pricePerUnit": 160.19
+      },
+      {
+        "date": "2023-04-28",
+        "pricePerUnit": 164.31
+      },
+      {
+        "date": "2023-05-01",
+        "pricePerUnit": 161.83
+      },
+      {
+        "date": "2023-05-02",
+        "pricePerUnit": 160.31
+      },
+      {
+        "date": "2023-05-03",
+        "pricePerUnit": 160.61
+      },
+      {
+        "date": "2023-05-04",
+        "pricePerUnit": 161.2
+      },
+      {
+        "date": "2023-05-05",
+        "pricePerUnit": 170.06
+      },
+      {
+        "date": "2023-05-08",
+        "pricePerUnit": 171.79
+      },
+      {
+        "date": "2023-05-09",
+        "pricePerUnit": 169.15
+      },
+      {
+        "date": "2023-05-10",
+        "pricePerUnit": 168.54
+      },
+      {
+        "date": "2023-05-11",
+        "pricePerUnit": 172.08
+      },
+      {
+        "date": "2023-05-12",
+        "pricePerUnit": 167.98
+      },
+      {
+        "date": "2023-05-15",
+        "pricePerUnit": 166.35
+      },
+      {
+        "date": "2023-05-16",
+        "pricePerUnit": 166.52
+      },
+      {
+        "date": "2023-05-17",
+        "pricePerUnit": 173.86
+      },
+      {
+        "date": "2023-05-18",
+        "pricePerUnit": 176.89
+      },
+      {
+        "date": "2023-05-19",
+        "pricePerUnit": 180.14
+      },
+      {
+        "date": "2023-05-22",
+        "pricePerUnit": 188.87
+      },
+      {
+        "date": "2023-05-23",
+        "pricePerUnit": 185.77
+      },
+      {
+        "date": "2023-05-24",
+        "pricePerUnit": 182.9
+      },
+      {
+        "date": "2023-05-25",
+        "pricePerUnit": 184.47
+      },
+      {
+        "date": "2023-05-26",
+        "pricePerUnit": 193.17
+      },
+      {
+        "date": "2023-05-30",
+        "pricePerUnit": 201.16
+      },
+      {
+        "date": "2023-05-31",
+        "pricePerUnit": 203.93
+      },
+      {
+        "date": "2023-06-01",
+        "pricePerUnit": 207.52
+      },
+      {
+        "date": "2023-06-02",
+        "pricePerUnit": 213.97
+      },
+      {
+        "date": "2023-06-05",
+        "pricePerUnit": 217.61
+      },
+      {
+        "date": "2023-06-06",
+        "pricePerUnit": 221.31
+      },
+      {
+        "date": "2023-06-07",
+        "pricePerUnit": 224.57
+      },
+      {
+        "date": "2023-06-08",
+        "pricePerUnit": 234.86
+      },
+      {
+        "date": "2023-06-09",
+        "pricePerUnit": 244.4
+      },
+      {
+        "date": "2023-06-12",
+        "pricePerUnit": 249.83
+      },
+      {
+        "date": "2023-06-13",
+        "pricePerUnit": 258.71
+      },
+      {
+        "date": "2023-06-14",
+        "pricePerUnit": 256.79
+      },
+      {
+        "date": "2023-06-15",
+        "pricePerUnit": 255.9
+      },
+      {
+        "date": "2023-06-16",
+        "pricePerUnit": 260.54
+      },
+      {
+        "date": "2023-06-20",
+        "pricePerUnit": 274.45
+      },
+      {
+        "date": "2023-06-21",
+        "pricePerUnit": 259.46
+      },
+      {
+        "date": "2023-06-22",
+        "pricePerUnit": 264.61
+      },
+      {
+        "date": "2023-06-23",
+        "pricePerUnit": 256.6
+      },
+      {
+        "date": "2023-06-26",
+        "pricePerUnit": 241.05
+      },
+      {
+        "date": "2023-06-27",
+        "pricePerUnit": 250.21
+      },
+      {
+        "date": "2023-06-28",
+        "pricePerUnit": 256.24
+      },
+      {
+        "date": "2023-06-29",
+        "pricePerUnit": 257.5
+      },
+      {
+        "date": "2023-06-30",
+        "pricePerUnit": 261.77
+      },
+      {
+        "date": "2023-07-03",
+        "pricePerUnit": 279.82
+      },
+      {
+        "date": "2023-07-05",
+        "pricePerUnit": 282.48
+      },
+      {
+        "date": "2023-07-06",
+        "pricePerUnit": 276.54
+      },
+      {
+        "date": "2023-07-07",
+        "pricePerUnit": 274.43
+      },
+      {
+        "date": "2023-07-10",
+        "pricePerUnit": 269.61
+      },
+      {
+        "date": "2023-07-11",
+        "pricePerUnit": 269.79
+      },
+      {
+        "date": "2023-07-12",
+        "pricePerUnit": 271.99
+      },
+      {
+        "date": "2023-07-13",
+        "pricePerUnit": 277.9
+      },
+      {
+        "date": "2023-07-14",
+        "pricePerUnit": 281.38
+      },
+      {
+        "date": "2023-07-17",
+        "pricePerUnit": 290.38
+      },
+      {
+        "date": "2023-07-18",
+        "pricePerUnit": 293.34
+      },
+      {
+        "date": "2023-07-19",
+        "pricePerUnit": 291.26
+      },
+      {
+        "date": "2023-07-20",
+        "pricePerUnit": 262.9
+      },
+      {
+        "date": "2023-07-21",
+        "pricePerUnit": 260.02
+      },
+      {
+        "date": "2023-07-24",
+        "pricePerUnit": 269.06
+      },
+      {
+        "date": "2023-07-25",
+        "pricePerUnit": 265.28
+      },
+      {
+        "date": "2023-07-26",
+        "pricePerUnit": 264.35
+      },
+      {
+        "date": "2023-07-27",
+        "pricePerUnit": 255.71
+      },
+      {
+        "date": "2023-07-28",
+        "pricePerUnit": 266.44
+      },
+      {
+        "date": "2023-07-31",
+        "pricePerUnit": 267.43
+      },
+      {
+        "date": "2023-08-01",
+        "pricePerUnit": 261.07
+      },
+      {
+        "date": "2023-08-02",
+        "pricePerUnit": 254.11
+      },
+      {
+        "date": "2023-08-03",
+        "pricePerUnit": 259.32
+      },
+      {
+        "date": "2023-08-04",
+        "pricePerUnit": 253.86
+      },
+      {
+        "date": "2023-08-07",
+        "pricePerUnit": 251.45
+      },
+      {
+        "date": "2023-08-08",
+        "pricePerUnit": 249.7
+      },
+      {
+        "date": "2023-08-09",
+        "pricePerUnit": 242.19
+      },
+      {
+        "date": "2023-08-10",
+        "pricePerUnit": 245.34
+      },
+      {
+        "date": "2023-08-11",
+        "pricePerUnit": 242.65
+      },
+      {
+        "date": "2023-08-14",
+        "pricePerUnit": 239.76
+      },
+      {
+        "date": "2023-08-15",
+        "pricePerUnit": 232.96
+      },
+      {
+        "date": "2023-08-16",
+        "pricePerUnit": 225.6
+      },
+      {
+        "date": "2023-08-17",
+        "pricePerUnit": 219.22
+      },
+      {
+        "date": "2023-08-18",
+        "pricePerUnit": 215.49
+      },
+      {
+        "date": "2023-08-21",
+        "pricePerUnit": 231.28
+      },
+      {
+        "date": "2023-08-22",
+        "pricePerUnit": 233.19
+      },
+      {
+        "date": "2023-08-23",
+        "pricePerUnit": 236.86
+      },
+      {
+        "date": "2023-08-24",
+        "pricePerUnit": 230.04
+      },
+      {
+        "date": "2023-08-25",
+        "pricePerUnit": 238.59
+      },
+      {
+        "date": "2023-08-28",
+        "pricePerUnit": 238.82
+      },
+      {
+        "date": "2023-08-29",
+        "pricePerUnit": 257.18
+      },
+      {
+        "date": "2023-08-30",
+        "pricePerUnit": 256.9
+      },
+      {
+        "date": "2023-08-31",
+        "pricePerUnit": 258.08
+      },
+      {
+        "date": "2023-09-01",
+        "pricePerUnit": 245.01
+      },
+      {
+        "date": "2023-09-05",
+        "pricePerUnit": 256.49
+      },
+      {
+        "date": "2023-09-06",
+        "pricePerUnit": 251.92
+      },
+      {
+        "date": "2023-09-07",
+        "pricePerUnit": 251.49
+      },
+      {
+        "date": "2023-09-08",
+        "pricePerUnit": 248.5
+      },
+      {
+        "date": "2023-09-11",
+        "pricePerUnit": 273.58
+      },
+      {
+        "date": "2023-09-12",
+        "pricePerUnit": 267.48
+      },
+      {
+        "date": "2023-09-13",
+        "pricePerUnit": 271.3
+      },
+      {
+        "date": "2023-09-14",
+        "pricePerUnit": 276.04
+      },
+      {
+        "date": "2023-09-15",
+        "pricePerUnit": 274.39
+      },
+      {
+        "date": "2023-09-18",
+        "pricePerUnit": 265.28
+      },
+      {
+        "date": "2023-09-19",
+        "pricePerUnit": 266.5
+      },
+      {
+        "date": "2023-09-20",
+        "pricePerUnit": 262.59
+      },
+      {
+        "date": "2023-09-21",
+        "pricePerUnit": 255.7
+      },
+      {
+        "date": "2023-09-22",
+        "pricePerUnit": 244.88
+      },
+      {
+        "date": "2023-09-25",
+        "pricePerUnit": 246.99
+      },
+      {
+        "date": "2023-09-26",
+        "pricePerUnit": 244.12
+      },
+      {
+        "date": "2023-09-27",
+        "pricePerUnit": 240.5
+      },
+      {
+        "date": "2023-09-28",
+        "pricePerUnit": 246.38
+      },
+      {
+        "date": "2023-09-29",
+        "pricePerUnit": 250.22
+      },
+      {
+        "date": "2023-10-02",
+        "pricePerUnit": 251.6
+      },
+      {
+        "date": "2023-10-03",
+        "pricePerUnit": 246.53
+      },
+      {
+        "date": "2023-10-04",
+        "pricePerUnit": 261.16
+      },
+      {
+        "date": "2023-10-05",
+        "pricePerUnit": 260.05
+      },
+      {
+        "date": "2023-10-06",
+        "pricePerUnit": 260.53
+      },
+      {
+        "date": "2023-10-09",
+        "pricePerUnit": 259.67
+      },
+      {
+        "date": "2023-10-10",
+        "pricePerUnit": 263.62
+      },
+      {
+        "date": "2023-10-11",
+        "pricePerUnit": 262.99
+      },
+      {
+        "date": "2023-10-12",
+        "pricePerUnit": 258.87
+      },
+      {
+        "date": "2023-10-13",
+        "pricePerUnit": 251.12
+      },
+      {
+        "date": "2023-10-16",
+        "pricePerUnit": 253.92
+      },
+      {
+        "date": "2023-10-17",
+        "pricePerUnit": 254.85
+      },
+      {
+        "date": "2023-10-18",
+        "pricePerUnit": 242.68
+      },
+      {
+        "date": "2023-10-19",
+        "pricePerUnit": 220.11
+      },
+      {
+        "date": "2023-10-20",
+        "pricePerUnit": 211.99
+      },
+      {
+        "date": "2023-10-23",
+        "pricePerUnit": 212.08
+      },
+      {
+        "date": "2023-10-24",
+        "pricePerUnit": 216.52
+      },
+      {
+        "date": "2023-10-25",
+        "pricePerUnit": 212.42
+      },
+      {
+        "date": "2023-10-26",
+        "pricePerUnit": 205.76
+      },
+      {
+        "date": "2023-10-27",
+        "pricePerUnit": 207.3
+      },
+      {
+        "date": "2023-10-30",
+        "pricePerUnit": 197.36
+      },
+      {
+        "date": "2023-10-31",
+        "pricePerUnit": 200.84
+      },
+      {
+        "date": "2023-11-01",
+        "pricePerUnit": 205.66
+      },
+      {
+        "date": "2023-11-02",
+        "pricePerUnit": 218.51
+      },
+      {
+        "date": "2023-11-03",
+        "pricePerUnit": 219.96
+      },
+      {
+        "date": "2023-11-06",
+        "pricePerUnit": 219.27
+      },
+      {
+        "date": "2023-11-07",
+        "pricePerUnit": 222.18
+      },
+      {
+        "date": "2023-11-08",
+        "pricePerUnit": 222.11
+      },
+      {
+        "date": "2023-11-09",
+        "pricePerUnit": 209.98
+      },
+      {
+        "date": "2023-11-10",
+        "pricePerUnit": 214.65
+      },
+      {
+        "date": "2023-11-13",
+        "pricePerUnit": 223.71
+      },
+      {
+        "date": "2023-11-14",
+        "pricePerUnit": 237.41
+      },
+      {
+        "date": "2023-11-15",
+        "pricePerUnit": 242.84
+      },
+      {
+        "date": "2023-11-16",
+        "pricePerUnit": 233.59
+      },
+      {
+        "date": "2023-11-17",
+        "pricePerUnit": 234.3
+      },
+      {
+        "date": "2023-11-20",
+        "pricePerUnit": 235.6
+      },
+      {
+        "date": "2023-11-21",
+        "pricePerUnit": 241.2
+      },
+      {
+        "date": "2023-11-22",
+        "pricePerUnit": 234.21
+      },
+      {
+        "date": "2023-11-24",
+        "pricePerUnit": 235.45
+      },
+      {
+        "date": "2023-11-27",
+        "pricePerUnit": 236.08
+      },
+      {
+        "date": "2023-11-28",
+        "pricePerUnit": 246.72
+      },
+      {
+        "date": "2023-11-29",
+        "pricePerUnit": 244.14
+      },
+      {
+        "date": "2023-11-30",
+        "pricePerUnit": 240.08
+      },
+      {
+        "date": "2023-12-01",
+        "pricePerUnit": 238.83
+      },
+      {
+        "date": "2023-12-04",
+        "pricePerUnit": 235.58
+      },
+      {
+        "date": "2023-12-05",
+        "pricePerUnit": 238.72
+      },
+      {
+        "date": "2023-12-06",
+        "pricePerUnit": 239.37
+      },
+      {
+        "date": "2023-12-07",
+        "pricePerUnit": 242.64
+      },
+      {
+        "date": "2023-12-08",
+        "pricePerUnit": 243.84
+      },
+      {
+        "date": "2023-12-11",
+        "pricePerUnit": 239.74
+      },
+      {
+        "date": "2023-12-12",
+        "pricePerUnit": 237.01
+      },
+      {
+        "date": "2023-12-13",
+        "pricePerUnit": 239.29
+      },
+      {
+        "date": "2023-12-14",
+        "pricePerUnit": 251.05
+      },
+      {
+        "date": "2023-12-15",
+        "pricePerUnit": 253.5
+      },
+      {
+        "date": "2023-12-18",
+        "pricePerUnit": 252.08
+      },
+      {
+        "date": "2023-12-19",
+        "pricePerUnit": 257.22
+      },
+      {
+        "date": "2023-12-20",
+        "pricePerUnit": 247.14
+      },
+      {
+        "date": "2023-12-21",
+        "pricePerUnit": 254.5
+      },
+      {
+        "date": "2023-12-22",
+        "pricePerUnit": 252.54
+      },
+      {
+        "date": "2023-12-26",
+        "pricePerUnit": 256.61
+      },
+      {
+        "date": "2023-12-27",
+        "pricePerUnit": 261.44
+      },
+      {
+        "date": "2023-12-28",
+        "pricePerUnit": 253.18
+      },
+      {
+        "date": "2023-12-29",
+        "pricePerUnit": 248.48
+      },
+      {
+        "date": "2024-01-02",
+        "pricePerUnit": 248.42
+      },
+      {
+        "date": "2024-01-03",
+        "pricePerUnit": 238.45
+      },
+      {
+        "date": "2024-01-04",
+        "pricePerUnit": 237.93
+      },
+      {
+        "date": "2024-01-05",
+        "pricePerUnit": 237.49
+      },
+      {
+        "date": "2024-01-08",
+        "pricePerUnit": 240.45
+      },
+      {
+        "date": "2024-01-09",
+        "pricePerUnit": 234.96
+      },
+      {
+        "date": "2024-01-10",
+        "pricePerUnit": 233.94
+      },
+      {
+        "date": "2024-01-11",
+        "pricePerUnit": 227.22
+      },
+      {
+        "date": "2024-01-12",
+        "pricePerUnit": 218.89
+      },
+      {
+        "date": "2024-01-16",
+        "pricePerUnit": 219.91
+      },
+      {
+        "date": "2024-01-17",
+        "pricePerUnit": 215.55
+      },
+      {
+        "date": "2024-01-18",
+        "pricePerUnit": 211.88
+      },
+      {
+        "date": "2024-01-19",
+        "pricePerUnit": 212.19
+      },
+      {
+        "date": "2024-01-22",
+        "pricePerUnit": 208.8
+      },
+      {
+        "date": "2024-01-23",
+        "pricePerUnit": 209.14
+      },
+      {
+        "date": "2024-01-24",
+        "pricePerUnit": 207.83
+      },
+      {
+        "date": "2024-01-25",
+        "pricePerUnit": 182.63
+      },
+      {
+        "date": "2024-01-26",
+        "pricePerUnit": 183.25
+      },
+      {
+        "date": "2024-01-29",
+        "pricePerUnit": 190.93
+      },
+      {
+        "date": "2024-01-30",
+        "pricePerUnit": 191.59
+      },
+      {
+        "date": "2024-01-31",
+        "pricePerUnit": 187.29
+      },
+      {
+        "date": "2024-02-01",
+        "pricePerUnit": 188.86
+      },
+      {
+        "date": "2024-02-02",
+        "pricePerUnit": 187.91
+      },
+      {
+        "date": "2024-02-05",
+        "pricePerUnit": 181.06
+      },
+      {
+        "date": "2024-02-06",
+        "pricePerUnit": 185.1
+      },
+      {
+        "date": "2024-02-07",
+        "pricePerUnit": 187.58
+      },
+      {
+        "date": "2024-02-08",
+        "pricePerUnit": 189.56
+      },
+      {
+        "date": "2024-02-09",
+        "pricePerUnit": 193.57
+      },
+      {
+        "date": "2024-02-12",
+        "pricePerUnit": 188.13
+      },
+      {
+        "date": "2024-02-13",
+        "pricePerUnit": 184.02
+      },
+      {
+        "date": "2024-02-14",
+        "pricePerUnit": 188.71
+      },
+      {
+        "date": "2024-02-15",
+        "pricePerUnit": 200.45
+      },
+      {
+        "date": "2024-02-16",
+        "pricePerUnit": 199.95
+      },
+      {
+        "date": "2024-02-20",
+        "pricePerUnit": 193.76
+      },
+      {
+        "date": "2024-02-21",
+        "pricePerUnit": 194.77
+      },
+      {
+        "date": "2024-02-22",
+        "pricePerUnit": 197.41
+      },
+      {
+        "date": "2024-02-23",
+        "pricePerUnit": 191.97
+      },
+      {
+        "date": "2024-02-26",
+        "pricePerUnit": 199.4
+      },
+      {
+        "date": "2024-02-27",
+        "pricePerUnit": 199.73
+      },
+      {
+        "date": "2024-02-28",
+        "pricePerUnit": 202.04
+      },
+      {
+        "date": "2024-02-29",
+        "pricePerUnit": 201.88
+      },
+      {
+        "date": "2024-03-01",
+        "pricePerUnit": 202.64
+      },
+      {
+        "date": "2024-03-04",
+        "pricePerUnit": 188.14
+      },
+      {
+        "date": "2024-03-05",
+        "pricePerUnit": 180.74
+      },
+      {
+        "date": "2024-03-06",
+        "pricePerUnit": 176.54
+      },
+      {
+        "date": "2024-03-07",
+        "pricePerUnit": 178.65
+      },
+      {
+        "date": "2024-03-08",
+        "pricePerUnit": 175.34
+      },
+      {
+        "date": "2024-03-11",
+        "pricePerUnit": 177.77
+      },
+      {
+        "date": "2024-03-12",
+        "pricePerUnit": 177.54
+      },
+      {
+        "date": "2024-03-13",
+        "pricePerUnit": 169.48
+      },
+      {
+        "date": "2024-03-14",
+        "pricePerUnit": 162.5
+      },
+      {
+        "date": "2024-03-15",
+        "pricePerUnit": 163.57
+      },
+      {
+        "date": "2024-03-18",
+        "pricePerUnit": 173.8
+      },
+      {
+        "date": "2024-03-19",
+        "pricePerUnit": 171.32
+      },
+      {
+        "date": "2024-03-20",
+        "pricePerUnit": 175.66
+      }
+    ]
+  }
