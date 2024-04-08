@@ -63,6 +63,7 @@ export function DashboardPage() {
     const processedDataSets = [];
 
     dataSets.forEach((dataSet, index) => {
+      const totalPurchasePrice =  dataSet.purchase.pricePerUnit * dataSet.purchase.units;
       const processedDataSet = {
         ...dataSet,
         historicalData: [],
@@ -106,7 +107,7 @@ export function DashboardPage() {
         const processedDataPoint = {
           date: formattedDate,
           pricePerUnit:
-            pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices,
+            (pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices) /* - totalPrice */,
         };
 
         processedDataSet.historicalData.push(processedDataPoint);
