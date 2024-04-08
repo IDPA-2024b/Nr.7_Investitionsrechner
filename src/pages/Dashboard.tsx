@@ -48,8 +48,7 @@ export function DashboardPage() {
 
     setInvestments(updatedInvestments);
   }, []);
-  console.log("investments", investments);
-  console.log("eachDayInvestment", eachDayInvestment);
+
   // adding each day betwenn an start date and today for each investment with date and price
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
