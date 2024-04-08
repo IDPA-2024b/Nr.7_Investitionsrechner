@@ -5,10 +5,10 @@ import { Section } from "./Section";
 
 interface ProfitSectionProps {
   value: number;
-  percentage: number;
+  roi: number;
 }
 
-export function ProfitSection({ value, percentage }: ProfitSectionProps) {
+export function ProfitSection({ value, roi }: ProfitSectionProps) {
   return (
     <Section>
       <TitleWithTooltip
@@ -17,9 +17,9 @@ export function ProfitSection({ value, percentage }: ProfitSectionProps) {
       />
       <Flex justify={"space-between"} align={"baseline"}>
         <ImportantNumber number={value} />
-        <Tag rounded={"full"} colorScheme={percentage > 0 ? "green" : "red"}>
+        <Tag rounded={"full"} colorScheme={roi > 0 ? "green" : "red"}>
           <Text>
-            {percentage.toLocaleString(undefined, {
+            {roi.toLocaleString(undefined, {
               maximumFractionDigits: 2,
             })}
             %

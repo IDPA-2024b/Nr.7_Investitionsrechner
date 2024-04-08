@@ -51,7 +51,9 @@ export function MarketValueChange({
 
   return (
     <HStack color={trendColorMap[difference]}>
-      <Text>{`${trendSymbolMap[difference]} \$${prettify(value)}`}</Text>
+      <Text>{`${trendSymbolMap[difference]} \$${prettify(
+        Math.abs(value)
+      )}`}</Text>
       <Text>{`(${prettify(percentage)}%)`}</Text>
       {trendIconMap[difference]()}
     </HStack>

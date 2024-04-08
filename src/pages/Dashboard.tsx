@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { MainScreen } from "../components/dashboard/MainScreen";
 import InvestmentData from "../MockData/InvestmentData.json";
 import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
@@ -148,8 +147,6 @@ export function DashboardPage() {
     return processedDataSets;
   }
 
-
-
   const investmentsWithSoldData = investments.filter(
     (investment) => investment.sale !== undefined
   );
@@ -165,8 +162,6 @@ export function DashboardPage() {
     return total + salePrice * saleAmount;
   }, 0);
 
-
-
   const profit = revenue - onlySoldSpent;
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
@@ -177,7 +172,10 @@ export function DashboardPage() {
       {/* TODO: find best max width*/}
       <VStack align={"start"} gap={8}>
         <Heading size={"lg"}>Dashboard</Heading>
-        <MarketValueSection defaultDateRange={DateRange.All} investments={eachDayInvestment}  />
+        <MarketValueSection
+          defaultDateRange={DateRange.All}
+          investments={eachDayInvestment}
+        />
         <Flex
           gap={"inherit"}
           width={"100%"}
@@ -189,8 +187,8 @@ export function DashboardPage() {
             width={"100%"}
             direction={{ base: "column", md: "row", lg: "column" }}
           >
-            {/* /TODO: i dont fucking know what you mean with the percentage leo / idk how to calculate */}
-            <ProfitSection value={profit} percentage={-0.5} />
+            {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
+            <ProfitSection value={profit} roi={-0.5} />
             <RevenueSection value={revenue} />
           </Flex>
           {/* Top Investments and Diversity */}
@@ -199,7 +197,6 @@ export function DashboardPage() {
             <DiversitySection investments={investments} />
           </Flex>
         </Flex>
-        <MainScreen investments={eachDayInvestment} />
       </VStack>
     </Container>
   );
