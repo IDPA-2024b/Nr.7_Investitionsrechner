@@ -14,6 +14,10 @@ const links: ILink[] = [
     href: "/about",
   },
   {
+    name: "Contact",
+    href: "/contact",
+  },
+  {
     name: "Privacy",
     href: "/privacy",
   },
