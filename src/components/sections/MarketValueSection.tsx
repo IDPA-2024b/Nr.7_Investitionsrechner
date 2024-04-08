@@ -6,10 +6,11 @@ import { LineChart } from "../charts/Line";
 import { Flex, Select, chakra, useBreakpointValue } from "@chakra-ui/react";
 import { DateRange } from "../../types/chart";
 import { useEffect, useRef, useState } from "react";
-import { Investment } from "../../types/investment";
+import type { Investment } from "../../types/investment";
 
 interface MarketValueSectionProps {
   defaultDateRange: DateRange;
+  investments: Investment[];
 }
 
 export function MarketValueSection({
@@ -45,7 +46,6 @@ export function MarketValueSection({
 
     return () => window.removeEventListener("resize", event);
   }, [ratio]);
-
 
   function calculateAmountSpentInTimeRange(
     investments: Investment[],
@@ -88,7 +88,7 @@ export function MarketValueSection({
   function receiveData(data1: number, data2: number) {
     setFirstValue(
       calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||
-      data1
+        data1
     );
     setLastValue(data2);
   }
@@ -112,7 +112,7 @@ export function MarketValueSection({
 
     const result = Object.entries(totalForMonth).map(([date, value]) => ({
       date,
-      value: parseFloat(value.toFixed(2)) // Round to two decimal places
+      value: parseFloat(value.toFixed(2)), // Round to two decimal places
     }));
 
     return result;

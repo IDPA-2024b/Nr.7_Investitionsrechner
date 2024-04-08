@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -67,7 +67,14 @@ export function LineChart({
   receiveData,
   ...styles
 }: LineChartProps & StyleProps) {
+  const chartRef = useRef(null);
   const [aggregatedData, setAggregatedData] = useState<PriceRecord[]>([]);
+
+  useEffect(() => {
+    if (!chartRef.current) return;
+    const chart = chartRef.current as ChartJS<"line">;
+    chart.resize();
+  }, [styles]);
 
   useEffect(() => {
     setAggregatedData(aggregateData(rawData, dateRange, maxDataPoints));
@@ -110,7 +117,7 @@ export function LineChart({
 
   return (
     <chakra.div {...styles}>
-      <Line options={options} data={data} />
+      <Line ref={chartRef} options={options} data={data} />
     </chakra.div>
   );
 }
