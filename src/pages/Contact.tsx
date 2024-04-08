@@ -58,6 +58,7 @@ export function Contact() {
         <>
             <Container
                 maxW={"container.lg"}
+                mt={"50px"}
             >
 
                 <Flex
@@ -94,7 +95,7 @@ export function Contact() {
 
                     </Box>
                     <form ref={formRef} onSubmit={sendEmail} style={{ width: "50%" }}>
-                        <FormControl>
+                        <FormControl marginBottom="1rem">
                             <FormLabel>Name</FormLabel>
                             <Input
                                 type="text"
@@ -105,10 +106,10 @@ export function Contact() {
                             />
                         </FormControl>
 
-                        <FormControl>
+                        <FormControl marginBottom="1rem">
                             <FormLabel>Email</FormLabel>
                             <Input
-                                //type="email"
+                                type="email" // I've uncommented this line assuming it's an email input
                                 name="from_email"
                                 required
                                 placeholder="John@Doe.com"
@@ -116,7 +117,7 @@ export function Contact() {
                             />
                         </FormControl>
 
-                        <FormControl>
+                        <FormControl marginBottom="1rem">
                             <FormLabel htmlFor="topic">Topic</FormLabel>
                             <Input
                                 type="text"
@@ -127,7 +128,7 @@ export function Contact() {
                             />
                         </FormControl>
 
-                        <FormControl>
+                        <FormControl marginBottom="1rem">
                             <FormLabel>Message</FormLabel>
                             <Textarea
                                 name="message"
@@ -141,6 +142,24 @@ export function Contact() {
                             Send
                         </Button>
                     </form>
+
+                    <Box fontStyle={"italic"} mt={"30px"} display={useBreakpointValue({ base: 'block', md: 'none' })}>
+                        <Text>
+                            InView CH
+                        </Text>
+                        <Text>
+                            Rosenstrasse 1
+                        </Text>
+                        <Text>
+                            8400 Winterthur
+                        </Text>
+                        <Text
+                            textDecor={"underline"}
+                        >
+                            <a href="mailto:idpa.investment.dashboard@gmail.com">idpa.investment.dashboard@gmail.com</a>
+                        </Text>
+                    </Box>
+
                 </Flex>
             </Container>
         </>
