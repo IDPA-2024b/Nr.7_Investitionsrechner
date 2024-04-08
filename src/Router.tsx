@@ -9,6 +9,7 @@ import { DashboardPage } from "./pages/Dashboard";
 import { InvestmentPage } from "./pages/Investment";
 import { NewInvestmentPage } from "./pages/NewInvestment";
 import { UserOnlyRoute } from "./routes/UserOnly";
+import { Contact } from "./pages/Contact";
 
 const router = createHashRouter([
   {
@@ -31,6 +32,10 @@ const router = createHashRouter([
         path: "/privacy",
         element: <PrivacyPage />,
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+      }
     ],
   },
   {
