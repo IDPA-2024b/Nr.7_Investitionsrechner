@@ -5,7 +5,7 @@ import { MarketValueSection } from "../components/sections/MarketValueSection";
 import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
-import { RevenueSection } from "../components/sections/RevenueSection";
+import { SingleInformationSection } from "../components/sections/SingleInformationSection";
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { set } from "firebase/database";
@@ -212,7 +212,7 @@ export function InvestmentPage() {
           direction={{ base: "column", lg: "row" }}
         >
           {/* Profit and Revenue */}
-          <RevenueSection value={holdingPeriod} />
+          <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
           <Flex
             gap={"inherit"}
             width={"100%"}
@@ -222,7 +222,6 @@ export function InvestmentPage() {
                     Oke i do now 🙁
             */}
             <ProfitSection value={12312} roi={-0.5} />
-            <RevenueSection value={123} />
           </Flex>
           {/* Top Investments and Diversity */}
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>

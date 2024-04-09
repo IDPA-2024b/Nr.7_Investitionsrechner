@@ -5,7 +5,7 @@ import { MarketValueSection } from "../components/sections/MarketValueSection";
 import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
-import { RevenueSection } from "../components/sections/RevenueSection";
+import { SingleInformationSection } from "../components/sections/SingleInformationSection";
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 export function DashboardPage() {
@@ -189,7 +189,7 @@ export function DashboardPage() {
           >
             {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
             <ProfitSection value={profit} roi={-0.5} />
-            <RevenueSection value={revenue} />
+            <SingleInformationSection value={revenue} title={"Revenue"} tooltip="The total revenue you've made from your investments" type="number" />
           </Flex>
           {/* Top Investments and Diversity */}
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
