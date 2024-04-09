@@ -9,11 +9,14 @@ import { RevenueSection } from "../components/sections/RevenueSection";
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { set } from "firebase/database";
+import { useLocation, useParams } from "react-router-dom";
 export function InvestmentPage() {
   const [investments, setInvestments] = useState([]);
+  const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
   const [investment, setInvestment] = useState([]);
-
+  const idArray = useParams();
+  const id: String = idArray.id;
   useEffect(() => {
     const updatedInvestments = InvestmentData.map((investment) => {
       const purchaseDate = new Date(investment.purchase.date);
@@ -47,14 +50,26 @@ export function InvestmentPage() {
 
       return { ...investment, historicalData };
     });
-    const url = window.location.href;
-    const id = url.substring(url.lastIndexOf("/") + 1);
     const singleInvestment = [updatedInvestments.find((item) => item.id === id)];
     console.log(singleInvestment);
 
     setInvestment(singleInvestment);
-    setInvestments(updatedInvestments);
   }, []);
+  useEffect(() => {
+    const purchaseDate = new Date(investment[0]?.purchase.date);
+    console.log("purchaseDate", purchaseDate);
+    if (investment[0]?.sale !== undefined) {
+      const saleDate = new Date(investment[0]?.sale.date);
+      const holdingPeriod = calculateDaysBetweenDates(purchaseDate, saleDate);
+      setHoldingPeriod(formatHoldingPeriod(holdingPeriod));
+    } else {
+      const holdingPeriod = calculateDaysBetweenDates(purchaseDate, new Date());
+      console.log(holdingPeriod);
+      console.log(formatHoldingPeriod(holdingPeriod));
+    }
+
+    setEachDayInvestment(processMultipleHistoricalData(investment));
+  }, [investment]);
 
   // adding each day betwenn an start date and today for each investment with date and price
   function processMultipleHistoricalData(dataSets) {
@@ -152,11 +167,35 @@ export function InvestmentPage() {
 
     return processedDataSets;
   }
-  let funny
-  // funny = processMultipleHistoricalData(investment);
-  useEffect(() => {
-    setEachDayInvestment(processMultipleHistoricalData(investment));
-  }, [investments]);
+
+  function calculateDaysBetweenDates(date1: Date, date2: Date): number {
+    // Convert both dates to UTC
+    const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+    const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+
+    // Calculate the difference in milliseconds
+    const diffInMs = Math.abs(utc2 - utc1);
+
+    // Convert the difference from milliseconds to days
+    return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+  }
+
+  function formatHoldingPeriod(days: number): string {
+    if (days === 1) {
+      return `${days} day`;
+    } else if (days < 7) {
+      return `${days} days`;
+    } else if (days < 30) {
+      const weeks = Math.floor(days / 7);
+      return `${weeks} week${weeks !== 1 ? 's' : ''}`;
+    } else if (days < 365 * 3) {
+      const months = Math.floor(days / 30);
+      return `${months} month${months !== 1 ? 's' : ''}`;
+    } else {
+      const years = Math.floor(days / 365);
+      return `${years} year${years !== 1 ? 's' : ''}`;
+    }
+  }
 
   return (
     <Container maxWidth={"5xl"}>
@@ -173,12 +212,15 @@ export function InvestmentPage() {
           direction={{ base: "column", lg: "row" }}
         >
           {/* Profit and Revenue */}
+          <RevenueSection value={holdingPeriod} />
           <Flex
             gap={"inherit"}
             width={"100%"}
             direction={{ base: "column", md: "row", lg: "column" }}
           >
-            {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
+            {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) 
+                    Oke i do now 🙁
+            */}
             <ProfitSection value={12312} roi={-0.5} />
             <RevenueSection value={123} />
           </Flex>
