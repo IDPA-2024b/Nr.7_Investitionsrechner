@@ -49,8 +49,10 @@ export function InvestmentPage() {
     });
     const url = window.location.href;
     const id = url.substring(url.lastIndexOf("/") + 1);
-    const singleInvestment = [investments.find((item) => item.id === id)];
+    const singleInvestment = [updatedInvestments.find((item) => item.id === id)];
     console.log(singleInvestment);
+
+    setInvestment(singleInvestment);
     setInvestments(updatedInvestments);
   }, []);
 
@@ -91,9 +93,9 @@ export function InvestmentPage() {
         )
           .toString()
           .padStart(2, "0")}-${currentDate
-          .getDate()
-          .toString()
-          .padStart(2, "0")}`;
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`;
 
         const pricePerUnit = dataSet.historicalData.find((dataPoint) => {
           const dataPointDate = new Date(dataPoint.date);
@@ -102,9 +104,9 @@ export function InvestmentPage() {
           )
             .toString()
             .padStart(2, "0")}-${dataPointDate
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`;
+              .getDate()
+              .toString()
+              .padStart(2, "0")}`;
           return formattedDataPointDate === formattedDate;
         })?.pricePerUnit;
 
@@ -150,11 +152,10 @@ export function InvestmentPage() {
 
     return processedDataSets;
   }
-  let funny 
+  let funny
   // funny = processMultipleHistoricalData(investment);
-  console.log(funny);
   useEffect(() => {
-    setEachDayInvestment(processMultipleHistoricalData(investments));
+    setEachDayInvestment(processMultipleHistoricalData(investment));
   }, [investments]);
 
   return (
@@ -185,6 +186,7 @@ export function InvestmentPage() {
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
           </Flex>
         </Flex>
+
       </VStack>
     </Container>
   );

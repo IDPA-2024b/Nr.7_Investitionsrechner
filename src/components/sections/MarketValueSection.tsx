@@ -34,7 +34,6 @@ export function MarketValueSection({
       },
       { ssr: false }
     ) ?? 1;
-
   useEffect(() => {
     const event = () => {
       if (chartRef.current) {
