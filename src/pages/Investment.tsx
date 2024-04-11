@@ -10,6 +10,7 @@ import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSect
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { set } from "firebase/database";
 import { useLocation, useParams } from "react-router-dom";
+import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
 export function InvestmentPage() {
   const [investments, setInvestments] = useState([]);
   const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
@@ -196,7 +197,8 @@ export function InvestmentPage() {
       return `${years} year${years !== 1 ? 's' : ''}`;
     }
   }
-
+  const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
+  const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
   return (
     <Container maxWidth={"5xl"}>
       {/* TODO: find best max width*/}
@@ -211,19 +213,17 @@ export function InvestmentPage() {
           width={"100%"}
           direction={{ base: "column", lg: "row" }}
         >
-          {/* Profit and Revenue */}
+          {/* Information about the investment */}
           <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
-          <Flex
-            gap={"inherit"}
-            width={"100%"}
-            direction={{ base: "column", md: "row", lg: "column" }}
-          >
-            {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) 
-                    Oke i do now 🙁
-            */}
-            <ProfitSection value={12312} roi={-0.5} />
-          </Flex>
-          {/* Top Investments and Diversity */}
+
+          {/* Display only when investment has a sale data */}
+          {investment[0]?.sale && (
+            <>
+              <ProfitSection value={12312} roi={-0.5} />
+              <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
+            </>
+          )}
+
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
           </Flex>
         </Flex>
