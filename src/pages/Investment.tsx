@@ -2,20 +2,25 @@ import { useEffect, useState } from "react";
 import InvestmentData from "../MockData/InvestmentData.json";
 import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
+import { Container, Flex, Heading, VStack, Text, HStack, Box, Button } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
+import { CiMenuKebab } from "react-icons/ci";
+
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { set } from "firebase/database";
-import { useLocation, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
+import { KebabIcon } from "../components/KebabIcon";
 export function InvestmentPage() {
   const [investments, setInvestments] = useState([]);
   const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
   const [investment, setInvestment] = useState([]);
+  const navigate = useNavigate();
   const idArray = useParams();
   const id: String = idArray.id;
   useEffect(() => {
@@ -199,11 +204,59 @@ export function InvestmentPage() {
   }
   const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
+  const totalUnits = investment[0]?.purchase.units.toLocaleString();
+  const investmentName = investment[0]?.name;
+  const investmentSymbol = investment[0]?.symbol;
+  console.log(investment)
   return (
     <Container maxWidth={"5xl"}>
-      {/* TODO: find best max width*/}
+
       <VStack align={"start"} gap={8}>
-        <Heading size={"lg"}>Dashboard</Heading>
+
+        <HStack cursor={"pointer"} onClick={() => navigate("/dashboard")}>
+
+          <ArrowBackIcon boxSize={6} />
+          <Text fontWeight={"600"}>Back to Dashboard</Text>
+        </HStack>
+        <Flex
+          justify={"space-between"}
+          width={"100%"}
+        >
+
+          <Box>
+            <Flex gap={5} alignItems="baseline" /*TODO: i am too stoopid to make text below and not at the top */>
+              <Heading size={"lg"}>{investmentName}</Heading>
+              <Text fontSize={"sm"} color={"grey"}>{investmentSymbol}</Text>
+            </Flex>
+            <Text fontWeight={"600"}>{totalUnits} Units</Text>
+          </Box>
+          <Flex
+            alignItems={"center"}
+            gap={1}
+          >
+            <Button
+              colorScheme="teal"
+              variant="solid"
+              size="md"
+              // TODO: add functionality
+              onClick={() => alert(`Want to sell investment with id ${id}`)}
+            >
+              Sell
+            </Button>
+            <Box>
+              <KebabIcon
+                cursor="pointer"
+                w={6}
+                h={6}
+                color=""
+                // TODO: add functionality
+                onClick={() => alert(`I dont fucking know what to do here leo pls helt`)}
+              />
+            </Box>
+
+          </Flex>
+
+        </Flex>
         <MarketValueSection
           defaultDateRange={DateRange.All}
           investments={eachDayInvestment}
@@ -214,15 +267,15 @@ export function InvestmentPage() {
           direction={{ base: "column", lg: "row" }}
         >
           {/* Information about the investment */}
-          <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
+          <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
 
           {/* Display only when investment has a sale data */}
           {investment[0]?.sale && (
             <>
               <ProfitSection value={12312} roi={-0.5} />
-              <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
             </>
           )}
+          <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
 
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
           </Flex>

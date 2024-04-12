@@ -18,3 +18,4 @@ export function Section({ children }: PropsWithChildren<object>) {
     </chakra.section>
   );
 }
+ 
