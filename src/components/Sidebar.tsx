@@ -1,6 +1,8 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import {
   Button,
+  Flex,
+  Icon,
   IconButton,
   Input,
   Text,
@@ -8,8 +10,9 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import investments from "../MockData/InvestmentData.json";
+import { MdAttachMoney } from "react-icons/md";
 interface SidebarProps {
   isOpen: boolean;
   onOpen?: () => void;
@@ -18,8 +21,8 @@ interface SidebarProps {
 
 export function Sidebar({
   isOpen,
-  onOpen = () => {},
-  onClose = () => {},
+  onOpen = () => { },
+  onClose = () => { },
 }: SidebarProps) {
   const navigate = useNavigate();
   const searchbarRef = useRef<HTMLInputElement>(null);
@@ -42,6 +45,8 @@ export function Sidebar({
     }
   }, [isOpen]);
 
+
+  console.log(investments);
   return (
     <chakra.aside>
       <VStack spacing={4} py="3" px="5">
@@ -68,7 +73,27 @@ export function Sidebar({
           icon={<SearchIcon />}
           onClick={handleOpenSearchBar}
         />
+        <>
+          {investments.map((investment) => (
+            <Link key={investment.id} to={`investment/${investment.id}`} style={{ width: "100%" }}>
+              <Flex align="center"
+                textAlign={isOpen ? "left" : "center"}
+                display={isOpen ? "flex" : "block"}
+              >
+                <Icon
+                  as={MdAttachMoney}
+                  boxSize={7}
+                  p={1}
+                  bg={"gray.200"} // Apply grey background when the sidebar is closed
+                  borderRadius="5px" // Make the background circular
+                />
+                                {isOpen && <Text ml={2}>{investment.name}</Text>} {/* Conditionally render the text only when the sidebar is open */}
+              </Flex>
+            </Link>
+          ))}
+        </>
       </VStack>
+
     </chakra.aside>
   );
 }

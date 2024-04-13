@@ -60,7 +60,8 @@ export function InvestmentPage() {
     console.log(singleInvestment);
 
     setInvestment(singleInvestment);
-  }, []);
+  }, [id]); // TODO: this is maybe not the best way to do it, but it works for now
+
   useEffect(() => {
     const purchaseDate = new Date(investment[0]?.purchase.date);
     console.log("purchaseDate", purchaseDate);
@@ -218,8 +219,12 @@ export function InvestmentPage() {
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
   const investmentName = investment[0]?.name;
   const investmentSymbol = investment[0]?.symbol;
-  const profit = profitCalculation().profit;
-  const roi = profitCalculation().roi;
+  let profit = 0;
+  let roi = 0;
+  if (investment[0]?.sale) {
+    profit = profitCalculation().profit;
+    roi = profitCalculation().roi;
+  }
 
   return (
     <Container maxWidth={"5xl"}>
@@ -241,7 +246,7 @@ export function InvestmentPage() {
               <Heading size={"lg"}>{investmentName}</Heading>
               <Text fontSize={"sm"} color={"grey"}>{investmentSymbol}</Text>
             </Flex>
-            <Text fontWeight={"600"}>{totalUnits} Units</Text>
+            <Text fontWeight={"600"}>{totalUnits}  Unit{totalUnits !== "1" ? "s" : ""}</Text>
           </Box>
           <Flex
             alignItems={"center"}
