@@ -202,12 +202,25 @@ export function InvestmentPage() {
       return `${years} year${years !== 1 ? 's' : ''}`;
     }
   }
+  function profitCalculation() {
+    const purchasePrice = investment[0]?.purchase.pricePerUnit;
+    const salePrice = investment[0]?.sale.pricePerUnit;
+    const units = investment[0]?.purchase.units;
+    const profit = (salePrice - purchasePrice) * units;
+    const roi = (profit / (purchasePrice * units)) * 100;
+    return { profit, roi };
+  }
+
+
+  // ka wie das wotsch clean go mache ga aber go for it
   const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
   const investmentName = investment[0]?.name;
   const investmentSymbol = investment[0]?.symbol;
-  console.log(investment)
+  const profit = profitCalculation().profit;
+  const roi = profitCalculation().roi;
+
   return (
     <Container maxWidth={"5xl"}>
 
@@ -272,7 +285,7 @@ export function InvestmentPage() {
           {/* Display only when investment has a sale data */}
           {investment[0]?.sale && (
             <>
-              <ProfitSection value={12312} roi={-0.5} />
+              <ProfitSection value={profit} roi={roi} />
             </>
           )}
           <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />

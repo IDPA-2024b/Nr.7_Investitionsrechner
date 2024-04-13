@@ -162,7 +162,10 @@ export function DashboardPage() {
     return total + salePrice * saleAmount;
   }, 0);
 
+
+  // TODO: Right calculation of roi
   const profit = revenue - onlySoldSpent;
+  const roi = profit / onlySoldSpent * 100;
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
@@ -188,7 +191,7 @@ export function DashboardPage() {
             direction={{ base: "column", md: "row", lg: "column" }}
           >
             {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
-            <ProfitSection value={profit} roi={-0.5} />
+            <ProfitSection value={profit} roi={roi} />
             <SingleInformationSection value={revenue} title={"Revenue"} tooltip="The total revenue you've made from your investments" type="number" />
           </Flex>
           {/* Top Investments and Diversity */}
