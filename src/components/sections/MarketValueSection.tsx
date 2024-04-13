@@ -79,11 +79,6 @@ export function MarketValueSection({
     return totalPaied;
   }
 
-  const tmp = calculateAmountSpentInTimeRange(
-    investments,
-    dateRange as DateRange
-  );
-  // console.log(tmp);
   function receiveData(data1: number, data2: number) {
     setFirstValue(
       calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||

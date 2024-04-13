@@ -80,7 +80,7 @@ export function Sidebar({
   }, [searchQuery, selectedType, investments]);
 
   return (
-    <chakra.aside>
+    <chakra.aside overflow={"auto"}>
       <VStack spacing={4} py="3" px="5">
         <Button
           colorScheme="teal"
@@ -138,7 +138,6 @@ export function Sidebar({
             display={filteredInvestments.length > 0 ? "block" : "none"} // Show the line only if there are filtered investments
           />
         )}
-        <>
           {filteredInvestments.map((investment) => (
             <Link key={investment.id} to={`investment/${investment.id}`} style={{ width: "100%" }}>
               <Flex align="center"
@@ -165,7 +164,6 @@ export function Sidebar({
               )}
             </Link>
           ))}
-        </>
       </VStack>
 
     </chakra.aside>

@@ -2,27 +2,30 @@ import { useEffect, useState } from "react";
 import InvestmentData from "../MockData/InvestmentData.json";
 import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Container, Flex, Heading, VStack, Text, HStack, Box, Button } from "@chakra-ui/react";
+import { Container, Flex, Heading, VStack, Text, HStack, Box, Popover } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
-import { CiMenuKebab } from "react-icons/ci";
 
-import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
-import { DiversitySection } from "../components/sections/DiversitySection";
-import { set } from "firebase/database";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
 import { KebabIcon } from "../components/KebabIcon";
+import { PopOverSell } from "../components/sections/PopOverSell";
+import { PopOverUnsell } from "../components/sections/PopOverUnsell";
 export function InvestmentPage() {
   const [investments, setInvestments] = useState([]);
+  const [pricePerUnit, setPricePerUnit] = useState("100");
+  const [units, setUnits] = useState("10");
+  const [saleDate, setSaleDate] = useState("01.03.2023");
   const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
   const [investment, setInvestment] = useState([]);
   const navigate = useNavigate();
   const idArray = useParams();
   const id: String = idArray.id;
+
+  // TODO:  this will be mosty gone after the backend is connected
   useEffect(() => {
     const updatedInvestments = InvestmentData.map((investment) => {
       const purchaseDate = new Date(investment.purchase.date);
@@ -57,28 +60,25 @@ export function InvestmentPage() {
       return { ...investment, historicalData };
     });
     const singleInvestment = [updatedInvestments.find((item) => item.id === id)];
-    console.log(singleInvestment);
 
     setInvestment(singleInvestment);
   }, [id]); // TODO: this is maybe not the best way to do it, but it works for now
 
   useEffect(() => {
     const purchaseDate = new Date(investment[0]?.purchase.date);
-    console.log("purchaseDate", purchaseDate);
     if (investment[0]?.sale !== undefined) {
       const saleDate = new Date(investment[0]?.sale.date);
       const holdingPeriod = calculateDaysBetweenDates(purchaseDate, saleDate);
       setHoldingPeriod(formatHoldingPeriod(holdingPeriod));
     } else {
       const holdingPeriod = calculateDaysBetweenDates(purchaseDate, new Date());
-      console.log(holdingPeriod);
-      console.log(formatHoldingPeriod(holdingPeriod));
+      setHoldingPeriod(formatHoldingPeriod(holdingPeriod));
     }
 
     setEachDayInvestment(processMultipleHistoricalData(investment));
   }, [investment]);
 
-  // adding each day betwenn an start date and today for each investment with date and price
+  // TODO: Remove this function after backend is connected and context is made
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
     const yesterday = new Date(today);
@@ -213,9 +213,11 @@ export function InvestmentPage() {
   }
 
 
-  // ka wie das wotsch clean go mache ga aber go for it
+  // bro mach das clean ich han 
+
   const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
+
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
   const investmentName = investment[0]?.name;
   const investmentSymbol = investment[0]?.symbol;
@@ -224,6 +226,22 @@ export function InvestmentPage() {
   if (investment[0]?.sale) {
     profit = profitCalculation().profit;
     roi = profitCalculation().roi;
+  }
+  useEffect(() => {
+    setUnits(investment[0]?.purchase.units);
+    setPricePerUnit(investment[0]?.purchase.pricePerUnit);
+    setSaleDate(investment[0]?.purchase?.date);
+
+  }, [investment]);
+
+  // TODO: this is just a placeholder function for now. I hope you will have fun @Le0nRoch
+  const handleSell = () => {
+    console.log("Price Per Unit:", pricePerUnit);
+    console.log("Units:", units);
+    console.log("Sale Date:", saleDate);
+  };
+  function unSell () {
+    console.log("unsell")
   }
 
   return (
@@ -252,15 +270,22 @@ export function InvestmentPage() {
             alignItems={"center"}
             gap={1}
           >
-            <Button
-              colorScheme="teal"
-              variant="solid"
-              size="md"
-              // TODO: add functionality
-              onClick={() => alert(`Want to sell investment with id ${id}`)}
-            >
-              Sell
-            </Button>
+            {investment[0]?.sale && (
+              <>
+                <PopOverUnsell unSell={unSell}/>
+              </>
+            ) || (
+                <PopOverSell
+                  pricePerUnit={pricePerUnit}
+                  units={units}
+                  saleDate={saleDate}
+                  setPricePerUnit={setPricePerUnit}
+                  setUnits={setUnits}
+                  setSaleDate={setSaleDate}
+                  onSell={handleSell}
+                />
+              )
+            }
             <Box>
               <KebabIcon
                 cursor="pointer"
@@ -284,7 +309,6 @@ export function InvestmentPage() {
           width={"100%"}
           direction={{ base: "column", lg: "row" }}
         >
-          {/* Information about the investment */}
           <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
 
           {/* Display only when investment has a sale data */}
