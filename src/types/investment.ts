@@ -6,6 +6,7 @@ export interface Investment {
 	purchase: Transaction;
 	sale?: Transaction;
 	historicalData: PriceRecord[];
+	unsubscribe: () => void; // used to unsubscribe from the listener
 }
 
 export interface Transaction {
@@ -21,7 +22,7 @@ export interface PriceRecord {
 
 // used in the form to create a new investment or update an existing one
 export interface InvestmentForm
-	extends Omit<Investment, "id" | "historicalData"> {}
+	extends Omit<Investment, "id" | "historicalData" | "unsubscribe"> {}
 
 export interface FirestoreInvestment
-	extends Omit<Investment, "historicalData"> {}
+	extends Omit<Investment, "historicalData" | "unsubscribe"> {}
