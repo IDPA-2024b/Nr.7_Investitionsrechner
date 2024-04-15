@@ -10,7 +10,6 @@ interface LeaderShipProps {
 }
 
 export function LeaderShip({ LeaderShipProps }: LeaderShipProps) {
-    console.log(LeaderShipProps)
     return (
         <>
             <Container
