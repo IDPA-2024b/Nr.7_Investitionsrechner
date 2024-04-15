@@ -46,7 +46,7 @@ export function Team({ TeamProps }: TeamProps) {
                                 >
                                     
                                     <Flex direction="column" alignItems="center">
-                                        <Image borderRadius={"1000px"} w="100px" src={team.ImageSrc} alt={team.name} />
+                                        <Image borderRadius={"1000px"} w="100px" src={team.ImageSrc} alt={team.name}  w="100px" h={"100px"}/>
                                         <Text>{team.name}</Text>
                                     </Flex>
                                     <hr style={{ width: "50%", backgroundColor: "teal", height: "1px", border: "none" }} />
