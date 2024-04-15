@@ -19,17 +19,9 @@ export interface PriceRecord {
 	pricePerUnit: number;
 }
 
-export interface InvestmentForm {
-	name: string;
-	symbol: string;
-	type: string;
-	purchase: Transaction;
-}
+// used in the form to create a new investment or update an existing one
+export interface InvestmentForm
+	extends Omit<Investment, "id" | "historicalData"> {}
 
-export interface FirestoreInvestment {
-	name: string;
-	symbol: string;
-	type: string;
-	purchase: Transaction;
-	sale?: Transaction;
-}
+export interface FirestoreInvestment
+	extends Omit<Investment, "historicalData"> {}
