@@ -34,7 +34,6 @@ export function MarketValueSection({
       },
       { ssr: false }
     ) ?? 1;
-
   useEffect(() => {
     const event = () => {
       if (chartRef.current) {
@@ -80,15 +79,10 @@ export function MarketValueSection({
     return totalPaied;
   }
 
-  const tmp = calculateAmountSpentInTimeRange(
-    investments,
-    dateRange as DateRange
-  );
-  // console.log(tmp);
   function receiveData(data1: number, data2: number) {
     setFirstValue(
       calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||
-        data1
+      data1
     );
     setLastValue(data2);
   }
@@ -96,6 +90,7 @@ export function MarketValueSection({
   function sumTotalForMonth(dataSets) {
     const totalForMonth = {};
 
+    
     // Calculate total price for each date
     dataSets.forEach((dataSet) => {
       dataSet.historicalData.forEach((dataPoint) => {
@@ -117,18 +112,22 @@ export function MarketValueSection({
 
     return result;
   }
-
   function calculatePercentageChange(firstValue: number, lastValue: number) {
     if (firstValue === 0) {
       return 0;
     }
-    return parseFloat(
-      (((lastValue - firstValue) / firstValue) * 100).toFixed(2)
-    );
+
+    const difference = lastValue - firstValue;
+
+    // Calculate the percentage change
+    const percentageChange = (difference / Math.abs(firstValue)) * 100;
+
+    return percentageChange;
   }
   useEffect(() => {
     setPercentageGain(calculatePercentageChange(firstValue, lastValue));
-    setAmountGain(parseFloat((lastValue - firstValue).toFixed(2)));
+    const amountGainedInTimeRange = lastValue - firstValue;
+    setAmountGain(parseFloat((amountGainedInTimeRange).toFixed(2)));
   }, [firstValue, lastValue]);
 
   const processedDataSets = sumTotalForMonth(investments);

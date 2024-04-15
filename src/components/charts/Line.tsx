@@ -38,6 +38,7 @@ const options: ChartOptions<"line"> = {
       text: "Investment Value",
     },
   },
+  
   scales: {
     y: {
       beginAtZero: false,

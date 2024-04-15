@@ -32,7 +32,6 @@ export function Contact() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        console.log('Submitted Data:', formData);
         emailjs
             .sendForm(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -42,7 +41,6 @@ export function Contact() {
             )
             .then(
                 (result) => {
-                    console.log(result.text + "123");
                     formRef.current.reset();
                 },
                 (error) => {

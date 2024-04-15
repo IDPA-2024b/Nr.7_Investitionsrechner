@@ -12,7 +12,7 @@
             "pricePerUnit": 171.5
         },
         "sale": {
-            "date": "2023-04-29T22:00:00.000Z",
+            "date": "2024-03-29T22:00:00.000Z",
             "units": 10,
             "pricePerUnit": 201.5
         },
@@ -74,6 +74,171 @@
                 "pricePerUnit": 90000
             }
 
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "type": "Crypto",
+        "purchase": {
+            "date": "2023-01-29T22:00:00.000Z",
+            "units": 0.5,
+            "pricePerUnit": 2000
+        },
+        "historicalData": [
+            {
+                "date": "2023-01-29T22:00:00.000Z",
+                "pricePerUnit": 2000
+            },
+            {
+                "date": "2023-02-29T22:00:00.000Z",
+                "pricePerUnit": 2500
+            },
+            {
+                "date": "2023-03-29T22:00:00.000Z",
+                "pricePerUnit": 3000
+            },
+            {
+                "date": "2023-04-29T22:00:00.000Z",
+                "pricePerUnit": 3500
+            },
+            {
+                "date": "2024-03-27T22:00:00.000Z",
+                "pricePerUnit": 4000
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Dogecoin",
+        "symbol": "DOGE",
+        "type": "Crypto",
+        "purchase": {
+            "date": "2023-01-29T22:00:00.000Z",
+            "units": 1000,
+            "pricePerUnit": 0.05
+        },
+        "historicalData": [
+            {
+                "date": "2023-01-29T22:00:00.000Z",
+                "pricePerUnit": 0.05
+            },
+            {
+                "date": "2023-02-29T22:00:00.000Z",
+                "pricePerUnit": 0.06
+            },
+            {
+                "date": "2023-03-29T22:00:00.000Z",
+                "pricePerUnit": 0.07
+            },
+            {
+                "date": "2023-04-29T22:00:00.000Z",
+                "pricePerUnit": 0.08
+            },
+            {
+                "date": "2024-03-27T22:00:00.000Z",
+                "pricePerUnit": 0.09
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Cardano",
+        "symbol": "ADA",
+        "type": "Crypto",
+        "purchase": {
+            "date": "2023-01-29T22:00:00.000Z",
+            "units": 100,
+            "pricePerUnit": 1.5
+        },
+        "historicalData": [
+            {
+                "date": "2023-01-29T22:00:00.000Z",
+                "pricePerUnit": 1.5
+            },
+            {
+                "date": "2023-02-29T22:00:00.000Z",
+                "pricePerUnit": 1.6
+            },
+            {
+                "date": "2023-03-29T22:00:00.000Z",
+                "pricePerUnit": 1.7
+            },
+            {
+                "date": "2023-04-29T22:00:00.000Z",
+                "pricePerUnit": 1.8
+            },
+            {
+                "date": "2024-03-27T22:00:00.000Z",
+                "pricePerUnit": 1.9
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Polkadot",
+        "symbol": "DOT",
+        "type": "Crypto",
+        "purchase": {
+            "date": "2023-01-29T22:00:00.000Z",
+            "units": 50,
+            "pricePerUnit": 20
+        },
+        "historicalData": [
+            {
+                "date": "2023-01-29T22:00:00.000Z",
+                "pricePerUnit": 20
+            },
+            {
+                "date": "2023-02-29T22:00:00.000Z",
+                "pricePerUnit": 25
+            },
+            {
+                "date": "2023-03-29T22:00:00.000Z",
+                "pricePerUnit": 30
+            },
+            {
+                "date": "2023-04-29T22:00:00.000Z",
+                "pricePerUnit": 35
+            },
+            {
+                "date": "2024-03-27T22:00:00.000Z",
+                "pricePerUnit": 40
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Solana",
+        "symbol": "SOL",
+        "type": "Crypto",
+        "purchase": {
+            "date": "2023-01-29T22:00:00.000Z",
+            "units": 10,
+            "pricePerUnit": 100
+        },
+        "historicalData": [
+            {
+                "date": "2023-01-29T22:00:00.000Z",
+                "pricePerUnit": 100
+            },
+            {
+                "date": "2023-02-29T22:00:00.000Z",
+                "pricePerUnit": 150
+            },
+            {
+                "date": "2023-03-29T22:00:00.000Z",
+                "pricePerUnit": 200
+            },
+            {
+                "date": "2023-04-29T22:00:00.000Z",
+                "pricePerUnit": 250
+            },
+            {
+                "date": "2024-03-27T22:00:00.000Z",
+                "pricePerUnit": 300
+            }
         ]
     }
 ]

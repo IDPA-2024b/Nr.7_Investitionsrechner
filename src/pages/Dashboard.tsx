@@ -5,7 +5,7 @@ import { MarketValueSection } from "../components/sections/MarketValueSection";
 import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
-import { RevenueSection } from "../components/sections/RevenueSection";
+import { SingleInformationSection } from "../components/sections/SingleInformationSection";
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 export function DashboardPage() {
@@ -48,8 +48,7 @@ export function DashboardPage() {
 
     setInvestments(updatedInvestments);
   }, []);
-  console.log("investments", investments);
-  console.log("eachDayInvestment", eachDayInvestment);
+
   // adding each day betwenn an start date and today for each investment with date and price
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
@@ -64,6 +63,7 @@ export function DashboardPage() {
     const processedDataSets = [];
 
     dataSets.forEach((dataSet, index) => {
+      const totalPurchasePrice =  dataSet.purchase.pricePerUnit * dataSet.purchase.units;
       const processedDataSet = {
         ...dataSet,
         historicalData: [],
@@ -107,7 +107,7 @@ export function DashboardPage() {
         const processedDataPoint = {
           date: formattedDate,
           pricePerUnit:
-            pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices,
+            (pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices) /* - totalPrice */,
         };
 
         processedDataSet.historicalData.push(processedDataPoint);
@@ -162,7 +162,10 @@ export function DashboardPage() {
     return total + salePrice * saleAmount;
   }, 0);
 
+
+  // TODO: Right calculation of roi
   const profit = revenue - onlySoldSpent;
+  const roi = profit / onlySoldSpent * 100;
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
@@ -188,8 +191,8 @@ export function DashboardPage() {
             direction={{ base: "column", md: "row", lg: "column" }}
           >
             {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
-            <ProfitSection value={profit} roi={-0.5} />
-            <RevenueSection value={revenue} />
+            <ProfitSection value={profit} roi={roi} />
+            <SingleInformationSection value={revenue} title={"Revenue"} tooltip="The total revenue you've made from your investments" type="number" />
           </Flex>
           {/* Top Investments and Diversity */}
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
