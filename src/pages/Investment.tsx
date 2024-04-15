@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import InvestmentData from "../MockData/InvestmentData.json";
 import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Container, Flex, Heading, VStack, Text, HStack, Box, Popover } from "@chakra-ui/react";
+import { Container, Flex, Heading, VStack, Text, HStack, Box, Popover, Button } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
@@ -272,7 +272,7 @@ export function InvestmentPage() {
           >
             {investment[0]?.sale && (
               <>
-                <PopOverUnsell unSell={unSell}/>
+              <Button colorScheme="teal" isDisabled>Sell</Button>
               </>
             ) || (
                 <PopOverSell
