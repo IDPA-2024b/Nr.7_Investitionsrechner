@@ -213,7 +213,7 @@ export function InvestmentPage() {
   }
 
 
-  // bro mach das clean ich han 
+  // bro mach das clean ich han kb uf das
 
   const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
@@ -239,10 +239,9 @@ export function InvestmentPage() {
     console.log("Price Per Unit:", pricePerUnit);
     console.log("Units:", units);
     console.log("Sale Date:", saleDate);
+    
   };
-  function unSell () {
-    console.log("unsell")
-  }
+
 
   return (
     <Container maxWidth={"5xl"}>
@@ -319,8 +318,7 @@ export function InvestmentPage() {
           )}
           <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
 
-          <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
-          </Flex>
+
         </Flex>
 
       </VStack>

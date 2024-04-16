@@ -13,6 +13,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import type { ILink } from "../types/link";
 import { FaGithub } from "react-icons/fa";
 import { chakra } from "@chakra-ui/react";
+import { Logo } from "./Logo";
 
 interface FooterProps {
   links: ILink[];
@@ -21,7 +22,9 @@ interface FooterProps {
 export function Footer({ links }: FooterProps) {
   const navigate = useNavigate();
   const location = useLocation();
-
+  function handleNavigate(path: To) {
+    navigate(path);
+  }
   return (
     <chakra.footer>
       <Flex
@@ -34,16 +37,7 @@ export function Footer({ links }: FooterProps) {
         overflow={"hidden"}
       >
         <VStack width={"100%"} spacing={2}>
-          <Heading
-            size={"lg"}
-            cursor={"pointer"}
-            _hover={{
-              transform: "scale(1.05)",
-            }}
-            onClick={() => navigate("/")}
-          >
-            InView
-          </Heading>
+          <Logo onClick={() => handleNavigate("/")} />
           <Flex direction={"row"} wrap={"wrap"} justify={"center"} width="100%">
             {links.map((link) => (
               <Button
