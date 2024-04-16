@@ -138,22 +138,24 @@ export function Sidebar({
             display={filteredInvestments.length > 0 ? "block" : "none"} // Show the line only if there are filtered investments
           />
         )}
-          {filteredInvestments.map((investment) => (
-            <Link key={investment.id} to={`investment/${investment.id}`} style={{ width: "100%" }}>
-              <Flex align="center"
-                textAlign={isOpen ? "left" : "center"}
-                display={isOpen ? "flex" : "block"}
-              >
-                <Icon
-                  as={investment.type === "Stock" ? AiOutlineStock : investment.type === "Crypto" ? FaBitcoin : investment.type === "Property" ? FaHouse : investment.type === "Cars" ? FaCarSide : HiOutlineDotsCircleHorizontal}
-                  boxSize={7}
-                  p={1}
-                  bg={"gray.200"} // Apply grey background when the sidebar is closed
-                  borderRadius="5px" // Make the background circular
-                />
-                {isOpen && <Text ml={2}>{investment.name}</Text>} {/* Conditionally render the text only when the sidebar is open */}
-              </Flex>
-              {isOpen && (
+        {isOpen && (
+          <>
+
+            {filteredInvestments.map((investment) => (
+              <Link key={investment.id} to={`investment/${investment.id}`} style={{ width: "100%" }}>
+                <Flex align="center"
+                  textAlign={isOpen ? "left" : "center"}
+                  display={isOpen ? "flex" : "block"}
+                >
+                  <Icon
+                    as={investment.type === "Stock" ? AiOutlineStock : investment.type === "Crypto" ? FaBitcoin : investment.type === "Property" ? FaHouse : investment.type === "Cars" ? FaCarSide : HiOutlineDotsCircleHorizontal}
+                    boxSize={7}
+                    p={1}
+                    bg={"gray.200"} // Apply grey background when the sidebar is closed
+                    borderRadius="5px" // Make the background circular
+                  />
+                  <Text ml={2}>{investment.name}</Text> {/* Conditionally render the text only when the sidebar is open */}
+                </Flex>
                 <chakra.div
                   w="100%"
                   h="1px"
@@ -161,9 +163,11 @@ export function Sidebar({
                   mt={5}
                   display={filteredInvestments.length > 0 ? "block" : "none"} // Show the line only if there are filtered investments
                 />
-              )}
-            </Link>
-          ))}
+
+              </Link>
+            ))}
+          </>
+        )}
       </VStack>
 
     </chakra.aside>

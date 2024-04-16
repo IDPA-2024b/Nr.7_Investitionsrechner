@@ -26,7 +26,6 @@ export function LeaderShip({ LeaderShipProps }: LeaderShipProps) {
                 </Heading>
                 <Flex
                     justifyContent="center"
-                    alignItems="center"
                     direction="row"
                     flexWrap="wrap"
                     gap={10}
@@ -38,7 +37,6 @@ export function LeaderShip({ LeaderShipProps }: LeaderShipProps) {
                             key={index}
                             mt={"20px"}
                             w={"210px"}
-                            justifyContent={"center"}
                             direction={"column"}
                             alignItems={"center"}
                         >

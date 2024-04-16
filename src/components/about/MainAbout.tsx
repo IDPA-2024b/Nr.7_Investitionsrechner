@@ -1,14 +1,9 @@
 import LogoIcon from '../../assets/InViewLogoIcon.svg';
 import {
-    Heading,
     chakra,
     Stack,
-    HStack,
     Text,
-    useColorModeValue,
     Box,
-    Link,
-    Button,
     Flex,
     Image,
 } from "@chakra-ui/react";
@@ -30,7 +25,7 @@ export function MainAbout() {
                     pt={"100px"}
                 >
                     <chakra.h1
-                        fontSize="5xl"
+                        fontSize="7xl"
                         lineHeight={1}
                         fontWeight="bold"
                         textAlign="center"
@@ -66,7 +61,7 @@ export function MainAbout() {
                                 textAlign="center"
                                 color="smalltext.base"
                             >
-                                At InView we strive to provide you with the best tools to help you manage your investment portfolio.
+                                Our goal is it to improve and help you during your investing journey
                             </Text>
                             <Text
                                 fontSize="1.2rem"
@@ -85,7 +80,7 @@ export function MainAbout() {
                                 textAlign="center"
                                 color="smalltext.base"
                             >
-                                Our goal is to provide you with the best tools to help you manage your investment portfolio.
+                                A third part but idk
                             </Text>
                         </Stack>
 
