@@ -27,9 +27,9 @@ export function JobOffer() {
 					We are searching for New Team Members
 				</Text>
 				<Text fontSize="lg">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-					perspiciatis unde omnis iste natus error sit voluptatem accusantium
-					doloremque laudantium.
+					We are looking for new team members to join our team. We offer a
+					competitive salary and a great work environment. If you are interested
+					in joining our team, please apply now.
 				</Text>
 				<Button
 					colorScheme="teal"

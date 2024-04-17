@@ -46,12 +46,10 @@ export function JoinUpNow() {
 				as="span"
 			>
 				<Text fontSize="2xl" fontWeight="bold" marginBottom="1rem">
-					Scrolled this Far And still not have a account?
+					Join InView Now
 				</Text>
 				<Text fontSize="lg">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
-					perspiciatis unde omnis iste natus error sit voluptatem accusantium
-					doloremque laudantium.
+					Whether you're advancing your investment portfolio or diving into the world of finance, InView is your destination. Join the best platform for investors to create the strategies that drive financial success. Let's grow from here.
 				</Text>
 				<Button
 					colorScheme="teal"
