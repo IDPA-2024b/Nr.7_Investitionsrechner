@@ -46,6 +46,23 @@ export function MarketValueSection({
     return () => window.removeEventListener("resize", event);
   }, [ratio]);
 
+  function dateRangeToBeforeDate(dateRange: DateRange) {
+    const now = new Date();
+    switch (dateRange) {
+      case DateRange.Last7Days:
+        return new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7);
+      case DateRange.LastMonth:
+        return new Date(now.getFullYear(), now.getMonth() - 1, now.getDate() - 1);
+      case DateRange.LastYear:
+        return new Date(now.getFullYear() - 1, now.getMonth(), now.getDate() - 1);
+      case DateRange.All:
+        return new Date(1970, 0, 1);
+    }
+  }
+  function parseDateString(dateString: string) {
+    const [year, month, day] = dateString.split('-').map(Number);
+    return new Date(year, month - 1, day);
+  }
   function calculateAmountSpentInTimeRange(
     investments: Investment[],
     dateRange: DateRange
@@ -61,8 +78,8 @@ export function MarketValueSection({
         break;
       case DateRange.LastYear:
         date.setFullYear(date.getFullYear() - 1);
-        date.setMonth(0);
-        date.setDate(1);
+        // date.setMonth(0);
+        // date.setDate(1);
         break;
       case DateRange.All:
         date.setFullYear(1970);
@@ -78,8 +95,43 @@ export function MarketValueSection({
     });
     return totalPaied;
   }
+  function calculateAmountSpentBeforeDate(investments: Investment[], oldestDate) {
+    let totalPaied = 0;
+    const filteredInvestments = investments.filter((investment) => {
+      const investmentDate = new Date(investment.purchase.date);
+      if (investmentDate <= oldestDate) {
+        totalPaied +=
+          investment.purchase.pricePerUnit * investment.purchase.units;
+      }
+    });
+    return totalPaied;
+  }
 
-  function receiveData(data1: number, data2: number) {
+  function receiveData(data1: number, data2: number, oldestDate: Date) {
+    const today = new Date();
+    const lastyear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
+    const dateBefore = dateRangeToBeforeDate(dateRange);
+    const oldestDateParsed = parseDateString(oldestDate)
+    // which date is newer
+
+
+    let amountSpentBefore = 0;
+    if (oldestDateParsed > dateBefore) {
+      amountSpentBefore = data1
+    } else {
+      amountSpentBefore = calculateAmountSpentBeforeDate(investments, dateBefore);
+    }
+
+    const totalSpent = calculateAmountSpentBeforeDate(investments, today);
+    const profitBefore = data1 - amountSpentBefore;
+    const profitNow = data2 - totalSpent;
+    const totalProfit = profitNow - profitBefore;
+    const startValue = data2 - totalProfit;
+    const percentageChangeTMP = calculatePercentageChange(startValue, data2);
+
+
+    setPercentageGain(percentageChangeTMP);
+    setAmountGain(totalProfit);
     setFirstValue(
       calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||
       data1
@@ -90,7 +142,7 @@ export function MarketValueSection({
   function sumTotalForMonth(dataSets) {
     const totalForMonth = {};
 
-    
+
     // Calculate total price for each date
     dataSets.forEach((dataSet) => {
       dataSet.historicalData.forEach((dataPoint) => {
@@ -124,11 +176,6 @@ export function MarketValueSection({
 
     return percentageChange;
   }
-  useEffect(() => {
-    setPercentageGain(calculatePercentageChange(firstValue, lastValue));
-    const amountGainedInTimeRange = lastValue - firstValue;
-    setAmountGain(parseFloat((amountGainedInTimeRange).toFixed(2)));
-  }, [firstValue, lastValue]);
 
   const processedDataSets = sumTotalForMonth(investments);
   // sort processedDataSets by date

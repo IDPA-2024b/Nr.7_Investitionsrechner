@@ -1,5 +1,4 @@
-import { Container, Heading, Flex, Image, Text, HStack, VStack } from '@chakra-ui/react';
-import React from 'react'
+import { Container, Heading, Flex, Image, Text, VStack } from '@chakra-ui/react';
 
 interface TeamProps {
     TeamProps: {

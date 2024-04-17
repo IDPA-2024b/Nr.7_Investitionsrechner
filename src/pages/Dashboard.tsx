@@ -33,7 +33,6 @@ export function DashboardPage() {
         });
       }
 
-      // Filter out historical data entries before the purchase date
       historicalData = historicalData.filter(
         (data) => new Date(data.date) > purchaseDate
       );
@@ -49,7 +48,6 @@ export function DashboardPage() {
     setInvestments(updatedInvestments);
   }, []);
 
-  // adding each day betwenn an start date and today for each investment with date and price
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();
     const yesterday = new Date(today);
@@ -112,7 +110,6 @@ export function DashboardPage() {
 
         processedDataSet.historicalData.push(processedDataPoint);
 
-        // Update the last known price for the current date
         if (pricePerUnit !== undefined) {
           lastKnownPrices = pricePerUnit;
         }
@@ -122,7 +119,7 @@ export function DashboardPage() {
           a: { date: string | number | Date },
           b: { date: string | number | Date }
         ) => new Date(a.date) - new Date(b.date)
-      ); // Sort by date
+      ); 
       if (
         processedDataSet.historicalData[
           processedDataSet.historicalData.length - 1
@@ -142,7 +139,7 @@ export function DashboardPage() {
     processedDataSets.sort(
       (a, b) =>
         new Date(a.historicalData[0].date) - new Date(b.historicalData[0].date)
-    ); // Sort processedDataSets by the earliest date in historicalData
+    ); 
 
     return processedDataSets;
   }
@@ -184,17 +181,14 @@ export function DashboardPage() {
           width={"100%"}
           direction={{ base: "column", lg: "row" }}
         >
-          {/* Profit and Revenue */}
           <Flex
             gap={"inherit"}
             width={"100%"}
             direction={{ base: "column", md: "row", lg: "column" }}
           >
-            {/* TODO: you fucking moron @DaniDevOfficial for the last fucking time its the roi (return on investment) */}
             <ProfitSection value={profit} roi={roi} />
             <SingleInformationSection value={revenue} title={"Revenue"} tooltip="The total revenue you've made from your investments" type="number" />
           </Flex>
-          {/* Top Investments and Diversity */}
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
             <TopInvestmentsSection investments={investments.slice(0, 10)} />
             <DiversitySection investments={investments} />

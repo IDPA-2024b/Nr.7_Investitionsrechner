@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import {
     FormControl,
@@ -36,7 +36,7 @@ export function Contact() {
             .sendForm(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                formRef.current, // Pass the formRef.current as the form parameter
+                formRef.current, 
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             )
             .then(
@@ -96,6 +96,7 @@ export function Contact() {
                         <FormControl marginBottom="1rem">
                             <FormLabel>Name</FormLabel>
                             <Input
+                                focusBorderColor='teal.400'
                                 type="text"
                                 name="from_name"
                                 required
@@ -107,7 +108,8 @@ export function Contact() {
                         <FormControl marginBottom="1rem">
                             <FormLabel>Email</FormLabel>
                             <Input
-                                type="email" // I've uncommented this line assuming it's an email input
+                                focusBorderColor='teal.400'
+                                type="email"
                                 name="from_email"
                                 required
                                 placeholder="John@Doe.com"
@@ -118,6 +120,7 @@ export function Contact() {
                         <FormControl marginBottom="1rem">
                             <FormLabel htmlFor="topic">Topic</FormLabel>
                             <Input
+                                focusBorderColor='teal.400'
                                 type="text"
                                 name="topic"
                                 required
@@ -129,6 +132,7 @@ export function Contact() {
                         <FormControl marginBottom="1rem">
                             <FormLabel>Message</FormLabel>
                             <Textarea
+                                focusBorderColor='teal.400'
                                 name="message"
                                 required
                                 placeholder="I would like to..."

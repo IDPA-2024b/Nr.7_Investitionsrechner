@@ -61,7 +61,7 @@ export function Testimonial({ TestimonialProps }: { TestimonialProps: Testimonia
 		</Container>
 	);
 }
-// fancy dotted box for the testimonial background
+// fancy dotted box for the testimonial background from template kart
 function DottedBox() {
 	return (
 		<Box

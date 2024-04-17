@@ -1,6 +1,6 @@
 import { PieChart } from "../charts/Pie";
 import { TitleWithTooltip } from "../TitleWithTooltip";
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 interface MainDoughnutChartProps {
   TypeDiversity: {
