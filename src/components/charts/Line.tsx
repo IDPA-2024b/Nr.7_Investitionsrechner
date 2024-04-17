@@ -136,11 +136,13 @@ function dateRangeToStartDate(dateRange?: DateRange): Date {
     case DateRange.LastMonth:
       startDate = new Date();
       startDate.setMonth(startDate.getMonth() - 1);
+      startDate.setDate(startDate.getDate() - 1);
       startDate.setHours(0, 1, 0, 0); 
       break;
     case DateRange.LastYear:
       startDate = new Date();
       startDate.setFullYear(startDate.getFullYear() - 1);
+      startDate.setDate(startDate.getDate() - 1);
       startDate.setHours(0, 1, 0, 0); 
       break;
     case DateRange.All:

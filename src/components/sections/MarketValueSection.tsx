@@ -108,17 +108,16 @@ export function MarketValueSection({
   }
 
   function receiveData(data1: number, data2: number, oldestDate: Date) {
-    console.log("-----------------------")
     const today = new Date();
     const lastyear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
     const dateBefore = dateRangeToBeforeDate(dateRange);
     const oldestDateParsed = parseDateString(oldestDate)
+    // which date is newer
 
-    console.log(oldestDateParsed, dateBefore) // TODO: work here
+
     let amountSpentBefore = 0;
-    if (dateRange === DateRange.All) { // TODO: this needs to be changed but idk to what. need more testing
+    if (oldestDateParsed > dateBefore) {
       amountSpentBefore = data1
-      console.log("test")
     } else {
       amountSpentBefore = calculateAmountSpentBeforeDate(investments, dateBefore);
     }
@@ -130,17 +129,6 @@ export function MarketValueSection({
     const startValue = data2 - totalProfit;
     const percentageChangeTMP = calculatePercentageChange(startValue, data2);
 
-    console.log("oldestDate", oldestDate)
-    console.log("amountSpentBefore", amountSpentBefore)
-    console.log("totalSpent", totalSpent)
-    console.log("data1", data1)
-    console.log("data2", data2)
-    console.log("profitBefore", profitBefore)
-    console.log("profitNow", profitNow)
-    console.log("totalProfit", totalProfit)
-    console.log("startValue", startValue)
-    console.log("percentageChangeTMP", percentageChangeTMP)
-    console.log("dateBefore", dateRange)
 
     setPercentageGain(percentageChangeTMP);
     setAmountGain(totalProfit);
