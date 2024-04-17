@@ -23,7 +23,6 @@ export function Benefits({ benefits }: { benefits: Benefit[] }) {
             <Flex
                 flexWrap={"wrap"}
                 justifyContent={"center"}
-                alignItems={"center"}
                 gap={10}
                 my={20}
             >

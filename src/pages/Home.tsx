@@ -36,19 +36,19 @@ export function HomePage() {
 
 	const faqData = [
 		{
-			question: "What is fortnite?",
+			question: "Which investments are connected to the market",
 			answer:
-				"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+				"Sadly we have just connections for Stocks, Options and Crypto currencies in the American Market.",
 		},
 		{
-			question: "Why do we use it?",
+			question: "Can I write down my onw values for a day? ",
 			answer:
-				"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+				"Currently this is not possible but we are working on it.",
 		},
 		{
-			question: "Where does it come from?",
+			question: "Where do I see the pricing?",
 			answer:
-				"Contrary to popular belief, Lorem Ipsum is not simply random text.",
+				"You can't because InView is totaly free. Neither we nor you should have any costs to cover and with our inteligent backend this is possible.",
 		},
 	]
 
@@ -60,6 +60,7 @@ export function HomePage() {
 		role: "Songwriter",
 		company: "Spotify"
 	}
+	
 	return (
 		<Container maxW="container.xl" overflowY="hidden">
 			<Landing />

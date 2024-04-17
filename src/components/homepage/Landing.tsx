@@ -27,7 +27,7 @@ export function Landing() {
 					fontWeight="bold"
 					textAlign="center"
 				>
-					Made Longterm investing easy <br />
+					Made broad investing easy <br />
 					<chakra.span color="teal.600">With InView</chakra.span>
 				</chakra.h1>
 				<Text
