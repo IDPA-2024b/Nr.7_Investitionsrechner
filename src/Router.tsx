@@ -10,6 +10,7 @@ import { InvestmentPage } from "./pages/Investment";
 import { NewInvestmentPage } from "./pages/NewInvestment";
 import { UserOnlyRoute } from "./routes/UserOnly";
 import { Contact } from "./pages/Contact";
+import { InvestmentsProvider } from "./contexts/investments";
 
 const router = createHashRouter([
   {
@@ -35,14 +36,16 @@ const router = createHashRouter([
       {
         path: "/contact",
         element: <Contact />,
-      }
+      },
     ],
   },
   {
     path: "/dashboard",
     element: (
       <UserOnlyRoute>
-        <DashboardLayout />
+        <InvestmentsProvider>
+          <DashboardLayout />
+        </InvestmentsProvider>
       </UserOnlyRoute>
     ),
     children: [
