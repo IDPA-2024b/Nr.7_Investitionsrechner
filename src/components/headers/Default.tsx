@@ -47,11 +47,16 @@ export function DefaultHeader({ links }: HeaderProps) {
     <chakra.header
       position={"sticky"}
       inset={0}
-      zIndex={1}
+      zIndex={1232}
       py="3"
       px="5"
-      borderBottomWidth={1}
-      bg={"white"}
+      backgroundColor={"rgba(255, 255, 255, 0.8)"}
+      sx={{
+        
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+      
+      }}
     >
       <Flex width={"100%"} justify={"space-between"} align={"center"}>
         <IconButton

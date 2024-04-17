@@ -17,6 +17,7 @@
 		"@emailjs/browser": "^4.3.3",
 		"@emotion/react": "^11.11.4",
 		"@emotion/styled": "^11.11.0",
+		"@splinetool/react-spline": "^2.2.6",
 		"firebase": "^10.5.2",
 		"framer-motion": "^11.0.12",
 		"localforage": "^1.10.0",

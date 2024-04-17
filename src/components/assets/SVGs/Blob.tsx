@@ -1,0 +1,16 @@
+export function Blob() {
+
+    return (
+        <>
+            <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+                        <stop id="stop1" stop-color="rgba(248, 117, 55, 1)" offset="0%"></stop>
+                        <stop id="stop2" stop-color="rgba(251, 168, 31, 1)" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path fill="url(#sw-gradient)" d="M26.1,-31.4C34,-24.5,40.7,-16.4,43.3,-6.9C45.8,2.7,44.3,13.7,39,22.2C33.7,30.7,24.6,36.7,15.1,39.2C5.5,41.7,-4.4,40.7,-13.1,37.1C-21.8,33.5,-29.2,27.3,-34.4,19.3C-39.6,11.4,-42.7,1.6,-40.7,-6.8C-38.8,-15.2,-31.8,-22.4,-24.1,-29.3C-16.5,-36.3,-8.3,-43.1,0.4,-43.6C9.1,-44.1,18.2,-38.3,26.1,-31.4Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" ></path>
+            </svg>
+        </>
+    )
+}
