@@ -12,9 +12,7 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
 import { KebabIcon } from "../components/KebabIcon";
 import { PopOverSell } from "../components/sections/PopOverSell";
-import { PopOverUnsell } from "../components/sections/PopOverUnsell";
 export function InvestmentPage() {
-  const [investments, setInvestments] = useState([]);
   const [pricePerUnit, setPricePerUnit] = useState("100");
   const [units, setUnits] = useState("10");
   const [saleDate, setSaleDate] = useState("01.03.2023");
@@ -47,7 +45,6 @@ export function InvestmentPage() {
         });
       }
 
-      // Filter out historical data entries before the purchase date
       historicalData = historicalData.filter(
         (data) => new Date(data.date) > purchaseDate
       );
@@ -140,7 +137,6 @@ export function InvestmentPage() {
 
         processedDataSet.historicalData.push(processedDataPoint);
 
-        // Update the last known price for the current date
         if (pricePerUnit !== undefined) {
           lastKnownPrices = pricePerUnit;
         }
@@ -150,7 +146,7 @@ export function InvestmentPage() {
           a: { date: string | number | Date },
           b: { date: string | number | Date }
         ) => new Date(a.date) - new Date(b.date)
-      ); // Sort by date
+      ); 
       if (
         processedDataSet.historicalData[
           processedDataSet.historicalData.length - 1
@@ -170,20 +166,18 @@ export function InvestmentPage() {
     processedDataSets.sort(
       (a, b) =>
         new Date(a.historicalData[0].date) - new Date(b.historicalData[0].date)
-    ); // Sort processedDataSets by the earliest date in historicalData
+    ); 
 
     return processedDataSets;
   }
 
   function calculateDaysBetweenDates(date1: Date, date2: Date): number {
-    // Convert both dates to UTC
+  
     const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
     const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
 
-    // Calculate the difference in milliseconds
     const diffInMs = Math.abs(utc2 - utc1);
 
-    // Convert the difference from milliseconds to days
     return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
   }
 
@@ -219,7 +213,7 @@ export function InvestmentPage() {
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
 
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
-  const investmentName = investment[0]?.name;
+    const investmentName = investment[0]?.name;
   const investmentSymbol = investment[0]?.symbol;
   let profit = 0;
   let roi = 0;
@@ -310,7 +304,6 @@ export function InvestmentPage() {
         >
           <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
 
-          {/* Display only when investment has a sale data */}
           {investment[0]?.sale && (
             <>
               <ProfitSection value={profit} roi={roi} />

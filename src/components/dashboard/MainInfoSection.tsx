@@ -71,7 +71,7 @@ export function MainInfoSection({ investments }: MainInfoSectionProps) {
             borderRadius="30px"
             outline={" 1px solid #e2e8f0"}
             px={10}
-            h="calc(50% - 2rem)" // Set the height of the box to 50% minus the gap
+            h="calc(50% - 2rem)" 
           >
               <TitleWithTooltip
                 title="Profit"

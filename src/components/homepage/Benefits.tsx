@@ -1,12 +1,9 @@
 import { SVGProps } from 'react';
 import {
-    Container,
     Box,
     chakra,
     Text,
-    SimpleGrid,
     Flex,
-    Link,
     useColorModeValue
 } from '@chakra-ui/react';
 
@@ -29,7 +26,6 @@ export function Benefits({ benefits }: { benefits: Benefit[] }) {
                 {benefits.map((feature, index) => (
                     <Box
                         key={index}
-                        // eslint-disable-next-line react-hooks/rules-of-hooks
                         bg={useColorModeValue('gray.100', 'gray.700')}
                         p={6}
                         rounded="lg"

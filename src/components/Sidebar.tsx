@@ -1,10 +1,8 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import {
-  Box,
   Button,
   Flex,
   FormControl,
-  FormLabel,
   Icon,
   IconButton,
   Input,
@@ -18,7 +16,6 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import investments from "../MockData/InvestmentData.json";
-import { MdAttachMoney } from "react-icons/md";
 import { FaBitcoin } from "react-icons/fa";
 import { AiOutlineStock } from "react-icons/ai";
 import { FaHouse } from "react-icons/fa6";
@@ -70,7 +67,7 @@ export function Sidebar({
       investment.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    let filteredByType = [...filteredByName]; // Start with filteredByName as the base
+    let filteredByType = [...filteredByName]; 
 
     if (selectedType !== "All") {
       filteredByType = filteredByName.filter(investment => investment.type === selectedType);
@@ -105,7 +102,6 @@ export function Sidebar({
             onChange={(e) => setSearchQuery(e.target.value)}
           />
         </InputGroup>
-        {/* Filter Section */}
 
 
         <IconButton
@@ -135,7 +131,7 @@ export function Sidebar({
             w="100%"
             h="1px"
             bg="gray.200"
-            display={filteredInvestments.length > 0 ? "block" : "none"} // Show the line only if there are filtered investments
+            display={filteredInvestments.length > 0 ? "block" : "none"} 
           />
         )}
         {isOpen && (
@@ -151,17 +147,17 @@ export function Sidebar({
                     as={investment.type === "Stock" ? AiOutlineStock : investment.type === "Crypto" ? FaBitcoin : investment.type === "Property" ? FaHouse : investment.type === "Cars" ? FaCarSide : HiOutlineDotsCircleHorizontal}
                     boxSize={7}
                     p={1}
-                    bg={"gray.200"} // Apply grey background when the sidebar is closed
-                    borderRadius="5px" // Make the background circular
+                    bg={"gray.200"} 
+                    borderRadius="5px" 
                   />
-                  <Text ml={2}>{investment.name}</Text> {/* Conditionally render the text only when the sidebar is open */}
+                  <Text ml={2}>{investment.name}</Text> 
                 </Flex>
                 <chakra.div
                   w="100%"
                   h="1px"
                   bg="gray.200"
                   mt={5}
-                  display={filteredInvestments.length > 0 ? "block" : "none"} // Show the line only if there are filtered investments
+                  display={filteredInvestments.length > 0 ? "block" : "none"} 
                 />
 
               </Link>
