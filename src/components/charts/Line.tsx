@@ -88,7 +88,8 @@ export function LineChart({
         Number.parseFloat(aggregatedData[0]?.pricePerUnit.toFixed(2)) || 0,
         Number.parseFloat(
           aggregatedData[aggregatedData.length - 1]?.pricePerUnit.toFixed(2)
-        ) || 0
+        ) || 0,
+        aggregatedData[0]?.date || "",
       );
     }
   }, [aggregatedData]);
