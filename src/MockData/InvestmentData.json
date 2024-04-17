@@ -2,193 +2,19 @@
     
 
     {
-        "id": "1",
-        "name": "Apple Investment",
-        "symbol": "AAPL",
-        "type": "Stock",
-        "purchase": {
-            "date": "2023-03-29T22:00:00.000Z",
-            "units": 10,
-            "pricePerUnit": 171.5
-        },
-        "sale": {
-            "date": "2024-03-29T22:00:00.000Z",
-            "units": 10,
-            "pricePerUnit": 201.5
-        },
-        "historicalData": "AAPL"
-    },
-    {
-        "id": "2",
-        "name": "i dont know what this is",
-        "symbol": "ZWS",
-        "type": "Stock",
-        "purchase": {
-            "date": "2023-04-29T22:00:00.000Z",
-            "units": 20,
-            "pricePerUnit": 21.44
-        },
-        "historicalData": "ZWS"
-    },
-    {
-        "id": "3",
-        "name": "Tesla Fan Boyyyyyyyyy",
-        "symbol": "TSLA",
-        "type": "Stock",
-        "purchase": {
-            "date": "2022-03-21T22:00:00.000Z",
-            "units": 5,
-            "pricePerUnit": 147.41
-        },
-        "historicalData": "TSLA"
-    },
-    {
-        "id": "4",
-        "name": "Bitcoin",
-        "symbol": "BTC",
-        "type": "Crypto",
-        "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
-            "units": 0.05,
-            "pricePerUnit": 50000
-        },
-        "historicalData": [
-            {
-                "date": "2023-01-29T22:00:00.000Z",
-                "pricePerUnit": 50000
-            },
-            {
-                "date": "2023-02-29T22:00:00.000Z",
-                "pricePerUnit": 60000
-            },
-            {
-                "date": "2023-03-29T22:00:00.000Z",
-                "pricePerUnit": 70000
-            },
-            {
-                "date": "2023-04-29T22:00:00.000Z",
-                "pricePerUnit": 80000
-            },         
-               {
-                "date": "2024-03-27T22:00:00.000Z",
-                "pricePerUnit": 90000
-            }
-
-        ]
-    },
-    {
-        "id": "5",
-        "name": "Ethereum",
-        "symbol": "ETH",
-        "type": "Crypto",
-        "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
-            "units": 0.5,
-            "pricePerUnit": 2000
-        },
-        "historicalData": [
-            {
-                "date": "2023-01-29T22:00:00.000Z",
-                "pricePerUnit": 2000
-            },
-            {
-                "date": "2023-02-29T22:00:00.000Z",
-                "pricePerUnit": 2500
-            },
-            {
-                "date": "2023-03-29T22:00:00.000Z",
-                "pricePerUnit": 3000
-            },
-            {
-                "date": "2023-04-29T22:00:00.000Z",
-                "pricePerUnit": 3500
-            },
-            {
-                "date": "2024-03-27T22:00:00.000Z",
-                "pricePerUnit": 4000
-            }
-        ]
-    },
-    {
-        "id": "6",
-        "name": "Dogecoin",
-        "symbol": "DOGE",
-        "type": "Crypto",
-        "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
-            "units": 1000,
-            "pricePerUnit": 0.05
-        },
-        "historicalData": [
-            {
-                "date": "2023-01-29T22:00:00.000Z",
-                "pricePerUnit": 0.05
-            },
-            {
-                "date": "2023-02-29T22:00:00.000Z",
-                "pricePerUnit": 0.06
-            },
-            {
-                "date": "2023-03-29T22:00:00.000Z",
-                "pricePerUnit": 0.07
-            },
-            {
-                "date": "2023-04-29T22:00:00.000Z",
-                "pricePerUnit": 0.08
-            },
-            {
-                "date": "2024-03-27T22:00:00.000Z",
-                "pricePerUnit": 0.09
-            }
-        ]
-    },
-    {
-        "id": "7",
-        "name": "Cardano",
-        "symbol": "ADA",
-        "type": "Crypto",
-        "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
-            "units": 100,
-            "pricePerUnit": 1.5
-        },
-        "historicalData": [
-            {
-                "date": "2023-01-29T22:00:00.000Z",
-                "pricePerUnit": 1.5
-            },
-            {
-                "date": "2023-02-29T22:00:00.000Z",
-                "pricePerUnit": 1.6
-            },
-            {
-                "date": "2023-03-29T22:00:00.000Z",
-                "pricePerUnit": 1.7
-            },
-            {
-                "date": "2023-04-29T22:00:00.000Z",
-                "pricePerUnit": 1.8
-            },
-            {
-                "date": "2024-03-27T22:00:00.000Z",
-                "pricePerUnit": 1.9
-            }
-        ]
-    },
-    {
         "id": "8",
         "name": "Polkadot",
         "symbol": "DOT",
         "type": "Crypto",
         "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
+            "date": "2022-01-29T22:00:00.000Z",
             "units": 50,
             "pricePerUnit": 20
         },
         "historicalData": [
             {
-                "date": "2023-01-29T22:00:00.000Z",
-                "pricePerUnit": 20
+                "date": "2022-02-29T22:00:00.000Z",
+                "pricePerUnit": 30
             },
             {
                 "date": "2023-02-29T22:00:00.000Z",
@@ -214,7 +40,7 @@
         "symbol": "SOL",
         "type": "Crypto",
         "purchase": {
-            "date": "2023-01-29T22:00:00.000Z",
+            "date": "2023-04-29T22:00:00.000Z",
             "units": 10,
             "pricePerUnit": 100
         },

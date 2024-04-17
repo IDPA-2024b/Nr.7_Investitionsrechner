@@ -41,7 +41,7 @@ const options: ChartOptions<"line"> = {
   
   scales: {
     y: {
-      beginAtZero: false,
+      beginAtZero: true,
     },
   },
   interaction: {
@@ -130,24 +130,26 @@ function dateRangeToStartDate(dateRange?: DateRange): Date {
     case DateRange.Last7Days:
       startDate = new Date();
       startDate.setDate(startDate.getDate() - 7);
+      startDate.setHours(0, 1, 0, 0); 
       break;
     case DateRange.LastMonth:
       startDate = new Date();
       startDate.setMonth(startDate.getMonth() - 1);
-      startDate.setDate(1);
+      startDate.setHours(0, 1, 0, 0); 
       break;
     case DateRange.LastYear:
       startDate = new Date();
       startDate.setFullYear(startDate.getFullYear() - 1);
-      startDate.setMonth(0);
-      startDate.setDate(1);
+      startDate.setHours(0, 1, 0, 0); 
       break;
     case DateRange.All:
       startDate = new Date(0);
+      startDate.setHours(0, 1, 0, 0); 
       break;
     default:
       startDate = new Date();
       startDate.setDate(startDate.getDate() - 7);
+      startDate.setHours(0, 1, 0, 0); 
   }
   return startDate;
 }
@@ -158,9 +160,9 @@ function aggregateData(
   maxDataPoints: number
 ): PriceRecord[] {
   const startDate = dateRangeToStartDate(range);
-
   const filteredData = data.filter((item) => new Date(item.date) >= startDate);
   const aggregatedData = averageValueByDay(filteredData, maxDataPoints);
+
 
   return aggregatedData;
 }

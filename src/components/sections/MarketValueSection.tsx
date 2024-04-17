@@ -61,8 +61,8 @@ export function MarketValueSection({
         break;
       case DateRange.LastYear:
         date.setFullYear(date.getFullYear() - 1);
-        date.setMonth(0);
-        date.setDate(1);
+        // date.setMonth(0);
+        // date.setDate(1);
         break;
       case DateRange.All:
         date.setFullYear(1970);
@@ -78,8 +78,40 @@ export function MarketValueSection({
     });
     return totalPaied;
   }
+  function calculateAmountSpentBeforeDate(investments: Investment[], oldestDate) {
+    let totalPaied = 0;
+    const filteredInvestments = investments.filter((investment) => {
+      const investmentDate = new Date(investment.purchase.date);
+      if (investmentDate <= oldestDate) {
+        totalPaied +=
+          investment.purchase.pricePerUnit * investment.purchase.units;
+      }
+    });
+    return totalPaied;
+  }
 
+  // working here
   function receiveData(data1: number, data2: number) {
+    const today = new Date();
+    const lastyear = new Date(today.getFullYear() - 1, today.getMonth(), today.getDate());
+    const amountSpentBefore = calculateAmountSpentBeforeDate(investments, lastyear);
+    const totalSpent = calculateAmountSpentBeforeDate(investments, today);
+    const profitBefore = data1 - amountSpentBefore;
+    const profitNow = data2 - totalSpent;
+    const totalProfit = profitNow - profitBefore;
+    const startValue = data2 - totalProfit;
+    const percentageChangeTMP = calculatePercentageChange(startValue, data2); 
+    console.log("-----------------------")
+    console.log("amountSpentBefore", amountSpentBefore)
+    console.log("totalSpent", totalSpent)
+    console.log("data1", data1)
+    console.log("data2", data2)
+    console.log("profitBefore", profitBefore)
+    console.log("profitNow", profitNow)
+    console.log("totalProfit", totalProfit)
+    console.log("startValue", startValue)
+        
+    
     setFirstValue(
       calculateAmountSpentInTimeRange(investments, dateRange as DateRange) ||
       data1
@@ -90,7 +122,7 @@ export function MarketValueSection({
   function sumTotalForMonth(dataSets) {
     const totalForMonth = {};
 
-    
+
     // Calculate total price for each date
     dataSets.forEach((dataSet) => {
       dataSet.historicalData.forEach((dataPoint) => {
@@ -127,6 +159,7 @@ export function MarketValueSection({
   useEffect(() => {
     setPercentageGain(calculatePercentageChange(firstValue, lastValue));
     const amountGainedInTimeRange = lastValue - firstValue;
+    
     setAmountGain(parseFloat((amountGainedInTimeRange).toFixed(2)));
   }, [firstValue, lastValue]);
 
