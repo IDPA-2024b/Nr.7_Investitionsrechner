@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
-import InvestmentData from "../MockData/InvestmentData.json";
-import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Container, Flex, Heading, VStack, Text, HStack, Box, Popover, Button } from "@chakra-ui/react";
+import {
+  Container,
+  Flex,
+  Heading,
+  VStack,
+  Text,
+  HStack,
+  Box,
+  Popover,
+  Button,
+} from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
 
 import { useNavigate, useParams } from "react-router-dom";
-import { ArrowBackIcon } from "@chakra-ui/icons";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
 import { KebabIcon } from "../components/KebabIcon";
 import { PopOverSell } from "../components/sections/PopOverSell";
 import { useInvestments } from "../hooks/contexts";
+import { BackToDashboard } from "../components/BackToDashboard";
 export function InvestmentPage() {
   const [pricePerUnit, setPricePerUnit] = useState("100");
   const [units, setUnits] = useState("10");
@@ -20,7 +28,6 @@ export function InvestmentPage() {
   const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
   const [investment, setInvestment] = useState([]);
-  const navigate = useNavigate();
   const idArray = useParams();
   const id: String = idArray.id;
 
@@ -53,8 +60,10 @@ export function InvestmentPage() {
 
       return { ...investment, historicalData };
     });
-    const singleInvestment = [updatedInvestments.find((item) => item.id === id)];
-    console.log(singleInvestment) 
+    const singleInvestment = [
+      updatedInvestments.find((item) => item.id === id),
+    ];
+
     setInvestment(singleInvestment);
   }, [id, investments]); // TODO: this is maybe not the best way to do it, but it works for now
 
@@ -109,9 +118,9 @@ export function InvestmentPage() {
         )
           .toString()
           .padStart(2, "0")}-${currentDate
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`;
+          .getDate()
+          .toString()
+          .padStart(2, "0")}`;
 
         const pricePerUnit = dataSet.historicalData.find((dataPoint) => {
           const dataPointDate = new Date(dataPoint.date);
@@ -120,9 +129,9 @@ export function InvestmentPage() {
           )
             .toString()
             .padStart(2, "0")}-${dataPointDate
-              .getDate()
-              .toString()
-              .padStart(2, "0")}`;
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`;
           return formattedDataPointDate === formattedDate;
         })?.pricePerUnit;
 
@@ -169,9 +178,16 @@ export function InvestmentPage() {
   }
 
   function calculateDaysBetweenDates(date1: Date, date2: Date): number {
-
-    const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
-    const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+    const utc1 = Date.UTC(
+      date1.getFullYear(),
+      date1.getMonth(),
+      date1.getDate()
+    );
+    const utc2 = Date.UTC(
+      date2.getFullYear(),
+      date2.getMonth(),
+      date2.getDate()
+    );
 
     const diffInMs = Math.abs(utc2 - utc1);
 
@@ -185,13 +201,13 @@ export function InvestmentPage() {
       return `${days} days`;
     } else if (days < 30) {
       const weeks = Math.floor(days / 7);
-      return `${weeks} week${weeks !== 1 ? 's' : ''}`;
+      return `${weeks} week${weeks !== 1 ? "s" : ""}`;
     } else if (days < 365 * 3) {
       const months = Math.floor(days / 30);
-      return `${months} month${months !== 1 ? 's' : ''}`;
+      return `${months} month${months !== 1 ? "s" : ""}`;
     } else {
       const years = Math.floor(days / 365);
-      return `${years} year${years !== 1 ? 's' : ''}`;
+      return `${years} year${years !== 1 ? "s" : ""}`;
     }
   }
   function profitCalculation() {
@@ -203,11 +219,11 @@ export function InvestmentPage() {
     return { profit, roi };
   }
 
-
   // bro mach das clean ich han kb uf das
 
-  const totalCost = investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
-  const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
+  const totalCost =
+    investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
+  const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types
 
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
   const investmentName = investment[0]?.name;
@@ -223,7 +239,6 @@ export function InvestmentPage() {
     setUnits(investment[0]?.purchase.units);
     setPricePerUnit(investment[0]?.purchase.pricePerUnit);
     setSaleDate(investment[0]?.purchase?.date);
-
   }, [investment]);
 
   // TODO: this is just a placeholder function for now. I hope you will have fun @Le0nRoch
@@ -236,49 +251,43 @@ export function InvestmentPage() {
     // update(investment.id, { sale: { pricePerUnit, units, date: saleDate } });
   };
 
-
   return (
     <Container maxWidth={"5xl"}>
-
       <VStack align={"start"} gap={8}>
-
-        <HStack cursor={"pointer"} onClick={() => navigate("/dashboard")}>
-
-          <ArrowBackIcon boxSize={6} />
-          <Text fontWeight={"600"}>Back to Dashboard</Text>
-        </HStack>
-        <Flex
-          justify={"space-between"}
-          width={"100%"}
-        >
-
+        <BackToDashboard />
+        <Flex justify={"space-between"} width={"100%"}>
           <Box>
-            <Flex gap={5} alignItems="baseline" /*TODO: i am too stoopid to make text below and not at the top */>
+            <Flex
+              gap={5}
+              alignItems="baseline" /*TODO: i am too stoopid to make text below and not at the top */
+            >
               <Heading size={"lg"}>{investmentName}</Heading>
-              <Text fontSize={"sm"} color={"grey"}>{investmentSymbol}</Text>
+              <Text fontSize={"sm"} color={"grey"}>
+                {investmentSymbol}
+              </Text>
             </Flex>
-            <Text fontWeight={"600"}>{totalUnits}  Unit{totalUnits !== "1" ? "s" : ""}</Text>
+            <Text fontWeight={"600"}>
+              {totalUnits} Unit{totalUnits !== "1" ? "s" : ""}
+            </Text>
           </Box>
-          <Flex
-            alignItems={"center"}
-            gap={1}
-          >
-            {investment[0]?.sale && (
+          <Flex alignItems={"center"} gap={1}>
+            {(investment[0]?.sale && (
               <>
-                <Button colorScheme="teal" isDisabled>Sell</Button>
+                <Button colorScheme="teal" isDisabled>
+                  Sell
+                </Button>
               </>
-            ) || (
-                <PopOverSell
-                  pricePerUnit={pricePerUnit}
-                  units={units}
-                  saleDate={saleDate}
-                  setPricePerUnit={setPricePerUnit}
-                  setUnits={setUnits}
-                  setSaleDate={setSaleDate}
-                  onSell={handleSell}
-                />
-              )
-            }
+            )) || (
+              <PopOverSell
+                pricePerUnit={pricePerUnit}
+                units={units}
+                saleDate={saleDate}
+                setPricePerUnit={setPricePerUnit}
+                setUnits={setUnits}
+                setSaleDate={setSaleDate}
+                onSell={handleSell}
+              />
+            )}
             <Box>
               <KebabIcon
                 cursor="pointer"
@@ -286,12 +295,12 @@ export function InvestmentPage() {
                 h={6}
                 color=""
                 // TODO: add functionality
-                onClick={() => alert(`I dont fucking know what to do here leo pls helt`)}
+                onClick={() =>
+                  alert(`I dont fucking know what to do here leo pls helt`)
+                }
               />
             </Box>
-
           </Flex>
-
         </Flex>
         <MarketValueSection
           defaultDateRange={DateRange.All}
@@ -302,18 +311,25 @@ export function InvestmentPage() {
           width={"100%"}
           direction={{ base: "column", lg: "row" }}
         >
-          <SingleInfoWithSubtextSection title="Investment" tooltip="idk" value={totalCost} singleUnitCost={singleUnitCost} />
+          <SingleInfoWithSubtextSection
+            title="Investment"
+            tooltip="idk"
+            value={totalCost}
+            singleUnitCost={singleUnitCost}
+          />
 
           {investment[0]?.sale && (
             <>
               <ProfitSection value={profit} roi={roi} />
             </>
           )}
-          <SingleInformationSection value={holdingPeriod} title="Holding Period" tooltip="This is how long you had that investment for" type="string" />
-
-
+          <SingleInformationSection
+            value={holdingPeriod}
+            title="Holding Period"
+            tooltip="This is how long you had that investment for"
+            type="string"
+          />
         </Flex>
-
       </VStack>
     </Container>
   );
