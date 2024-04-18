@@ -8,30 +8,27 @@ import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
+import { useInvestments } from "../hooks/contexts";
 export function DashboardPage() {
   const [investments, setInvestments] = useState([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
+  const { investments: investmentsFromContext}  = useInvestments();
+
+
 
   useEffect(() => {
-    const updatedInvestments = InvestmentData.map((investment) => {
+    const updatedInvestments = investmentsFromContext.map((investment) => {
       const purchaseDate = new Date(investment.purchase.date);
       let historicalData = [];
 
-      if (typeof investment.historicalData === "string") {
-        historicalData = StockData[investment.historicalData].map((data) => {
-          const pricePerUnit = (
-            data.pricePerUnit * investment.purchase.units
-          ).toFixed(2);
-          return { date: data.date, pricePerUnit: parseFloat(pricePerUnit) };
-        });
-      } else {
+
         historicalData = investment.historicalData.map((data) => {
           return {
             date: data.date,
             pricePerUnit: data.pricePerUnit * investment.purchase.units,
           };
         });
-      }
+      
 
       historicalData = historicalData.filter(
         (data) => new Date(data.date) > purchaseDate
@@ -46,7 +43,7 @@ export function DashboardPage() {
     });
 
     setInvestments(updatedInvestments);
-  }, []);
+  }, [investmentsFromContext]);
 
   function processMultipleHistoricalData(dataSets) {
     const today = new Date();

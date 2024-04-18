@@ -15,12 +15,12 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import investments from "../MockData/InvestmentData.json";
 import { FaBitcoin } from "react-icons/fa";
 import { AiOutlineStock } from "react-icons/ai";
 import { FaHouse } from "react-icons/fa6";
 import { FaCarSide } from "react-icons/fa";
 import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
+import { useInvestments } from "../hooks/contexts";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -32,6 +32,7 @@ export function Sidebar({
   onOpen = () => { },
   onClose = () => { },
 }: SidebarProps) {
+  const {investments} = useInvestments();
   const navigate = useNavigate();
   const searchbarRef = useRef<HTMLInputElement>(null);
   const [openSearchClicked, setOpenSearchClicked] = useState(false);
@@ -150,7 +151,9 @@ export function Sidebar({
                     bg={"gray.200"} 
                     borderRadius="5px" 
                   />
-                  <Text ml={2}>{investment.name}</Text> 
+                  <Text ml={2}
+
+                  >{investment.name}</Text> 
                 </Flex>
                 <chakra.div
                   w="100%"

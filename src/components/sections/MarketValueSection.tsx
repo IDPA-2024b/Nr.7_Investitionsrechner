@@ -113,8 +113,6 @@ export function MarketValueSection({
     const dateBefore = dateRangeToBeforeDate(dateRange);
     const oldestDateParsed = parseDateString(oldestDate)
     // which date is newer
-
-
     let amountSpentBefore = 0;
     if (oldestDateParsed > dateBefore) {
       amountSpentBefore = data1

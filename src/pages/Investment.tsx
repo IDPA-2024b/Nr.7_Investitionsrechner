@@ -12,6 +12,7 @@ import { ArrowBackIcon } from "@chakra-ui/icons";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
 import { KebabIcon } from "../components/KebabIcon";
 import { PopOverSell } from "../components/sections/PopOverSell";
+import { useInvestments } from "../hooks/contexts";
 export function InvestmentPage() {
   const [pricePerUnit, setPricePerUnit] = useState("100");
   const [units, setUnits] = useState("10");
@@ -23,27 +24,23 @@ export function InvestmentPage() {
   const idArray = useParams();
   const id: String = idArray.id;
 
-  // TODO:  this will be mosty gone after the backend is connected
+  const { investments } = useInvestments();
   useEffect(() => {
-    const updatedInvestments = InvestmentData.map((investment) => {
+    console.log(investments);
+  }, [investments]);
+    // TODO:  this will be mosty gone after the backend is connected
+  useEffect(() => {
+    const updatedInvestments = investments.map((investment) => {
       const purchaseDate = new Date(investment.purchase.date);
       let historicalData = [];
 
-      if (typeof investment.historicalData === "string") {
-        historicalData = StockData[investment.historicalData].map((data) => {
-          const pricePerUnit = (
-            data.pricePerUnit * investment.purchase.units
-          ).toFixed(2);
-          return { date: data.date, pricePerUnit: parseFloat(pricePerUnit) };
-        });
-      } else {
         historicalData = investment.historicalData.map((data) => {
           return {
             date: data.date,
             pricePerUnit: data.pricePerUnit * investment.purchase.units,
           };
         });
-      }
+      
 
       historicalData = historicalData.filter(
         (data) => new Date(data.date) > purchaseDate
@@ -57,9 +54,9 @@ export function InvestmentPage() {
       return { ...investment, historicalData };
     });
     const singleInvestment = [updatedInvestments.find((item) => item.id === id)];
-
+    console.log(singleInvestment) 
     setInvestment(singleInvestment);
-  }, [id]); // TODO: this is maybe not the best way to do it, but it works for now
+  }, [id, investments]); // TODO: this is maybe not the best way to do it, but it works for now
 
   useEffect(() => {
     const purchaseDate = new Date(investment[0]?.purchase.date);
@@ -146,7 +143,7 @@ export function InvestmentPage() {
           a: { date: string | number | Date },
           b: { date: string | number | Date }
         ) => new Date(a.date) - new Date(b.date)
-      ); 
+      );
       if (
         processedDataSet.historicalData[
           processedDataSet.historicalData.length - 1
@@ -166,13 +163,13 @@ export function InvestmentPage() {
     processedDataSets.sort(
       (a, b) =>
         new Date(a.historicalData[0].date) - new Date(b.historicalData[0].date)
-    ); 
+    );
 
     return processedDataSets;
   }
 
   function calculateDaysBetweenDates(date1: Date, date2: Date): number {
-  
+
     const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
     const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
 
@@ -213,7 +210,7 @@ export function InvestmentPage() {
   const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types 
 
   const totalUnits = investment[0]?.purchase.units.toLocaleString();
-    const investmentName = investment[0]?.name;
+  const investmentName = investment[0]?.name;
   const investmentSymbol = investment[0]?.symbol;
   let profit = 0;
   let roi = 0;
@@ -221,6 +218,7 @@ export function InvestmentPage() {
     profit = profitCalculation().profit;
     roi = profitCalculation().roi;
   }
+
   useEffect(() => {
     setUnits(investment[0]?.purchase.units);
     setPricePerUnit(investment[0]?.purchase.pricePerUnit);
@@ -229,11 +227,13 @@ export function InvestmentPage() {
   }, [investment]);
 
   // TODO: this is just a placeholder function for now. I hope you will have fun @Le0nRoch
+  const { update } = useInvestments();
+
   const handleSell = () => {
     console.log("Price Per Unit:", pricePerUnit);
     console.log("Units:", units);
     console.log("Sale Date:", saleDate);
-    
+    // update(investment.id, { sale: { pricePerUnit, units, date: saleDate } });
   };
 
 
@@ -265,7 +265,7 @@ export function InvestmentPage() {
           >
             {investment[0]?.sale && (
               <>
-              <Button colorScheme="teal" isDisabled>Sell</Button>
+                <Button colorScheme="teal" isDisabled>Sell</Button>
               </>
             ) || (
                 <PopOverSell
