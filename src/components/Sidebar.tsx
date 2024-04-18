@@ -3,7 +3,6 @@ import {
   Button,
   Flex,
   FormControl,
-  Icon,
   IconButton,
   Input,
   InputGroup,
@@ -16,11 +15,8 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import investments from "../MockData/InvestmentData.json";
-import { FaBitcoin } from "react-icons/fa";
-import { AiOutlineStock } from "react-icons/ai";
-import { FaHouse } from "react-icons/fa6";
-import { FaCarSide } from "react-icons/fa";
-import { HiOutlineDotsCircleHorizontal } from "react-icons/hi";
+import { InvestmentIcon } from "./InvestmentIcon";
+import { InvestmentType, type Investment } from "../types/investment";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -29,22 +25,18 @@ interface SidebarProps {
 }
 export function Sidebar({
   isOpen,
-  onOpen = () => { },
-  onClose = () => { },
+  onOpen = () => {},
+  onClose = () => {},
 }: SidebarProps) {
   const navigate = useNavigate();
   const searchbarRef = useRef<HTMLInputElement>(null);
   const [openSearchClicked, setOpenSearchClicked] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredInvestments, setFilteredInvestments] = useState(investments);
+  const [filteredInvestments, setFilteredInvestments] = useState(
+    investments as Investment[]
+  );
   const [selectedType, setSelectedType] = useState("All");
-  const types = [
-    { name: "Stock", icon: <AiOutlineStock /> },
-    { name: "Crypto", icon: <FaBitcoin /> },
-    { name: "Property", icon: <FaHouse /> },
-    { name: "Cars", icon: <FaCarSide /> },
-    { name: "Others", icon: <HiOutlineDotsCircleHorizontal /> },
-  ];
+
   function handleOpenSearchBar() {
     onOpen();
     setOpenSearchClicked(true);
@@ -63,14 +55,16 @@ export function Sidebar({
   }, [isOpen]);
 
   useEffect(() => {
-    const filteredByName = investments.filter(investment =>
+    const filteredByName = (investments as Investment[]).filter((investment) =>
       investment.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-    let filteredByType = [...filteredByName]; 
+    let filteredByType = [...filteredByName];
 
-    if (selectedType !== "All") {
-      filteredByType = filteredByName.filter(investment => investment.type === selectedType);
+    if (selectedType !== "all") {
+      filteredByType = filteredByName.filter(
+        (investment) => investment.type === selectedType
+      );
     }
 
     setFilteredInvestments(filteredByType);
@@ -103,7 +97,6 @@ export function Sidebar({
           />
         </InputGroup>
 
-
         <IconButton
           display={isOpen ? "none" : "block"}
           aria-label="search"
@@ -113,15 +106,14 @@ export function Sidebar({
         {isOpen && (
           <FormControl>
             <Select
-              id="type"
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
             >
-              <option value="All">All</option>
-              {types.map((type) => (
-                <option key={type} value={type.name}>
-                  {type.icon} {type.name}
-                </option>
+              <option value="all">All</option>
+              {Object.entries(InvestmentType).map(([key, value]) => (
+                <chakra.option key={key} value={value}>
+                  {key}
+                </chakra.option>
               ))}
             </Select>
           </FormControl>
@@ -131,41 +123,43 @@ export function Sidebar({
             w="100%"
             h="1px"
             bg="gray.200"
-            display={filteredInvestments.length > 0 ? "block" : "none"} 
+            display={filteredInvestments.length > 0 ? "block" : "none"}
           />
         )}
         {isOpen && (
           <>
-
             {filteredInvestments.map((investment) => (
-              <Link key={investment.id} to={`investment/${investment.id}`} style={{ width: "100%" }}>
-                <Flex align="center"
+              <Link
+                key={investment.id}
+                to={`investment/${investment.id}`}
+                style={{ width: "100%" }}
+              >
+                <Flex
+                  align="center"
                   textAlign={isOpen ? "left" : "center"}
                   display={isOpen ? "flex" : "block"}
                 >
-                  <Icon
-                    as={investment.type === "Stock" ? AiOutlineStock : investment.type === "Crypto" ? FaBitcoin : investment.type === "Property" ? FaHouse : investment.type === "Cars" ? FaCarSide : HiOutlineDotsCircleHorizontal}
+                  <InvestmentIcon
+                    type={investment.type}
                     boxSize={7}
                     p={1}
-                    bg={"gray.200"} 
-                    borderRadius="5px" 
+                    bg={"gray.200"}
+                    borderRadius="5px"
                   />
-                  <Text ml={2}>{investment.name}</Text> 
+                  <Text ml={2}>{investment.name}</Text>
                 </Flex>
                 <chakra.div
                   w="100%"
                   h="1px"
                   bg="gray.200"
                   mt={5}
-                  display={filteredInvestments.length > 0 ? "block" : "none"} 
+                  display={filteredInvestments.length > 0 ? "block" : "none"}
                 />
-
               </Link>
             ))}
           </>
         )}
       </VStack>
-
     </chakra.aside>
   );
 }

@@ -2,7 +2,7 @@ export interface Investment {
 	id: string;
 	name: string;
 	symbol: string;
-	type: string;
+	type: InvestmentType;
 	purchase: Transaction;
 	sale?: Transaction;
 	historicalData: PriceRecord[];
@@ -20,6 +20,14 @@ export interface PriceRecord {
 	pricePerUnit: number;
 }
 
+export enum InvestmentType {
+	Stock = "stock",
+	Option = "option",
+	Crypto = "crypto",
+	Forex = "forex",
+	Index = "index",
+	Other = "other",
+}
 // used in the form to create a new investment or update an existing one
 export interface InvestmentForm
 	extends Omit<Investment, "id" | "historicalData" | "unsubscribe"> {}
