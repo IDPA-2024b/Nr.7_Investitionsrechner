@@ -67,7 +67,5 @@ const router = createHashRouter([
 ]);
 
 export function Router() {
-
-
   return <RouterProvider router={router} />;
 }
