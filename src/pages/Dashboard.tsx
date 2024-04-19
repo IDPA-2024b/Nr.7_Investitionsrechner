@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import InvestmentData from "../MockData/InvestmentData.json";
-import StockData from "../MockData/StockData.json";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
 import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
@@ -9,26 +7,23 @@ import { SingleInformationSection } from "../components/sections/SingleInformati
 import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSection";
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { useInvestments } from "../hooks/contexts";
+import type { Investment } from "../types/investment";
 export function DashboardPage() {
-  const [investments, setInvestments] = useState([]);
+  const [investments, setInvestments] = useState<Investment>([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
-  const { investments: investmentsFromContext}  = useInvestments();
-
-
+  const { investments: investmentsFromContext } = useInvestments();
 
   useEffect(() => {
     const updatedInvestments = investmentsFromContext.map((investment) => {
       const purchaseDate = new Date(investment.purchase.date);
       let historicalData = [];
 
-
-        historicalData = investment.historicalData.map((data) => {
-          return {
-            date: data.date,
-            pricePerUnit: data.pricePerUnit * investment.purchase.units,
-          };
-        });
-      
+      historicalData = investment.historicalData.map((data) => {
+        return {
+          date: data.date,
+          pricePerUnit: data.pricePerUnit * investment.purchase.units,
+        };
+      });
 
       historicalData = historicalData.filter(
         (data) => new Date(data.date) > purchaseDate
@@ -58,7 +53,8 @@ export function DashboardPage() {
     const processedDataSets = [];
 
     dataSets.forEach((dataSet, index) => {
-      const totalPurchasePrice =  dataSet.purchase.pricePerUnit * dataSet.purchase.units;
+      const totalPurchasePrice =
+        dataSet.purchase.pricePerUnit * dataSet.purchase.units;
       const processedDataSet = {
         ...dataSet,
         historicalData: [],
@@ -102,7 +98,9 @@ export function DashboardPage() {
         const processedDataPoint = {
           date: formattedDate,
           pricePerUnit:
-            (pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices) /* - totalPrice */,
+            pricePerUnit !== undefined
+              ? pricePerUnit
+              : lastKnownPrices /* - totalPrice */,
         };
 
         processedDataSet.historicalData.push(processedDataPoint);
@@ -116,7 +114,7 @@ export function DashboardPage() {
           a: { date: string | number | Date },
           b: { date: string | number | Date }
         ) => new Date(a.date) - new Date(b.date)
-      ); 
+      );
       if (
         processedDataSet.historicalData[
           processedDataSet.historicalData.length - 1
@@ -136,13 +134,13 @@ export function DashboardPage() {
     processedDataSets.sort(
       (a, b) =>
         new Date(a.historicalData[0].date) - new Date(b.historicalData[0].date)
-    ); 
+    );
 
     return processedDataSets;
   }
 
   const investmentsWithSoldData = investments.filter(
-    (investment) => investment.sale !== undefined
+    (investment) => investment.sale
   );
   const onlySoldSpent = investmentsWithSoldData.reduce((total, investment) => {
     const purchasePrice = investment.purchase.pricePerUnit;
@@ -156,10 +154,21 @@ export function DashboardPage() {
     return total + salePrice * saleAmount;
   }, 0);
 
+  function calculateProfit() {
+    return investmentsFromContext
+      .filter((investment) => investment.sale)
+      .reduce((total, investment) => {
+        const purchasePrice = investment.purchase.pricePerUnit;
+        const salePrice = investment.sale!.pricePerUnit;
+        const units = investment.purchase.units;
+        return total + (salePrice - purchasePrice) * units;
+      }, 0);
+  }
 
-  // TODO: Right calculation of roi
-  const profit = revenue - onlySoldSpent;
-  const roi = profit / onlySoldSpent * 100;
+  function calculateROI() {
+    const profit = calculateProfit();
+    return (profit / onlySoldSpent) * 100;
+  }
   useEffect(() => {
     setEachDayInvestment(processMultipleHistoricalData(investments));
   }, [investments]);
@@ -183,8 +192,13 @@ export function DashboardPage() {
             width={"100%"}
             direction={{ base: "column", md: "row", lg: "column" }}
           >
-            <ProfitSection value={profit} roi={roi} />
-            <SingleInformationSection value={revenue} title={"Revenue"} tooltip="The total revenue you've made from your investments" type="number" />
+            <ProfitSection value={calculateProfit()} roi={calculateROI()} />
+            <SingleInformationSection
+              value={revenue}
+              title={"Revenue"}
+              tooltip="The total revenue you've made from your investments"
+              type="number"
+            />
           </Flex>
           <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
             <TopInvestmentsSection investments={investments.slice(0, 10)} />
