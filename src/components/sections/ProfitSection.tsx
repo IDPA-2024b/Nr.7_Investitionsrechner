@@ -2,6 +2,7 @@ import { Flex, Tag, Text } from "@chakra-ui/react";
 import { TitleWithTooltip } from "../TitleWithTooltip";
 import { ImportantNumber } from "../ImportantNumber";
 import { Section } from "./Section";
+import { useEffect, useState } from "react";
 
 interface ProfitSectionProps {
   value: number;
@@ -9,6 +10,22 @@ interface ProfitSectionProps {
 }
 
 export function ProfitSection({ value, roi }: ProfitSectionProps) {
+  const [color, setColor] = useState("gray");
+
+  function getROIColor(roi: number) {
+    if (roi > 0) {
+      return "green";
+    }
+    if (roi < 0) {
+      return "red";
+    }
+
+    return "gray";
+  }
+  useEffect(() => {
+    setColor(getROIColor(roi));
+  }, [roi]);
+
   return (
     <Section>
       <TitleWithTooltip
@@ -17,7 +34,7 @@ export function ProfitSection({ value, roi }: ProfitSectionProps) {
       />
       <Flex justify={"space-between"} align={"baseline"}>
         <ImportantNumber number={value} />
-        <Tag rounded={"full"} colorScheme={roi > 0 ? "green" : "red"}>
+        <Tag rounded={"full"} colorScheme={color}>
           <Text>
             {roi.toLocaleString(undefined, {
               maximumFractionDigits: 2,

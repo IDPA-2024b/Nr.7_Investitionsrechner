@@ -6,10 +6,9 @@ import {
   Heading,
   VStack,
   Text,
-  HStack,
-  Box,
-  Popover,
   Button,
+  useDisclosure,
+  HStack,
 } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
@@ -17,177 +16,60 @@ import { SingleInformationSection } from "../components/sections/SingleInformati
 
 import { useNavigate, useParams } from "react-router-dom";
 import { SingleInfoWithSubtextSection } from "../components/sections/SingleInfoWithSubtextSection";
-import { KebabIcon } from "../components/KebabIcon";
-import { PopOverSell } from "../components/sections/PopOverSell";
+import { PopOverSell } from "../components/single/PopOverSell";
 import { useInvestments } from "../hooks/contexts";
 import { BackToDashboard } from "../components/BackToDashboard";
+import type { Investment } from "../types/investment";
+import { format } from "date-fns";
+import { OptionsMenu } from "../components/single/OptionsMenu";
+
 export function InvestmentPage() {
   const [pricePerUnit, setPricePerUnit] = useState("100");
   const [units, setUnits] = useState("10");
-  const [saleDate, setSaleDate] = useState("01.03.2023");
-  const [holdingPeriod, setHoldingPeriod] = useState("10 Weeks");
-  const [eachDayInvestment, setEachDayInvestment] = useState([]);
-  const [investment, setInvestment] = useState([]);
-  const idArray = useParams();
-  const id: String = idArray.id;
-
-  const { investments } = useInvestments();
-  useEffect(() => {
-    console.log(investments);
-  }, [investments]);
-    // TODO:  this will be mosty gone after the backend is connected
-  useEffect(() => {
-    const updatedInvestments = investments.map((investment) => {
-      const purchaseDate = new Date(investment.purchase.date);
-      let historicalData = [];
-
-        historicalData = investment.historicalData.map((data) => {
-          return {
-            date: data.date,
-            pricePerUnit: data.pricePerUnit * investment.purchase.units,
-          };
-        });
-      
-
-      historicalData = historicalData.filter(
-        (data) => new Date(data.date) > purchaseDate
-      );
-      historicalData.unshift({
-        date: investment.purchase.date,
-        pricePerUnit:
-          investment.purchase.units * investment.purchase.pricePerUnit,
-      });
-
-      return { ...investment, historicalData };
-    });
-    const singleInvestment = [
-      updatedInvestments.find((item) => item.id === id),
-    ];
-
-    setInvestment(singleInvestment);
-  }, [id, investments]); // TODO: this is maybe not the best way to do it, but it works for now
+  const [saleDate, setSaleDate] = useState(new Date());
+  const [holdingPeriod, setHoldingPeriod] = useState<number>(0);
+  const [investment, setInvestment] = useState<Investment | null>(null);
+  const { investments, update, remove } = useInvestments();
+  const navigate = useNavigate();
+  const params = useParams();
+  const {
+    isOpen: OptionsOpen,
+    onClose: closeOptions,
+    onOpen: openOptions,
+  } = useDisclosure();
 
   useEffect(() => {
-    const purchaseDate = new Date(investment[0]?.purchase.date);
-    if (investment[0]?.sale !== undefined) {
-      const saleDate = new Date(investment[0]?.sale.date);
-      const holdingPeriod = calculateDaysBetweenDates(purchaseDate, saleDate);
-      setHoldingPeriod(formatHoldingPeriod(holdingPeriod));
-    } else {
-      const holdingPeriod = calculateDaysBetweenDates(purchaseDate, new Date());
-      setHoldingPeriod(formatHoldingPeriod(holdingPeriod));
+    const id = params.id;
+    const investment = investments.find((item) => item.id === id);
+    if (!investment) {
+      navigate("/dashboard");
+      return;
     }
+    setInvestment(investment);
+  }, [params, investments, navigate]);
 
-    setEachDayInvestment(processMultipleHistoricalData(investment));
+  // update holding period
+  useEffect(() => {
+    if (!investment) return;
+    const purchaseDate = new Date(investment.purchase.date);
+    const saleDate = investment.sale
+      ? new Date(investment.sale.date)
+      : new Date();
+
+    const holdingPeriod = calculateDaysBetweenDates(purchaseDate, saleDate);
+    setHoldingPeriod(holdingPeriod);
   }, [investment]);
 
-  // TODO: Remove this function after backend is connected and context is made
-  function processMultipleHistoricalData(dataSets) {
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const formattedYesterday = `${today.getFullYear()}-${(
-      yesterday.getMonth() + 1
-    )
-      .toString()
-      .padStart(2, "0")}-${yesterday.getDate().toString().padStart(2, "0")}`;
+  // update state in sell popover
+  useEffect(() => {
+    if (!investment) return;
+    setUnits(investment.purchase.units.toString());
+    setPricePerUnit(investment.purchase.pricePerUnit.toString());
+  }, [investment]);
 
-    const processedDataSets = [];
-
-    dataSets.forEach((dataSet, index) => {
-      const processedDataSet = {
-        ...dataSet,
-        historicalData: [],
-      };
-      dataSet.historicalData.sort(
-        (a, b) => new Date(a.date) - new Date(b.date)
-      );
-      const firstDate = new Date(dataSet.purchase.date);
-      const daysTillNow = Math.abs(
-        Math.floor((today - firstDate) / (24 * 60 * 60 * 1000))
-      );
-
-      let lastKnownPrices =
-        dataSet.purchase.pricePerUnit * dataSet.purchase.units;
-      for (let day = 0; day < daysTillNow; day++) {
-        const currentDate = new Date(firstDate);
-        currentDate.setDate(firstDate.getDate() + day);
-
-        const formattedDate = `${currentDate.getFullYear()}-${(
-          currentDate.getMonth() + 1
-        )
-          .toString()
-          .padStart(2, "0")}-${currentDate
-          .getDate()
-          .toString()
-          .padStart(2, "0")}`;
-
-        const pricePerUnit = dataSet.historicalData.find((dataPoint) => {
-          const dataPointDate = new Date(dataPoint.date);
-          const formattedDataPointDate = `${dataPointDate.getFullYear()}-${(
-            dataPointDate.getMonth() + 1
-          )
-            .toString()
-            .padStart(2, "0")}-${dataPointDate
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`;
-          return formattedDataPointDate === formattedDate;
-        })?.pricePerUnit;
-
-        const processedDataPoint = {
-          date: formattedDate,
-          pricePerUnit:
-            pricePerUnit !== undefined ? pricePerUnit : lastKnownPrices,
-        };
-
-        processedDataSet.historicalData.push(processedDataPoint);
-
-        if (pricePerUnit !== undefined) {
-          lastKnownPrices = pricePerUnit;
-        }
-      }
-      processedDataSet.historicalData.sort(
-        (
-          a: { date: string | number | Date },
-          b: { date: string | number | Date }
-        ) => new Date(a.date) - new Date(b.date)
-      );
-      if (
-        processedDataSet.historicalData[
-          processedDataSet.historicalData.length - 1
-        ].date !== formattedYesterday
-      ) {
-        processedDataSet.historicalData.push({
-          date: formattedYesterday,
-          pricePerUnit:
-            processedDataSet.historicalData[
-              processedDataSet.historicalData.length - 1
-            ].pricePerUnit,
-        });
-      }
-      processedDataSets.push(processedDataSet);
-    });
-
-    processedDataSets.sort(
-      (a, b) =>
-        new Date(a.historicalData[0].date) - new Date(b.historicalData[0].date)
-    );
-
-    return processedDataSets;
-  }
-
-  function calculateDaysBetweenDates(date1: Date, date2: Date): number {
-    const utc1 = Date.UTC(
-      date1.getFullYear(),
-      date1.getMonth(),
-      date1.getDate()
-    );
-    const utc2 = Date.UTC(
-      date2.getFullYear(),
-      date2.getMonth(),
-      date2.getDate()
-    );
+  function calculateDaysBetweenDates(a: Date, b: Date): number {
+    const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate());
+    const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate());
 
     const diffInMs = Math.abs(utc2 - utc1);
 
@@ -197,81 +79,90 @@ export function InvestmentPage() {
   function formatHoldingPeriod(days: number): string {
     if (days === 1) {
       return `${days} day`;
-    } else if (days < 7) {
+    }
+    if (days < 7) {
       return `${days} days`;
-    } else if (days < 30) {
+    }
+    if (days < 30) {
       const weeks = Math.floor(days / 7);
       return `${weeks} week${weeks !== 1 ? "s" : ""}`;
-    } else if (days < 365 * 3) {
+    }
+    if (days < 365 * 3) {
       const months = Math.floor(days / 30);
       return `${months} month${months !== 1 ? "s" : ""}`;
-    } else {
-      const years = Math.floor(days / 365);
-      return `${years} year${years !== 1 ? "s" : ""}`;
     }
-  }
-  function profitCalculation() {
-    const purchasePrice = investment[0]?.purchase.pricePerUnit;
-    const salePrice = investment[0]?.sale.pricePerUnit;
-    const units = investment[0]?.purchase.units;
-    const profit = (salePrice - purchasePrice) * units;
-    const roi = (profit / (purchasePrice * units)) * 100;
-    return { profit, roi };
+    const years = Math.floor(days / 365);
+    return `${years} year${years !== 1 ? "s" : ""}`;
   }
 
-  // bro mach das clean ich han kb uf das
-
-  const totalCost =
-    investment[0]?.purchase.pricePerUnit * investment[0]?.purchase.units;
-  const singleUnitCost = Number(investment[0]?.purchase.pricePerUnit); // hehe viel spass mit types
-
-  const totalUnits = investment[0]?.purchase.units.toLocaleString();
-  const investmentName = investment[0]?.name;
-  const investmentSymbol = investment[0]?.symbol;
-  let profit = 0;
-  let roi = 0;
-  if (investment[0]?.sale) {
-    profit = profitCalculation().profit;
-    roi = profitCalculation().roi;
+  function calculateProfit() {
+    if (!investment?.sale) return 0;
+    const purchasePrice = investment.purchase.pricePerUnit;
+    const salePrice = investment.sale.pricePerUnit;
+    const units = investment.purchase.units;
+    return (salePrice - purchasePrice) * units;
   }
 
-  useEffect(() => {
-    setUnits(investment[0]?.purchase.units);
-    setPricePerUnit(investment[0]?.purchase.pricePerUnit);
-    setSaleDate(investment[0]?.purchase?.date);
-  }, [investment]);
+  function calculateROI() {
+    if (!investment?.sale) return 0;
+    const profit = calculateProfit();
+    const purchasePrice = investment.purchase.pricePerUnit;
+    const units = investment.purchase.units;
+    return (profit / (purchasePrice * units)) * 100;
+  }
 
-  // TODO: this is just a placeholder function for now. I hope you will have fun @Le0nRoch
-  const { update } = useInvestments();
+  function calculateTotalInvestment() {
+    if (!investment) return 0;
+    return investment.purchase.pricePerUnit * investment.purchase.units;
+  }
 
-  const handleSell = () => {
-    console.log("Price Per Unit:", pricePerUnit);
-    console.log("Units:", units);
-    console.log("Sale Date:", saleDate);
-    // update(investment.id, { sale: { pricePerUnit, units, date: saleDate } });
-  };
+  async function handleSell() {
+    if (!investment) return;
+    await update(investment.id, {
+      sale: {
+        pricePerUnit: Number.parseFloat(pricePerUnit),
+        units: Number.parseFloat(units),
+        date: format(saleDate, "MM-dd-yyyy"),
+      },
+    });
+  }
+
+  function displayTotalUnits() {
+    if (!investment) return "0";
+    const { units } = investment.purchase;
+    return `${units} Unit${units !== 1 ? "s" : ""}`;
+  }
 
   return (
     <Container maxWidth={"5xl"}>
-      <VStack align={"start"} gap={8}>
+      <VStack align={"start"} gap={8} width={"100%"}>
         <BackToDashboard />
-        <Flex justify={"space-between"} width={"100%"}>
-          <Box>
-            <Flex
-              gap={5}
-              alignItems="baseline" /*TODO: i am too stoopid to make text below and not at the top */
-            >
-              <Heading size={"lg"}>{investmentName}</Heading>
-              <Text fontSize={"sm"} color={"grey"}>
-                {investmentSymbol}
+        <Flex
+          justify={"space-between"}
+          width={"100%"}
+          gap="20"
+          align={"baseline"}
+        >
+          <VStack align={"left"} overflow={"hidden"} spacing={"0"}>
+            <HStack align={"baseline"} gap={2}>
+              <Heading
+                maxWidth={"100%"}
+                overflow={"hidden"}
+                textOverflow={"ellipsis"}
+                whiteSpace={"nowrap"}
+                size={"lg"}
+              >
+                {investment?.name ?? "Investment"}
+              </Heading>
+              <Text fontSize={"md"} color={"grey"}>
+                {investment?.symbol}
               </Text>
-            </Flex>
-            <Text fontWeight={"600"}>
-              {totalUnits} Unit{totalUnits !== "1" ? "s" : ""}
-            </Text>
-          </Box>
-          <Flex alignItems={"center"} gap={1}>
-            {(investment[0]?.sale && (
+            </HStack>
+            <Text fontWeight={"600"}>{displayTotalUnits()}</Text>
+          </VStack>
+          {/* Actions */}
+          <HStack>
+            {(investment?.sale && (
               <>
                 <Button colorScheme="teal" isDisabled>
                   Sell
@@ -288,43 +179,37 @@ export function InvestmentPage() {
                 onSell={handleSell}
               />
             )}
-            <Box>
-              <KebabIcon
-                cursor="pointer"
-                w={6}
-                h={6}
-                color=""
-                // TODO: add functionality
-                onClick={() =>
-                  alert(`I dont fucking know what to do here leo pls helt`)
-                }
-              />
-            </Box>
-          </Flex>
+            <OptionsMenu
+              onOpen={openOptions}
+              isOpen={OptionsOpen}
+              onClose={closeOptions}
+              onDelete={() => remove(investment?.id ?? "")}
+              onUpdate={() => {}}
+            />
+          </HStack>
         </Flex>
         <MarketValueSection
           defaultDateRange={DateRange.All}
-          investments={eachDayInvestment}
+          investments={investment ? [investment] : []}
         />
         <Flex
           gap={"inherit"}
           width={"100%"}
           direction={{ base: "column", lg: "row" }}
         >
+          {/* Investment Section */}
           <SingleInfoWithSubtextSection
             title="Investment"
             tooltip="idk"
-            value={totalCost}
-            singleUnitCost={singleUnitCost}
+            value={calculateTotalInvestment()}
+            singleUnitCost={investment?.purchase.pricePerUnit ?? 0}
           />
 
-          {investment[0]?.sale && (
-            <>
-              <ProfitSection value={profit} roi={roi} />
-            </>
-          )}
+          {/* Profit Section */}
+          <ProfitSection value={calculateProfit()} roi={calculateROI()} />
+          {/* Holding Period Section */}
           <SingleInformationSection
-            value={holdingPeriod}
+            value={formatHoldingPeriod(holdingPeriod)}
             title="Holding Period"
             tooltip="This is how long you had that investment for"
             type="string"

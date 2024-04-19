@@ -1,11 +1,32 @@
-// PopOverSell.js
+import {
+  Button,
+  Text,
+  ButtonGroup,
+  FormControl,
+  FormLabel,
+  Input,
+  Popover,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverTrigger,
+  Stack,
+  useDisclosure,
+} from "@chakra-ui/react";
+import { useRef } from "react";
+import { SingleDatepicker } from "chakra-dayzed-datepicker";
 
-import { Button, Text, ButtonGroup, FormControl, FormLabel, Input, Popover, PopoverArrow, PopoverCloseButton, PopoverContent, PopoverTrigger, Stack, useDisclosure } from "@chakra-ui/react";
-import React, { useRef } from "react";
-
-export function PopOverSell({ pricePerUnit, units, saleDate, setPricePerUnit, setUnits, setSaleDate, onSell }) {
+export function PopOverSell({
+  pricePerUnit,
+  units,
+  saleDate,
+  setPricePerUnit,
+  setUnits,
+  setSaleDate,
+  onSell,
+}) {
   const firstFieldRef = useRef(null);
-  const { onOpen, onClose, isOpen } = useDisclosure()
+  const { onOpen, onClose, isOpen } = useDisclosure();
 
   return (
     <>
@@ -14,10 +35,10 @@ export function PopOverSell({ pricePerUnit, units, saleDate, setPricePerUnit, se
         initialFocusRef={firstFieldRef}
         onOpen={onOpen}
         onClose={onClose}
-        placement='auto'
+        placement="auto"
         closeOnBlur={true}
       >
-                        <PopoverTrigger>
+        <PopoverTrigger>
           <Button colorScheme="teal">Sell</Button>
         </PopoverTrigger>
         <PopoverContent p={5}>
@@ -32,8 +53,10 @@ export function PopOverSell({ pricePerUnit, units, saleDate, setPricePerUnit, se
             setUnits={setUnits}
             setSaleDate={setSaleDate}
             onClose={onClose}
-            onSell={onSell}
-
+            onSell={() => {
+              onSell();
+              onClose();
+            }}
           />
         </PopoverContent>
       </Popover>
@@ -42,9 +65,17 @@ export function PopOverSell({ pricePerUnit, units, saleDate, setPricePerUnit, se
 }
 // Form.js
 
-
-
-const Form = ({ firstFieldRef, pricePerUnit, units, saleDate, setPricePerUnit, setUnits, setSaleDate, onClose, onSell }) => {
+const Form = ({
+  firstFieldRef,
+  pricePerUnit,
+  units,
+  saleDate,
+  setPricePerUnit,
+  setUnits,
+  setSaleDate,
+  onClose,
+  onSell,
+}) => {
   const handlePriceChange = (e) => {
     setPricePerUnit(e.target.value);
   };
@@ -53,16 +84,17 @@ const Form = ({ firstFieldRef, pricePerUnit, units, saleDate, setPricePerUnit, s
     setUnits(e.target.value);
   };
 
-  const handleSaleDateChange = (e) => {
-    setSaleDate(e.target.value);
-  };
-
   return (
     <Stack spacing={4}>
       <Text>Sell Your Investment Now</Text>
       <FormControl>
         <FormLabel htmlFor="price-per-unit">Price Per Unit</FormLabel>
-        <Input ref={firstFieldRef} id="price-per-unit" value={pricePerUnit} onChange={handlePriceChange} />
+        <Input
+          ref={firstFieldRef}
+          id="price-per-unit"
+          value={pricePerUnit}
+          onChange={handlePriceChange}
+        />
       </FormControl>
       <FormControl>
         <FormLabel htmlFor="units">Units</FormLabel>
@@ -70,7 +102,30 @@ const Form = ({ firstFieldRef, pricePerUnit, units, saleDate, setPricePerUnit, s
       </FormControl>
       <FormControl>
         <FormLabel htmlFor="saleDate">Sale Date</FormLabel>
-        <Input id="saleDate" value={saleDate} onChange={handleSaleDateChange} />
+        <SingleDatepicker
+          triggerVariant="input"
+          maxDate={new Date()}
+          propsConfigs={{
+            inputProps: {
+              width: "100%",
+              bg: "white",
+              isRequired: true,
+            },
+            dayOfMonthBtnProps: {
+              defaultBtnProps: {
+                _hover: {
+                  bg: "teal.100",
+                },
+              },
+              selectedBtnProps: {
+                bg: "teal.400",
+                color: "white",
+              },
+            },
+          }}
+          date={saleDate}
+          onDateChange={(d) => setSaleDate(d)}
+        />
       </FormControl>
       <ButtonGroup display="flex" justifyContent="flex-end">
         <Button variant="outline" onClick={onClose}>
