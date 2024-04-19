@@ -28,7 +28,7 @@ export function DefaultLayout() {
     <chakra.div width={"100%"}>
       <chakra.div minHeight={"100vh"} width={"100%"}>
         <DefaultHeader links={links} />
-        <chakra.main>
+        <chakra.main marginBottom={"2rem"}>
           <Outlet />
         </chakra.main>
       </chakra.div>
