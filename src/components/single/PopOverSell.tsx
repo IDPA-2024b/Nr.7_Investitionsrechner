@@ -35,7 +35,7 @@ export function PopOverSell({
         initialFocusRef={firstFieldRef}
         onOpen={onOpen}
         onClose={onClose}
-        placement="auto"
+        placement="top"
         closeOnBlur={true}
       >
         <PopoverTrigger>
