@@ -54,9 +54,7 @@ export function DetailsForm({
       <Form
         label={"Ticker Symbol"}
         helperText={
-          type === InvestmentType.Stock
-            ? "Start typing to get suggestions..."
-            : "Enter the ticker symbol for this investment."
+          "Only the US market is supported. Enter the ticker symbol of the investment."
         }
         isRequired
       >
@@ -80,7 +78,7 @@ export function DetailsForm({
           }}
           bg={"white"}
           placeholder={"My Investment"}
-        />
+        />        
       </Form>
       <Form
         label="Units"
