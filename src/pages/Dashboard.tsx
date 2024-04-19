@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Container, Flex, Heading, VStack } from "@chakra-ui/react";
+import { Button, Container, Flex, Heading, VStack, Text } from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
@@ -8,6 +8,7 @@ import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSect
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { useInvestments } from "../hooks/contexts";
 import type { Investment } from "../types/investment";
+
 export function DashboardPage() {
   const [investments, setInvestments] = useState<Investment>([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
@@ -78,9 +79,9 @@ export function DashboardPage() {
         )
           .toString()
           .padStart(2, "0")}-${currentDate
-          .getDate()
-          .toString()
-          .padStart(2, "0")}`;
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`;
 
         const pricePerUnit = dataSet.historicalData.find((dataPoint) => {
           const dataPointDate = new Date(dataPoint.date);
@@ -89,9 +90,9 @@ export function DashboardPage() {
           )
             .toString()
             .padStart(2, "0")}-${dataPointDate
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`;
+              .getDate()
+              .toString()
+              .padStart(2, "0")}`;
           return formattedDataPointDate === formattedDate;
         })?.pricePerUnit;
 
@@ -179,36 +180,58 @@ export function DashboardPage() {
   return (
     <Container maxWidth={"5xl"}>
       {/* TODO: find best max width*/}
-      <VStack align={"start"} gap={8}>
-        <Heading size={"lg"}>Dashboard</Heading>
-        <MarketValueSection
-          defaultDateRange={DateRange.All}
-          investments={eachDayInvestment}
-        />
-        <Flex
-          gap={"inherit"}
-          width={"100%"}
-          direction={{ base: "column", lg: "row" }}
-        >
+      {investments.length === 0 ? (
+        <>
+          <Flex 
+          justifyContent={"center"}
+          alignItems={"center"}
+          flexDirection={"column"}
+          gap={10}
+          >
+
+            <Heading size={"lg"}>Hmmm 🧐, it seems Like you dont have any investments tracked.</Heading>
+            <Button
+              colorScheme="teal"
+              gap={"2"}
+              onClick={123}
+            >
+              Create one now
+            </Button>
+          </Flex>
+        </>
+
+      ) : (
+        <VStack align={"start"} gap={8}>
+          <Heading size={"lg"}>Dashboard</Heading>
+          <MarketValueSection
+            defaultDateRange={DateRange.All}
+            investments={eachDayInvestment}
+          />
           <Flex
             gap={"inherit"}
             width={"100%"}
-            direction={{ base: "column", md: "row", lg: "column" }}
+            direction={{ base: "column", lg: "row" }}
           >
-            <ProfitSection value={calculateProfit()} roi={calculateROI()} />
-            <SingleInformationSection
-              value={revenue}
-              title={"Revenue"}
-              tooltip="The total revenue you've made from your investments"
-              type="number"
-            />
+            <Flex
+              gap={"inherit"}
+              width={"100%"}
+              direction={{ base: "column", md: "row", lg: "column" }}
+            >
+              <ProfitSection value={calculateProfit()} roi={calculateROI()} />
+              <SingleInformationSection
+                value={revenue}
+                title={"Revenue"}
+                tooltip="The total revenue you've made from your investments"
+                type="number"
+              />
+            </Flex>
+            <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
+              <TopInvestmentsSection investments={investments.slice(0, 10)} />
+              <DiversitySection investments={investments} />
+            </Flex>
           </Flex>
-          <Flex gap={"inherit"} direction={{ base: "column", lg: "row" }}>
-            <TopInvestmentsSection investments={investments.slice(0, 10)} />
-            <DiversitySection investments={investments} />
-          </Flex>
-        </Flex>
-      </VStack>
+        </VStack>
+      )}
     </Container>
   );
 }

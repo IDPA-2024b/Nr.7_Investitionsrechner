@@ -27,7 +27,7 @@ export function PopOverSell({
 }) {
   const firstFieldRef = useRef(null);
   const { onOpen, onClose, isOpen } = useDisclosure();
-
+  const noAnim = {}
   return (
     <>
       <Popover
@@ -41,7 +41,7 @@ export function PopOverSell({
         <PopoverTrigger>
           <Button colorScheme="teal">Sell</Button>
         </PopoverTrigger>
-        <PopoverContent p={5}>
+        <PopoverContent p="5" variants={noAnim}>
           <PopoverArrow />
           <PopoverCloseButton />
           <Form

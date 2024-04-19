@@ -188,7 +188,7 @@ export function MarketValueSection({
         <Flex direction={"column"} gap={{ base: "inherit" }}>
           <TitleWithTooltip
             title="Current Market Value"
-            tooltip="The total value of all your investments as of today"
+            tooltip="The total value of all your investment/s as of today"
           />
           <ImportantNumber number={lastValue} />
           <MarketValueChange value={amountGain} percentage={percentageGain} />

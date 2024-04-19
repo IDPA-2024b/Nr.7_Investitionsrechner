@@ -200,7 +200,7 @@ export function InvestmentPage() {
           {/* Investment Section */}
           <SingleInfoWithSubtextSection
             title="Investment"
-            tooltip="idk"
+            tooltip="This is how much you have spent on this investment"
             value={calculateTotalInvestment()}
             singleUnitCost={investment?.purchase.pricePerUnit ?? 0}
           />
