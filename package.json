@@ -1,5 +1,5 @@
 {
-	"name": "investment-calculator",
+	"name": "InView",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -42,6 +42,7 @@
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.5",
 		"typescript": "^5.2.2",
-		"vite": "^5.1.6"
+		"vite": "^5.1.6",
+		"vite-plugin-pwa": "^0.19.8"
 	}
 }
