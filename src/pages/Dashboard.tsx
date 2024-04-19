@@ -167,6 +167,9 @@ export function DashboardPage() {
 
   function calculateROI() {
     const profit = calculateProfit();
+    if (onlySoldSpent === 0) {
+      return 0;
+    }
     return (profit / onlySoldSpent) * 100;
   }
   useEffect(() => {
