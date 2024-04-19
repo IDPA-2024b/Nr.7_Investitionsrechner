@@ -1,7 +1,7 @@
-import { RouterProvider, createHashRouter } from "react-router-dom";
-import { DashboardLayout } from "./layouts/DashboardLayout";
-import { DefaultLayout } from "./layouts/DefaultLayout";
-import { StartPage } from "./pages/Start";
+import { Navigate, RouterProvider, createHashRouter } from "react-router-dom";
+import { DashboardLayout } from "./layouts/Dashboard";
+import { DefaultLayout } from "./layouts/Default";
+import { HomePage } from "./pages/Home";
 import { LoginPage } from "./pages/Login";
 import { AboutPage } from "./pages/About";
 import { PrivacyPage } from "./pages/Privacy";
@@ -9,6 +9,8 @@ import { DashboardPage } from "./pages/Dashboard";
 import { InvestmentPage } from "./pages/Investment";
 import { NewInvestmentPage } from "./pages/NewInvestment";
 import { UserOnlyRoute } from "./routes/UserOnly";
+import { Contact } from "./pages/Contact";
+import { InvestmentsProvider } from "./contexts/investments";
 
 const router = createHashRouter([
   {
@@ -17,7 +19,7 @@ const router = createHashRouter([
     children: [
       {
         index: true, // same path as parent: "/"
-        element: <StartPage />,
+        element: <HomePage />,
       },
       {
         path: "/login",
@@ -31,13 +33,23 @@ const router = createHashRouter([
         path: "/privacy",
         element: <PrivacyPage />,
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "*",
+        element: <Navigate to="/" />,
+      },
     ],
   },
   {
     path: "/dashboard",
     element: (
       <UserOnlyRoute>
-        <DashboardLayout />
+        <InvestmentsProvider>
+          <DashboardLayout />
+        </InvestmentsProvider>
       </UserOnlyRoute>
     ),
     children: [
@@ -53,6 +65,10 @@ const router = createHashRouter([
       {
         path: "new",
         element: <NewInvestmentPage />,
+      },
+      {
+        path: "*",
+        element: <Navigate to="/dashboard" />,
       },
     ],
   },

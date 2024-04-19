@@ -1,0 +1,68 @@
+[
+	{
+		"id": "8",
+		"name": "Polkadot",
+		"symbol": "DOT",
+		"type": "crypto",
+		"purchase": {
+			"date": "2022-01-29T22:00:00.000Z",
+			"units": 50,
+			"pricePerUnit": 20
+		},
+		"historicalData": [
+			{
+				"date": "2022-02-29T22:00:00.000Z",
+				"pricePerUnit": 30
+			},
+			{
+				"date": "2023-02-29T22:00:00.000Z",
+				"pricePerUnit": 25
+			},
+			{
+				"date": "2023-03-29T22:00:00.000Z",
+				"pricePerUnit": 30
+			},
+			{
+				"date": "2023-04-29T22:00:00.000Z",
+				"pricePerUnit": 35
+			},
+			{
+				"date": "2024-03-27T22:00:00.000Z",
+				"pricePerUnit": 40
+			}
+		]
+	},
+	{
+		"id": "9",
+		"name": "Solana",
+		"symbol": "SOL",
+		"type": "crypto",
+		"purchase": {
+			"date": "2023-04-29T22:00:00.000Z",
+			"units": 10,
+			"pricePerUnit": 100
+		},
+		"historicalData": [
+			{
+				"date": "2023-01-29T22:00:00.000Z",
+				"pricePerUnit": 100
+			},
+			{
+				"date": "2023-02-29T22:00:00.000Z",
+				"pricePerUnit": 150
+			},
+			{
+				"date": "2023-03-29T22:00:00.000Z",
+				"pricePerUnit": 200
+			},
+			{
+				"date": "2023-04-29T22:00:00.000Z",
+				"pricePerUnit": 250
+			},
+			{
+				"date": "2024-03-27T22:00:00.000Z",
+				"pricePerUnit": 300
+			}
+		]
+	}
+]
