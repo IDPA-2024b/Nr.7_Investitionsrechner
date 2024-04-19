@@ -1,8 +1,9 @@
 import { SearchIcon } from "@chakra-ui/icons";
 import {
   Button,
+  Divider,
   Flex,
-  FormControl,
+  Highlight,
   IconButton,
   Input,
   InputGroup,
@@ -11,9 +12,10 @@ import {
   Text,
   VStack,
   chakra,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { InvestmentIcon } from "./InvestmentIcon";
 import { InvestmentType, type Investment } from "../types/investment";
 import { useInvestments } from "../hooks/contexts";
@@ -28,15 +30,16 @@ export function Sidebar({
   onOpen = () => {},
   onClose = () => {},
 }: SidebarProps) {
-  const {investments} = useInvestments();
-  const navigate = useNavigate();
+  const isMobile = useBreakpointValue({ base: true, md: false }) ?? false;
   const searchbarRef = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { investments } = useInvestments();
   const [openSearchClicked, setOpenSearchClicked] = useState(false);
+  const [selectedType, setSelectedType] = useState("all");
+  const [filteredInvestments, setFilteredInvestments] = useState(investments);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredInvestments, setFilteredInvestments] = useState(
-    investments as Investment[]
-  );
-  const [selectedType, setSelectedType] = useState("All");
+  const [selectedInvestment, setSelectedInvestment] = useState<string | null>();
 
   function handleOpenSearchBar() {
     onOpen();
@@ -48,28 +51,39 @@ export function Sidebar({
     navigate("/dashboard/new");
   }
 
+  function handleInvestmentClick(id: string) {
+    setSelectedInvestment(id);
+    if (isMobile) onClose();
+    navigate(`/dashboard/investment/${id}`);
+  }
+
+  function filterByQuery(investment: Investment): boolean {
+    return investment.name.toLowerCase().includes(searchQuery.toLowerCase());
+  }
+
+  function filterByType(investment: Investment): boolean {
+    if (selectedType === "all") return true;
+    return investment.type === selectedType;
+  }
+
+  useEffect(() => {
+    if (location.pathname === "/dashboard") {
+      setSelectedInvestment(null);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    setFilteredInvestments(
+      investments.filter(filterByQuery).filter(filterByType)
+    );
+  }, [investments, selectedType, searchQuery]);
+
   useEffect(() => {
     if (isOpen && openSearchClicked) {
       searchbarRef.current?.focus();
       setOpenSearchClicked(false);
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    const filteredByName = (investments as Investment[]).filter((investment) =>
-      investment.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    let filteredByType = [...filteredByName];
-
-    if (selectedType !== "all") {
-      filteredByType = filteredByName.filter(
-        (investment) => investment.type === selectedType
-      );
-    }
-
-    setFilteredInvestments(filteredByType);
-  }, [searchQuery, selectedType, investments]);
 
   return (
     <chakra.aside overflow={"auto"}>
@@ -105,61 +119,60 @@ export function Sidebar({
           onClick={handleOpenSearchBar}
         />
         {isOpen && (
-          <FormControl>
-            <Select
-              value={selectedType}
-              onChange={(e) => setSelectedType(e.target.value)}
-            >
-              <option value="all">All</option>
-              {Object.entries(InvestmentType).map(([key, value]) => (
-                <chakra.option key={key} value={value}>
-                  {key}
-                </chakra.option>
-              ))}
-            </Select>
-          </FormControl>
-        )}
-        {isOpen && (
-          <chakra.div
-            w="100%"
-            h="1px"
-            bg="gray.200"
-            display={filteredInvestments.length > 0 ? "block" : "none"}
-          />
-        )}
-        {isOpen && (
-          <>
-            {filteredInvestments.map((investment) => (
-              <Link
-                key={investment.id}
-                to={`investment/${investment.id}`}
-                style={{ width: "100%" }}
-              >
-                <Flex
-                  align="center"
-                  textAlign={isOpen ? "left" : "center"}
-                  display={isOpen ? "flex" : "block"}
-                >
-                  <InvestmentIcon
-                    type={investment.type}
-                    boxSize={7}
-                    p={1}
-                    bg={"gray.200"}
-                    borderRadius="5px"
-                  />
-                  <Text ml={2}>{investment.name}</Text>
-                </Flex>
-                <chakra.div
-                  w="100%"
-                  h="1px"
-                  bg="gray.200"
-                  mt={5}
-                  display={filteredInvestments.length > 0 ? "block" : "none"}
-                />
-              </Link>
+          <Select
+            value={selectedType}
+            onChange={(e) => setSelectedType(e.target.value)}
+          >
+            <option value="all">All</option>
+            {Object.entries(InvestmentType).map(([key, value]) => (
+              <chakra.option key={key} value={value}>
+                {key}
+              </chakra.option>
             ))}
-          </>
+          </Select>
         )}
+        <VStack
+          width={"100%"}
+          align="start"
+          spacing={2}
+          display={isOpen ? "flex" : "none"}
+        >
+          {filteredInvestments.map((investment) => (
+            <chakra.div
+              _hover={{
+                bg: "gray.100",
+                borderTopRadius: "5px",
+              }}
+              bg={selectedInvestment === investment.id ? "gray.100" : "white"}
+              key={investment.id}
+              width="100%"
+              onClick={() => handleInvestmentClick(investment.id)}
+            >
+              <Flex cursor={"pointer"} key={investment.id} paddingY={2} gap={3}>
+                <InvestmentIcon
+                  type={investment.type}
+                  boxSize={7}
+                  p={1}
+                  // bg={"gray.200"}
+                  borderRadius="5px"
+                />
+                <Text
+                  overflow="hidden"
+                  textOverflow="ellipsis"
+                  whiteSpace="nowrap"
+                >
+                  <Highlight
+                    styles={{ color: "teal.500", fontWeight: "bolder" }}
+                    query={searchQuery}
+                  >
+                    {investment.name}
+                  </Highlight>
+                </Text>
+              </Flex>
+              <Divider borderColor={"gray.300"} />
+            </chakra.div>
+          ))}
+        </VStack>
       </VStack>
     </chakra.aside>
   );

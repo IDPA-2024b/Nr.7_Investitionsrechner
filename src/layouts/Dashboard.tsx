@@ -62,6 +62,7 @@ export function DashboardLayout() {
       >
         {/* Sidebar */}
         <Flex
+          maxWidth={{ base: "66%", md: "33%" }}
           ref={sidebarRef}
           width={"fit-content"}
           zIndex={{ base: 1, md: 0 }}
