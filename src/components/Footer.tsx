@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import type { PropsWithChildren } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, type To } from "react-router-dom";
 import type { ILink } from "../types/link";
 import { FaGithub } from "react-icons/fa";
 import { chakra } from "@chakra-ui/react";
@@ -35,6 +35,7 @@ export function Footer({ links }: FooterProps) {
         paddingX={{ base: 2, md: 5 }}
         paddingY={{ base: 2, md: 3 }}
         overflow={"hidden"}
+        bg={"gray.200"}
       >
         <VStack width={"100%"} spacing={2}>
           <Logo onClick={() => handleNavigate("/")} />
