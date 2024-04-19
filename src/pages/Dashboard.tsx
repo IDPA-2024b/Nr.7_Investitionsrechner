@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { MarketValueSection } from "../components/sections/MarketValueSection";
-import { Button, Container, Flex, Heading, VStack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Container,
+  Flex,
+  Heading,
+  VStack,
+  Text,
+} from "@chakra-ui/react";
 import { DateRange } from "../types/chart";
 import { ProfitSection } from "../components/sections/ProfitSection";
 import { SingleInformationSection } from "../components/sections/SingleInformationSection";
@@ -8,11 +15,13 @@ import { TopInvestmentsSection } from "../components/sections/TopInvestmentsSect
 import { DiversitySection } from "../components/sections/DiversitySection";
 import { useInvestments } from "../hooks/contexts";
 import type { Investment } from "../types/investment";
+import { useNavigate } from "react-router-dom";
 
 export function DashboardPage() {
   const [investments, setInvestments] = useState<Investment>([]);
   const [eachDayInvestment, setEachDayInvestment] = useState([]);
   const { investments: investmentsFromContext } = useInvestments();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const updatedInvestments = investmentsFromContext.map((investment) => {
@@ -79,9 +88,9 @@ export function DashboardPage() {
         )
           .toString()
           .padStart(2, "0")}-${currentDate
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`;
+          .getDate()
+          .toString()
+          .padStart(2, "0")}`;
 
         const pricePerUnit = dataSet.historicalData.find((dataPoint) => {
           const dataPointDate = new Date(dataPoint.date);
@@ -90,9 +99,9 @@ export function DashboardPage() {
           )
             .toString()
             .padStart(2, "0")}-${dataPointDate
-              .getDate()
-              .toString()
-              .padStart(2, "0")}`;
+            .getDate()
+            .toString()
+            .padStart(2, "0")}`;
           return formattedDataPointDate === formattedDate;
         })?.pricePerUnit;
 
@@ -182,24 +191,24 @@ export function DashboardPage() {
       {/* TODO: find best max width*/}
       {investments.length === 0 ? (
         <>
-          <Flex 
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
-          gap={10}
+          <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexDirection={"column"}
+            gap={10}
           >
-
-            <Heading size={"lg"}>Hmmm 🧐, it seems Like you dont have any investments tracked.</Heading>
+            <Heading size={"lg"}>
+              Hmmm 🧐, it seems Like you dont have any investments tracked.
+            </Heading>
             <Button
               colorScheme="teal"
               gap={"2"}
-              onClick={123}
+              onClick={() => navigate("/dashboard/new")}
             >
               Create one now
             </Button>
           </Flex>
         </>
-
       ) : (
         <VStack align={"start"} gap={8}>
           <Heading size={"lg"}>Dashboard</Heading>

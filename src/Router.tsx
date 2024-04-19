@@ -1,4 +1,4 @@
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createHashRouter } from "react-router-dom";
 import { DashboardLayout } from "./layouts/Dashboard";
 import { DefaultLayout } from "./layouts/Default";
 import { HomePage } from "./pages/Home";
@@ -37,6 +37,10 @@ const router = createHashRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "*",
+        element: <Navigate to="/" />,
+      },
     ],
   },
   {
@@ -61,6 +65,10 @@ const router = createHashRouter([
       {
         path: "new",
         element: <NewInvestmentPage />,
+      },
+      {
+        path: "*",
+        element: <Navigate to="/dashboard" />,
       },
     ],
   },
